@@ -1,0 +1,490 @@
+{
+  "loanGoals": [
+    {
+      "year": 2023,
+      "loanType": "ALL",
+      "goalStatus": [
+        {
+          "fairLendingType": "LMIArea",
+          "goalAdj": 32,
+          "goalCount": 116,
+          "goalPct": 0.20975344452501812,
+          "myCount": 84,
+          "myPct": 0.15162454873646208
+        },
+        {
+          "fairLendingType": "MinorityArea",
+          "goalAdj": 53,
+          "goalCount": 220,
+          "goalPct": 0.3966642494561276,
+          "myCount": 167,
+          "myPct": 0.30144404332129965
+        },
+        {
+          "fairLendingType": "HispanicArea",
+          "goalAdj": 2,
+          "goalCount": 3,
+          "goalPct": 0.004713560551124003,
+          "myCount": 1,
+          "myPct": 0.0018050541516245488
+        },
+        {
+          "fairLendingType": "AAArea",
+          "goalAdj": 45,
+          "goalCount": 128,
+          "goalPct": 0.2307831762146483,
+          "myCount": 83,
+          "myPct": 0.14981949458483754
+        },
+        {
+          "fairLendingType": "HispanicIndividual",
+          "goalAdj": 0,
+          "goalCount": 0,
+          "goalPct": 0.0,
+          "myCount": 0,
+          "myPct": 0.0
+        },
+        {
+          "fairLendingType": "AAIndividual",
+          "goalAdj": 0,
+          "goalCount": 0,
+          "goalPct": 0.0,
+          "myCount": 0,
+          "myPct": 0.0
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "loanType": "FIRST",
+      "goalStatus": [
+        {
+          "fairLendingType": "LMIArea",
+          "goalAdj": -1,
+          "goalCount": 58,
+          "goalPct": 0.20975344452501812,
+          "myCount": 59,
+          "myPct": 0.21299638989169675
+        },
+        {
+          "fairLendingType": "MinorityArea",
+          "goalAdj": 6,
+          "goalCount": 110,
+          "goalPct": 0.3966642494561276,
+          "myCount": 104,
+          "myPct": 0.37545126353790614
+        },
+        {
+          "fairLendingType": "HispanicArea",
+          "goalAdj": 0,
+          "goalCount": 1,
+          "goalPct": 0.004713560551124003,
+          "myCount": 1,
+          "myPct": 0.0036101083032490976
+        },
+        {
+          "fairLendingType": "AAArea",
+          "goalAdj": 5,
+          "goalCount": 64,
+          "goalPct": 0.2307831762146483,
+          "myCount": 59,
+          "myPct": 0.21299638989169675
+        },
+        {
+          "fairLendingType": "HispanicIndividual",
+          "goalAdj": 0,
+          "goalCount": 0,
+          "goalPct": 0.0,
+          "myCount": 0,
+          "myPct": 0.0
+        },
+        {
+          "fairLendingType": "AAIndividual",
+          "goalAdj": 0,
+          "goalCount": 0,
+          "goalPct": 0.0,
+          "myCount": 0,
+          "myPct": 0.0
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "loanType": "SECOND",
+      "goalStatus": [
+        {
+          "fairLendingType": "LMIArea",
+          "goalAdj": 33,
+          "goalCount": 58,
+          "goalPct": 0.20975344452501812,
+          "myCount": 25,
+          "myPct": 0.09025270758122744
+        },
+        {
+          "fairLendingType": "MinorityArea",
+          "goalAdj": 47,
+          "goalCount": 110,
+          "goalPct": 0.3966642494561276,
+          "myCount": 63,
+          "myPct": 0.22743682310469315
+        },
+        {
+          "fairLendingType": "HispanicArea",
+          "goalAdj": 1,
+          "goalCount": 1,
+          "goalPct": 0.004713560551124003,
+          "myCount": 0,
+          "myPct": 0.0
+        },
+        {
+          "fairLendingType": "AAArea",
+          "goalAdj": 40,
+          "goalCount": 64,
+          "goalPct": 0.2307831762146483,
+          "myCount": 24,
+          "myPct": 0.08664259927797834
+        },
+        {
+          "fairLendingType": "HispanicIndividual",
+          "goalAdj": 0,
+          "goalCount": 0,
+          "goalPct": 0.0,
+          "myCount": 0,
+          "myPct": 0.0
+        },
+        {
+          "fairLendingType": "AAIndividual",
+          "goalAdj": 0,
+          "goalCount": 0,
+          "goalPct": 0.0,
+          "myCount": 0,
+          "myPct": 0.0
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "loanType": "ALL",
+      "goalStatus": [
+        {
+          "fairLendingType": "LMIArea",
+          "goalAdj": -25,
+          "goalCount": 123,
+          "goalPct": 0.08656174334140436,
+          "myCount": 148,
+          "myPct": 0.10437235543018336
+        },
+        {
+          "fairLendingType": "MinorityArea",
+          "goalAdj": 54,
+          "goalCount": 271,
+          "goalPct": 0.19092009685230024,
+          "myCount": 217,
+          "myPct": 0.1530324400564175
+        },
+        {
+          "fairLendingType": "HispanicArea",
+          "goalAdj": 1,
+          "goalCount": 2,
+          "goalPct": 0.0013317191283292978,
+          "myCount": 1,
+          "myPct": 7.052186177715092e-4
+        },
+        {
+          "fairLendingType": "AAArea",
+          "goalAdj": 22,
+          "goalCount": 171,
+          "goalPct": 0.12088377723970944,
+          "myCount": 149,
+          "myPct": 0.10507757404795487
+        },
+        {
+          "fairLendingType": "HispanicIndividual",
+          "goalAdj": 20,
+          "goalCount": 52,
+          "goalPct": 0.03631961259079903,
+          "myCount": 32,
+          "myPct": 0.022566995768688293
+        },
+        {
+          "fairLendingType": "AAIndividual",
+          "goalAdj": 95,
+          "goalCount": 302,
+          "goalPct": 0.21307506053268765,
+          "myCount": 207,
+          "myPct": 0.1459802538787024
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "loanType": "ALL",
+      "goalStatus": [
+        {
+          "fairLendingType": "LMIArea",
+          "goalAdj": 62,
+          "goalCount": 238,
+          "goalPct": 0.21179393023004645,
+          "myCount": 176,
+          "myPct": 0.15630550621669628
+        },
+        {
+          "fairLendingType": "MinorityArea",
+          "goalAdj": 213,
+          "goalCount": 499,
+          "goalPct": 0.44313640781941893,
+          "myCount": 286,
+          "myPct": 0.2539964476021314
+        },
+        {
+          "fairLendingType": "HispanicArea",
+          "goalAdj": -2,
+          "goalCount": 3,
+          "goalPct": 0.002592072578032185,
+          "myCount": 5,
+          "myPct": 0.004440497335701598
+        },
+        {
+          "fairLendingType": "AAArea",
+          "goalAdj": 175,
+          "goalCount": 311,
+          "goalPct": 0.2764877416567664,
+          "myCount": 136,
+          "myPct": 0.12078152753108348
+        },
+        {
+          "fairLendingType": "HispanicIndividual",
+          "goalAdj": 26,
+          "goalCount": 45,
+          "goalPct": 0.04039313100766821,
+          "myCount": 19,
+          "myPct": 0.016873889875666074
+        },
+        {
+          "fairLendingType": "AAIndividual",
+          "goalAdj": 212,
+          "goalCount": 381,
+          "goalPct": 0.3382654714332001,
+          "myCount": 169,
+          "myPct": 0.15008880994671403
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "loanType": "FIRST",
+      "goalStatus": [
+        {
+          "fairLendingType": "LMIArea",
+          "goalAdj": -38,
+          "goalCount": 89,
+          "goalPct": 0.08656174334140436,
+          "myCount": 127,
+          "myPct": 0.12342079689018465
+        },
+        {
+          "fairLendingType": "MinorityArea",
+          "goalAdj": 12,
+          "goalCount": 196,
+          "goalPct": 0.19092009685230024,
+          "myCount": 184,
+          "myPct": 0.17881438289601556
+        },
+        {
+          "fairLendingType": "HispanicArea",
+          "goalAdj": 0,
+          "goalCount": 1,
+          "goalPct": 0.0013317191283292978,
+          "myCount": 1,
+          "myPct": 9.718172983479105e-4
+        },
+        {
+          "fairLendingType": "AAArea",
+          "goalAdj": -4,
+          "goalCount": 124,
+          "goalPct": 0.12088377723970944,
+          "myCount": 128,
+          "myPct": 0.12439261418853255
+        },
+        {
+          "fairLendingType": "HispanicIndividual",
+          "goalAdj": 9,
+          "goalCount": 37,
+          "goalPct": 0.03631961259079903,
+          "myCount": 28,
+          "myPct": 0.027210884353741496
+        },
+        {
+          "fairLendingType": "AAIndividual",
+          "goalAdj": 52,
+          "goalCount": 219,
+          "goalPct": 0.21307506053268765,
+          "myCount": 167,
+          "myPct": 0.16229348882410108
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "loanType": "FIRST",
+      "goalStatus": [
+        {
+          "fairLendingType": "LMIArea",
+          "goalAdj": 8,
+          "goalCount": 145,
+          "goalPct": 0.21179393023004645,
+          "myCount": 137,
+          "myPct": 0.2
+        },
+        {
+          "fairLendingType": "MinorityArea",
+          "goalAdj": 76,
+          "goalCount": 304,
+          "goalPct": 0.44313640781941893,
+          "myCount": 228,
+          "myPct": 0.33284671532846716
+        },
+        {
+          "fairLendingType": "HispanicArea",
+          "goalAdj": -2,
+          "goalCount": 2,
+          "goalPct": 0.002592072578032185,
+          "myCount": 4,
+          "myPct": 0.00583941605839416
+        },
+        {
+          "fairLendingType": "AAArea",
+          "goalAdj": 72,
+          "goalCount": 189,
+          "goalPct": 0.2764877416567664,
+          "myCount": 117,
+          "myPct": 0.1708029197080292
+        },
+        {
+          "fairLendingType": "HispanicIndividual",
+          "goalAdj": 13,
+          "goalCount": 28,
+          "goalPct": 0.04039313100766821,
+          "myCount": 15,
+          "myPct": 0.021897810218978103
+        },
+        {
+          "fairLendingType": "AAIndividual",
+          "goalAdj": 98,
+          "goalCount": 232,
+          "goalPct": 0.3382654714332001,
+          "myCount": 134,
+          "myPct": 0.19562043795620437
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "loanType": "SECOND",
+      "goalStatus": [
+        {
+          "fairLendingType": "LMIArea",
+          "goalAdj": 13,
+          "goalCount": 34,
+          "goalPct": 0.08656174334140436,
+          "myCount": 21,
+          "myPct": 0.05398457583547558
+        },
+        {
+          "fairLendingType": "MinorityArea",
+          "goalAdj": 41,
+          "goalCount": 74,
+          "goalPct": 0.19092009685230024,
+          "myCount": 33,
+          "myPct": 0.08483290488431877
+        },
+        {
+          "fairLendingType": "HispanicArea",
+          "goalAdj": 1,
+          "goalCount": 1,
+          "goalPct": 0.0013317191283292978,
+          "myCount": 0,
+          "myPct": 0.0
+        },
+        {
+          "fairLendingType": "AAArea",
+          "goalAdj": 26,
+          "goalCount": 47,
+          "goalPct": 0.12088377723970944,
+          "myCount": 21,
+          "myPct": 0.05398457583547558
+        },
+        {
+          "fairLendingType": "HispanicIndividual",
+          "goalAdj": 10,
+          "goalCount": 14,
+          "goalPct": 0.03631961259079903,
+          "myCount": 4,
+          "myPct": 0.010282776349614395
+        },
+        {
+          "fairLendingType": "AAIndividual",
+          "goalAdj": 43,
+          "goalCount": 83,
+          "goalPct": 0.21307506053268765,
+          "myCount": 40,
+          "myPct": 0.10282776349614396
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "loanType": "SECOND",
+      "goalStatus": [
+        {
+          "fairLendingType": "LMIArea",
+          "goalAdj": 54,
+          "goalCount": 93,
+          "goalPct": 0.21179393023004645,
+          "myCount": 39,
+          "myPct": 0.08843537414965986
+        },
+        {
+          "fairLendingType": "MinorityArea",
+          "goalAdj": 137,
+          "goalCount": 195,
+          "goalPct": 0.44313640781941893,
+          "myCount": 58,
+          "myPct": 0.13151927437641722
+        },
+        {
+          "fairLendingType": "HispanicArea",
+          "goalAdj": 0,
+          "goalCount": 1,
+          "goalPct": 0.002592072578032185,
+          "myCount": 1,
+          "myPct": 0.0022675736961451248
+        },
+        {
+          "fairLendingType": "AAArea",
+          "goalAdj": 103,
+          "goalCount": 122,
+          "goalPct": 0.2764877416567664,
+          "myCount": 19,
+          "myPct": 0.04308390022675737
+        },
+        {
+          "fairLendingType": "HispanicIndividual",
+          "goalAdj": 14,
+          "goalCount": 18,
+          "goalPct": 0.04039313100766821,
+          "myCount": 4,
+          "myPct": 0.009070294784580499
+        },
+        {
+          "fairLendingType": "AAIndividual",
+          "goalAdj": 114,
+          "goalCount": 149,
+          "goalPct": 0.3382654714332001,
+          "myCount": 35,
+          "myPct": 0.07936507936507936
+        }
+      ]
+    }
+  ]
+}

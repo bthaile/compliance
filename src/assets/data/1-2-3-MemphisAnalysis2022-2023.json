@@ -1,0 +1,2072 @@
+{
+    "lenderNames" : [ {
+      "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+      "lenderName" : "REGIONS BANK"
+    }, {
+      "lenderCode" : "549300IJ8KTGYPKLXK63",
+      "lenderName" : "Community Mortgage Corporation"
+    }, {
+      "lenderCode" : "549300CDOC4F7XSRG390",
+      "lenderName" : "Pinnacle Bank"
+    }, {
+      "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+      "lenderName" : "Cadence Bank"
+    }, {
+      "lenderCode" : "549300FGXN1K3HLB1R50",
+      "lenderName" : "ROCKET MORTGAGE"
+    }, {
+      "lenderCode" : "549300KM0M1BH7LBWW77",
+      "lenderName" : "PATRIOT BANK"
+    }, {
+      "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+      "lenderName" : "FIRST HORIZON BANK"
+    }, {
+      "lenderCode" : "01J4SO3XTWZF4PP38209",
+      "lenderName" : "TRUSTMARK NATIONAL BANK"
+    }, {
+      "lenderCode" : "549300HW662MN1WU8550",
+      "lenderName" : "United Wholesale Mortgage"
+    }, {
+      "lenderCode" : "5493003GQDUH26DNNH17",
+      "lenderName" : "Navy Federal Credit Union"
+    }, {
+      "lenderCode" : "5493001EXVWX6Q13MY44",
+      "lenderName" : "Bank of Bartlett"
+    } ],
+    "loanRankings" : [ {
+      "year" : 2022,
+      "peerGroupMin" : 563,
+      "peerGroupMax" : 2252,
+      "loanType" : "ALL",
+      "fairLendingCounts" : [ {
+        "fairLendingType" : "Total",
+        "loanCounts" : [ {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 2151,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 2059,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 1452,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 1126,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 1032,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 952,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 902,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 711,
+          "pct" : 0.0
+        } ]
+      }, {
+        "fairLendingType" : "LMIArea",
+        "loanCounts" : [ {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 801,
+          "pct" : 0.3723849372384937
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 217,
+          "pct" : 0.21027131782945738
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 198,
+          "pct" : 0.20798319327731093
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 353,
+          "pct" : 0.1714424477901894
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 176,
+          "pct" : 0.15630550621669628
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 201,
+          "pct" : 0.1384297520661157
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 88,
+          "pct" : 0.12376933895921238
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 103,
+          "pct" : 0.11419068736141907
+        } ]
+      }, {
+        "fairLendingType" : "MinorityArea",
+        "loanCounts" : [ {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 1614,
+          "pct" : 0.7503486750348675
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 890,
+          "pct" : 0.43224866440019427
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 430,
+          "pct" : 0.4166666666666667
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 336,
+          "pct" : 0.35294117647058826
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 446,
+          "pct" : 0.3071625344352617
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 286,
+          "pct" : 0.2539964476021314
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 227,
+          "pct" : 0.2516629711751663
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 160,
+          "pct" : 0.2250351617440225
+        } ]
+      }, {
+        "fairLendingType" : "HispanicArea",
+        "loanCounts" : [ {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 9,
+          "pct" : 0.006198347107438017
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 5,
+          "pct" : 0.004440497335701598
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 3,
+          "pct" : 0.004219409282700422
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 4,
+          "pct" : 0.004201680672268907
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 5,
+          "pct" : 0.0023245002324500234
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 2,
+          "pct" : 0.0022172949002217295
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 1,
+          "pct" : 9.689922480620155E-4
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 0,
+          "pct" : 0.0
+        } ]
+      }, {
+        "fairLendingType" : "AAArea",
+        "loanCounts" : [ {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 1227,
+          "pct" : 0.5704323570432357
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 253,
+          "pct" : 0.2451550387596899
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 495,
+          "pct" : 0.24040796503156872
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 211,
+          "pct" : 0.22163865546218486
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 94,
+          "pct" : 0.13220815752461323
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 184,
+          "pct" : 0.12672176308539945
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 136,
+          "pct" : 0.12078152753108348
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 96,
+          "pct" : 0.10643015521064302
+        } ]
+      }, {
+        "fairLendingType" : "HispanicIndividual",
+        "loanCounts" : [ {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 206,
+          "pct" : 0.1418732782369146
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 38,
+          "pct" : 0.03682170542635659
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 33,
+          "pct" : 0.03466386554621849
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 20,
+          "pct" : 0.02812939521800281
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 53,
+          "pct" : 0.025740650801359885
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 23,
+          "pct" : 0.025498891352549888
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 26,
+          "pct" : 0.023090586145648313
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 46,
+          "pct" : 0.021385402138540215
+        } ]
+      }, {
+        "fairLendingType" : "AAIndividual",
+        "loanCounts" : [ {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 1488,
+          "pct" : 0.691771269177127
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 352,
+          "pct" : 0.34108527131782945
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 594,
+          "pct" : 0.28848955803788245
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 365,
+          "pct" : 0.2513774104683196
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 189,
+          "pct" : 0.19852941176470587
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 171,
+          "pct" : 0.15186500888099466
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 132,
+          "pct" : 0.14634146341463414
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 100,
+          "pct" : 0.14064697609001406
+        } ]
+      } ]
+    }, {
+      "year" : 2022,
+      "peerGroupMin" : 342,
+      "peerGroupMax" : 1370,
+      "loanType" : "FIRST",
+      "fairLendingCounts" : [ {
+        "fairLendingType" : "Total",
+        "loanCounts" : [ {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 2022,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 1452,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 956,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 722,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 689,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 685,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 673,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 632,
+          "pct" : 0.0
+        } ]
+      }, {
+        "fairLendingType" : "LMIArea",
+        "loanCounts" : [ {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 377,
+          "pct" : 0.39435146443514646
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 179,
+          "pct" : 0.24792243767313019
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 169,
+          "pct" : 0.24528301886792453
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 137,
+          "pct" : 0.2
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 352,
+          "pct" : 0.17408506429277942
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 201,
+          "pct" : 0.1384297520661157
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 85,
+          "pct" : 0.13449367088607594
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 70,
+          "pct" : 0.10401188707280833
+        } ]
+      }, {
+        "fairLendingType" : "MinorityArea",
+        "loanCounts" : [ {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 603,
+          "pct" : 0.6307531380753139
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 314,
+          "pct" : 0.45573294629898403
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 881,
+          "pct" : 0.43570722057368944
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 284,
+          "pct" : 0.39335180055401664
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 228,
+          "pct" : 0.33284671532846716
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 446,
+          "pct" : 0.3071625344352617
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 168,
+          "pct" : 0.26582278481012656
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 128,
+          "pct" : 0.1901931649331352
+        } ]
+      }, {
+        "fairLendingType" : "HispanicArea",
+        "loanCounts" : [ {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 9,
+          "pct" : 0.006198347107438017
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 4,
+          "pct" : 0.00583941605839416
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 4,
+          "pct" : 0.00554016620498615
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 4,
+          "pct" : 0.0041841004184100415
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 2,
+          "pct" : 0.0031645569620253164
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 2,
+          "pct" : 0.0029717682020802376
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 1,
+          "pct" : 0.001451378809869376
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 0,
+          "pct" : 0.0
+        } ]
+      }, {
+        "fairLendingType" : "AAArea",
+        "loanCounts" : [ {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 436,
+          "pct" : 0.4560669456066946
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 188,
+          "pct" : 0.2728592162554427
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 184,
+          "pct" : 0.2548476454293629
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 489,
+          "pct" : 0.24183976261127596
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 117,
+          "pct" : 0.1708029197080292
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 184,
+          "pct" : 0.12672176308539945
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 75,
+          "pct" : 0.11867088607594936
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 63,
+          "pct" : 0.09361069836552749
+        } ]
+      }, {
+        "fairLendingType" : "HispanicIndividual",
+        "loanCounts" : [ {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 206,
+          "pct" : 0.1418732782369146
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 30,
+          "pct" : 0.04354136429608128
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 28,
+          "pct" : 0.038781163434903045
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 20,
+          "pct" : 0.029197080291970802
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 19,
+          "pct" : 0.02823179791976226
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 53,
+          "pct" : 0.026211671612265085
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 16,
+          "pct" : 0.02531645569620253
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 24,
+          "pct" : 0.02510460251046025
+        } ]
+      }, {
+        "fairLendingType" : "AAIndividual",
+        "loanCounts" : [ {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 541,
+          "pct" : 0.5658995815899581
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 253,
+          "pct" : 0.3671988388969521
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 585,
+          "pct" : 0.2893175074183976
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 365,
+          "pct" : 0.2513774104683196
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 152,
+          "pct" : 0.21052631578947367
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 135,
+          "pct" : 0.19708029197080293
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 94,
+          "pct" : 0.14873417721518986
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 72,
+          "pct" : 0.10698365527488855
+        } ]
+      } ]
+    }, {
+      "year" : 2022,
+      "peerGroupMin" : 220,
+      "peerGroupMax" : 882,
+      "loanType" : "SECOND",
+      "fairLendingCounts" : [ {
+        "fairLendingType" : "Total",
+        "loanCounts" : [ {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 1195,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 441,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 343,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 270,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 230,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 38,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 37,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 0,
+          "pct" : 0.0
+        } ]
+      }, {
+        "fairLendingType" : "LMIArea",
+        "loanCounts" : [ {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 18,
+          "pct" : 0.47368421052631576
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 424,
+          "pct" : 0.3548117154811716
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 48,
+          "pct" : 0.13994169096209913
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 39,
+          "pct" : 0.08843537414965986
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 19,
+          "pct" : 0.08260869565217391
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 18,
+          "pct" : 0.06666666666666667
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 1,
+          "pct" : 0.02702702702702703
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 0,
+          "pct" : 0.0
+        } ]
+      }, {
+        "fairLendingType" : "MinorityArea",
+        "loanCounts" : [ {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 1011,
+          "pct" : 0.8460251046025105
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 32,
+          "pct" : 0.8421052631578947
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 116,
+          "pct" : 0.33819241982507287
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 9,
+          "pct" : 0.24324324324324326
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 52,
+          "pct" : 0.22608695652173913
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 59,
+          "pct" : 0.21851851851851853
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 58,
+          "pct" : 0.13151927437641722
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 0,
+          "pct" : 0.0
+        } ]
+      }, {
+        "fairLendingType" : "HispanicArea",
+        "loanCounts" : [ {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 1,
+          "pct" : 0.02631578947368421
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 1,
+          "pct" : 0.0022675736961451248
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 1,
+          "pct" : 8.368200836820083E-4
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 0,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 0,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 0,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 0,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 0,
+          "pct" : 0.0
+        } ]
+      }, {
+        "fairLendingType" : "AAArea",
+        "loanCounts" : [ {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 31,
+          "pct" : 0.8157894736842105
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 791,
+          "pct" : 0.6619246861924686
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 65,
+          "pct" : 0.18950437317784258
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 6,
+          "pct" : 0.16216216216216217
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 27,
+          "pct" : 0.11739130434782609
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 21,
+          "pct" : 0.07777777777777778
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 19,
+          "pct" : 0.04308390022675737
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 0,
+          "pct" : 0.0
+        } ]
+      }, {
+        "fairLendingType" : "HispanicIndividual",
+        "loanCounts" : [ {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 1,
+          "pct" : 0.02631578947368421
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 7,
+          "pct" : 0.025925925925925925
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 8,
+          "pct" : 0.023323615160349854
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 5,
+          "pct" : 0.021739130434782608
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 22,
+          "pct" : 0.018410041841004185
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 6,
+          "pct" : 0.013605442176870748
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 0,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 0,
+          "pct" : 0.0
+        } ]
+      }, {
+        "fairLendingType" : "AAIndividual",
+        "loanCounts" : [ {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 947,
+          "pct" : 0.792468619246862
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 28,
+          "pct" : 0.7368421052631579
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 99,
+          "pct" : 0.2886297376093295
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 9,
+          "pct" : 0.24324324324324326
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 37,
+          "pct" : 0.1608695652173913
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 38,
+          "pct" : 0.14074074074074075
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 36,
+          "pct" : 0.08163265306122448
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 0,
+          "pct" : 0.0
+        } ]
+      } ]
+    }, {
+      "year" : 2023,
+      "peerGroupMin" : 392,
+      "peerGroupMax" : 1568,
+      "loanType" : "ALL",
+      "fairLendingCounts" : [ {
+        "fairLendingType" : "Total",
+        "loanCounts" : [ {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 1291,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 1034,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 1006,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 873,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 836,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 784,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 759,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 563,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "5493001EXVWX6Q13MY44",
+          "count" : 501,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300HW662MN1WU8550",
+          "count" : 444,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "5493003GQDUH26DNNH17",
+          "count" : 420,
+          "pct" : 0.0
+        } ]
+      }, {
+        "fairLendingType" : "LMIArea",
+        "loanCounts" : [ {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 356,
+          "pct" : 0.344294003868472
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 294,
+          "pct" : 0.33676975945017185
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 133,
+          "pct" : 0.23623445825932504
+        }, {
+          "lenderCode" : "549300HW662MN1WU8550",
+          "count" : 89,
+          "pct" : 0.20045045045045046
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 255,
+          "pct" : 0.19752130131680867
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 147,
+          "pct" : 0.17583732057416268
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 160,
+          "pct" : 0.15904572564612326
+        }, {
+          "lenderCode" : "5493003GQDUH26DNNH17",
+          "count" : 60,
+          "pct" : 0.14285714285714285
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 103,
+          "pct" : 0.13137755102040816
+        }, {
+          "lenderCode" : "5493001EXVWX6Q13MY44",
+          "count" : 62,
+          "pct" : 0.12375249500998003
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 86,
+          "pct" : 0.11330698287220026
+        } ]
+      }, {
+        "fairLendingType" : "MinorityArea",
+        "loanCounts" : [ {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 663,
+          "pct" : 0.6411992263056093
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 417,
+          "pct" : 0.47766323024054985
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 538,
+          "pct" : 0.41673121611154146
+        }, {
+          "lenderCode" : "549300HW662MN1WU8550",
+          "count" : 183,
+          "pct" : 0.41216216216216217
+        }, {
+          "lenderCode" : "5493003GQDUH26DNNH17",
+          "count" : 170,
+          "pct" : 0.40476190476190477
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 324,
+          "pct" : 0.3875598086124402
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 195,
+          "pct" : 0.3463587921847247
+        }, {
+          "lenderCode" : "5493001EXVWX6Q13MY44",
+          "count" : 172,
+          "pct" : 0.34331337325349304
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 331,
+          "pct" : 0.3290258449304175
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 214,
+          "pct" : 0.2729591836734694
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 171,
+          "pct" : 0.22529644268774704
+        } ]
+      }, {
+        "fairLendingType" : "HispanicArea",
+        "loanCounts" : [ {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 5,
+          "pct" : 0.005980861244019139
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 3,
+          "pct" : 0.0053285968028419185
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 3,
+          "pct" : 0.002982107355864811
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 2,
+          "pct" : 0.002290950744558992
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 2,
+          "pct" : 0.0019342359767891683
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 2,
+          "pct" : 0.001549186676994578
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 1,
+          "pct" : 0.0013175230566534915
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 1,
+          "pct" : 0.0012755102040816326
+        }, {
+          "lenderCode" : "549300HW662MN1WU8550",
+          "count" : 0,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "5493003GQDUH26DNNH17",
+          "count" : 0,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "5493001EXVWX6Q13MY44",
+          "count" : 0,
+          "pct" : 0.0
+        } ]
+      }, {
+        "fairLendingType" : "AAArea",
+        "loanCounts" : [ {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 400,
+          "pct" : 0.38684719535783363
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 308,
+          "pct" : 0.3528064146620848
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 306,
+          "pct" : 0.2370255615801704
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 129,
+          "pct" : 0.2291296625222025
+        }, {
+          "lenderCode" : "5493003GQDUH26DNNH17",
+          "count" : 95,
+          "pct" : 0.2261904761904762
+        }, {
+          "lenderCode" : "549300HW662MN1WU8550",
+          "count" : 100,
+          "pct" : 0.22522522522522523
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 184,
+          "pct" : 0.22009569377990432
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 147,
+          "pct" : 0.14612326043737575
+        }, {
+          "lenderCode" : "5493001EXVWX6Q13MY44",
+          "count" : 70,
+          "pct" : 0.13972055888223553
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 104,
+          "pct" : 0.1326530612244898
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 78,
+          "pct" : 0.10276679841897234
+        } ]
+      }, {
+        "fairLendingType" : "HispanicIndividual",
+        "loanCounts" : [ {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 201,
+          "pct" : 0.19980119284294234
+        }, {
+          "lenderCode" : "5493001EXVWX6Q13MY44",
+          "count" : 40,
+          "pct" : 0.07984031936127745
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 49,
+          "pct" : 0.05861244019138756
+        }, {
+          "lenderCode" : "5493003GQDUH26DNNH17",
+          "count" : 23,
+          "pct" : 0.05476190476190476
+        }, {
+          "lenderCode" : "549300HW662MN1WU8550",
+          "count" : 22,
+          "pct" : 0.04954954954954955
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 34,
+          "pct" : 0.04479578392621871
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 38,
+          "pct" : 0.043528064146620846
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 20,
+          "pct" : 0.035523978685612786
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 31,
+          "pct" : 0.029980657640232108
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 36,
+          "pct" : 0.027885360185902403
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 16,
+          "pct" : 0.02040816326530612
+        } ]
+      }, {
+        "fairLendingType" : "AAIndividual",
+        "loanCounts" : [ {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 594,
+          "pct" : 0.574468085106383
+        }, {
+          "lenderCode" : "5493003GQDUH26DNNH17",
+          "count" : 197,
+          "pct" : 0.46904761904761905
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 266,
+          "pct" : 0.3181818181818182
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 355,
+          "pct" : 0.2749806351665376
+        }, {
+          "lenderCode" : "549300HW662MN1WU8550",
+          "count" : 111,
+          "pct" : 0.25
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 227,
+          "pct" : 0.22564612326043737
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 123,
+          "pct" : 0.21847246891651864
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 162,
+          "pct" : 0.18556701030927836
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 145,
+          "pct" : 0.18494897959183673
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 101,
+          "pct" : 0.13306982872200263
+        }, {
+          "lenderCode" : "5493001EXVWX6Q13MY44",
+          "count" : 52,
+          "pct" : 0.10379241516966067
+        } ]
+      } ]
+    }, {
+      "year" : 2023,
+      "peerGroupMin" : 211,
+      "peerGroupMax" : 844,
+      "loanType" : "FIRST",
+      "fairLendingCounts" : [ {
+        "fairLendingType" : "Total",
+        "loanCounts" : [ {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 1134,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 1006,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 679,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 673,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 512,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 509,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 474,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300HW662MN1WU8550",
+          "count" : 439,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 422,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "5493001EXVWX6Q13MY44",
+          "count" : 265,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "5493003GQDUH26DNNH17",
+          "count" : 201,
+          "pct" : 0.0
+        } ]
+      }, {
+        "fairLendingType" : "LMIArea",
+        "loanCounts" : [ {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 266,
+          "pct" : 0.3917525773195876
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 231,
+          "pct" : 0.34323922734026746
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 251,
+          "pct" : 0.22134038800705466
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 104,
+          "pct" : 0.21940928270042195
+        }, {
+          "lenderCode" : "549300HW662MN1WU8550",
+          "count" : 89,
+          "pct" : 0.20273348519362186
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 100,
+          "pct" : 0.19646365422396855
+        }, {
+          "lenderCode" : "5493003GQDUH26DNNH17",
+          "count" : 38,
+          "pct" : 0.1890547263681592
+        }, {
+          "lenderCode" : "5493001EXVWX6Q13MY44",
+          "count" : 50,
+          "pct" : 0.18867924528301888
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 69,
+          "pct" : 0.16350710900473933
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 160,
+          "pct" : 0.15904572564612326
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 69,
+          "pct" : 0.134765625
+        } ]
+      }, {
+        "fairLendingType" : "MinorityArea",
+        "loanCounts" : [ {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 434,
+          "pct" : 0.6448736998514116
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 355,
+          "pct" : 0.5228276877761414
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 217,
+          "pct" : 0.4578059071729958
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 504,
+          "pct" : 0.4444444444444444
+        }, {
+          "lenderCode" : "5493001EXVWX6Q13MY44",
+          "count" : 117,
+          "pct" : 0.44150943396226416
+        }, {
+          "lenderCode" : "549300HW662MN1WU8550",
+          "count" : 182,
+          "pct" : 0.4145785876993166
+        }, {
+          "lenderCode" : "5493003GQDUH26DNNH17",
+          "count" : 79,
+          "pct" : 0.39303482587064675
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 331,
+          "pct" : 0.3290258449304175
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 130,
+          "pct" : 0.3080568720379147
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 150,
+          "pct" : 0.29469548133595286
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 123,
+          "pct" : 0.240234375
+        } ]
+      }, {
+        "fairLendingType" : "HispanicArea",
+        "loanCounts" : [ {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 3,
+          "pct" : 0.005893909626719057
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 2,
+          "pct" : 0.004219409282700422
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 3,
+          "pct" : 0.002982107355864811
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 2,
+          "pct" : 0.0029717682020802376
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 1,
+          "pct" : 0.002369668246445498
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 1,
+          "pct" : 0.001953125
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 2,
+          "pct" : 0.001763668430335097
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 1,
+          "pct" : 0.0014727540500736377
+        }, {
+          "lenderCode" : "549300HW662MN1WU8550",
+          "count" : 0,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "5493003GQDUH26DNNH17",
+          "count" : 0,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "5493001EXVWX6Q13MY44",
+          "count" : 0,
+          "pct" : 0.0
+        } ]
+      }, {
+        "fairLendingType" : "AAArea",
+        "loanCounts" : [ {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 277,
+          "pct" : 0.40795287187039764
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 249,
+          "pct" : 0.3699851411589896
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 134,
+          "pct" : 0.28270042194092826
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 298,
+          "pct" : 0.26278659611992944
+        }, {
+          "lenderCode" : "5493003GQDUH26DNNH17",
+          "count" : 51,
+          "pct" : 0.2537313432835821
+        }, {
+          "lenderCode" : "549300HW662MN1WU8550",
+          "count" : 99,
+          "pct" : 0.2255125284738041
+        }, {
+          "lenderCode" : "5493001EXVWX6Q13MY44",
+          "count" : 57,
+          "pct" : 0.21509433962264152
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 92,
+          "pct" : 0.1807465618860511
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 68,
+          "pct" : 0.16113744075829384
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 147,
+          "pct" : 0.14612326043737575
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 62,
+          "pct" : 0.12109375
+        } ]
+      }, {
+        "fairLendingType" : "HispanicIndividual",
+        "loanCounts" : [ {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 201,
+          "pct" : 0.19980119284294234
+        }, {
+          "lenderCode" : "5493001EXVWX6Q13MY44",
+          "count" : 25,
+          "pct" : 0.09433962264150944
+        }, {
+          "lenderCode" : "5493003GQDUH26DNNH17",
+          "count" : 14,
+          "pct" : 0.06965174129353234
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 30,
+          "pct" : 0.06329113924050633
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 30,
+          "pct" : 0.05859375
+        }, {
+          "lenderCode" : "549300HW662MN1WU8550",
+          "count" : 22,
+          "pct" : 0.05011389521640091
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 33,
+          "pct" : 0.048600883652430045
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 20,
+          "pct" : 0.03929273084479371
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 23,
+          "pct" : 0.03417533432392273
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 31,
+          "pct" : 0.027336860670194002
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 10,
+          "pct" : 0.023696682464454975
+        } ]
+      }, {
+        "fairLendingType" : "AAIndividual",
+        "loanCounts" : [ {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 370,
+          "pct" : 0.549777117384844
+        }, {
+          "lenderCode" : "5493003GQDUH26DNNH17",
+          "count" : 92,
+          "pct" : 0.4577114427860697
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 166,
+          "pct" : 0.350210970464135
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 326,
+          "pct" : 0.2874779541446208
+        }, {
+          "lenderCode" : "549300HW662MN1WU8550",
+          "count" : 111,
+          "pct" : 0.2528473804100228
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 227,
+          "pct" : 0.22564612326043737
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 89,
+          "pct" : 0.2109004739336493
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 120,
+          "pct" : 0.17673048600883653
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 81,
+          "pct" : 0.15913555992141454
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 73,
+          "pct" : 0.142578125
+        }, {
+          "lenderCode" : "5493001EXVWX6Q13MY44",
+          "count" : 25,
+          "pct" : 0.09433962264150944
+        } ]
+      } ]
+    }, {
+      "year" : 2023,
+      "peerGroupMin" : 181,
+      "peerGroupMax" : 724,
+      "loanType" : "SECOND",
+      "fairLendingCounts" : [ {
+        "fairLendingType" : "Total",
+        "loanCounts" : [ {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 362,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 362,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 361,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 247,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "5493001EXVWX6Q13MY44",
+          "count" : 236,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "5493003GQDUH26DNNH17",
+          "count" : 219,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 194,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 157,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 54,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300HW662MN1WU8550",
+          "count" : 5,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 0,
+          "pct" : 0.0
+        } ]
+      }, {
+        "fairLendingType" : "LMIArea",
+        "loanCounts" : [ {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 33,
+          "pct" : 0.6111111111111112
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 125,
+          "pct" : 0.3462603878116344
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 28,
+          "pct" : 0.14432989690721648
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 43,
+          "pct" : 0.11878453038674033
+        }, {
+          "lenderCode" : "5493003GQDUH26DNNH17",
+          "count" : 22,
+          "pct" : 0.1004566210045662
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 34,
+          "pct" : 0.09392265193370165
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 17,
+          "pct" : 0.06882591093117409
+        }, {
+          "lenderCode" : "5493001EXVWX6Q13MY44",
+          "count" : 12,
+          "pct" : 0.05084745762711865
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 4,
+          "pct" : 0.025477707006369428
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 0,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300HW662MN1WU8550",
+          "count" : 0,
+          "pct" : 0.0
+        } ]
+      }, {
+        "fairLendingType" : "MinorityArea",
+        "loanCounts" : [ {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 45,
+          "pct" : 0.8333333333333334
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 229,
+          "pct" : 0.6343490304709142
+        }, {
+          "lenderCode" : "5493003GQDUH26DNNH17",
+          "count" : 91,
+          "pct" : 0.4155251141552511
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 62,
+          "pct" : 0.31958762886597936
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 107,
+          "pct" : 0.2955801104972376
+        }, {
+          "lenderCode" : "5493001EXVWX6Q13MY44",
+          "count" : 55,
+          "pct" : 0.2330508474576271
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 84,
+          "pct" : 0.23204419889502761
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 34,
+          "pct" : 0.21656050955414013
+        }, {
+          "lenderCode" : "549300HW662MN1WU8550",
+          "count" : 1,
+          "pct" : 0.2
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 48,
+          "pct" : 0.19433198380566802
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 0,
+          "pct" : 0.0
+        } ]
+      }, {
+        "fairLendingType" : "HispanicArea",
+        "loanCounts" : [ {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 3,
+          "pct" : 0.008287292817679558
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 1,
+          "pct" : 0.005154639175257732
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 0,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300HW662MN1WU8550",
+          "count" : 0,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 0,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 0,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 0,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 0,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 0,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "5493003GQDUH26DNNH17",
+          "count" : 0,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "5493001EXVWX6Q13MY44",
+          "count" : 0,
+          "pct" : 0.0
+        } ]
+      }, {
+        "fairLendingType" : "AAArea",
+        "loanCounts" : [ {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 37,
+          "pct" : 0.6851851851851852
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 151,
+          "pct" : 0.4182825484764543
+        }, {
+          "lenderCode" : "5493003GQDUH26DNNH17",
+          "count" : 44,
+          "pct" : 0.2009132420091324
+        }, {
+          "lenderCode" : "549300HW662MN1WU8550",
+          "count" : 1,
+          "pct" : 0.2
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 31,
+          "pct" : 0.15979381443298968
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 50,
+          "pct" : 0.13812154696132597
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 36,
+          "pct" : 0.09944751381215469
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 16,
+          "pct" : 0.06477732793522267
+        }, {
+          "lenderCode" : "5493001EXVWX6Q13MY44",
+          "count" : 13,
+          "pct" : 0.05508474576271186
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 8,
+          "pct" : 0.050955414012738856
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 0,
+          "pct" : 0.0
+        } ]
+      }, {
+        "fairLendingType" : "HispanicIndividual",
+        "loanCounts" : [ {
+          "lenderCode" : "5493001EXVWX6Q13MY44",
+          "count" : 15,
+          "pct" : 0.0635593220338983
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 19,
+          "pct" : 0.052486187845303865
+        }, {
+          "lenderCode" : "5493003GQDUH26DNNH17",
+          "count" : 9,
+          "pct" : 0.0410958904109589
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 5,
+          "pct" : 0.03184713375796178
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 5,
+          "pct" : 0.02577319587628866
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 8,
+          "pct" : 0.0221606648199446
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 6,
+          "pct" : 0.016574585635359115
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 4,
+          "pct" : 0.016194331983805668
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 0,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300HW662MN1WU8550",
+          "count" : 0,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 0,
+          "pct" : 0.0
+        } ]
+      }, {
+        "fairLendingType" : "AAIndividual",
+        "loanCounts" : [ {
+          "lenderCode" : "549300KM0M1BH7LBWW77",
+          "count" : 42,
+          "pct" : 0.7777777777777778
+        }, {
+          "lenderCode" : "01J4SO3XTWZF4PP38209",
+          "count" : 224,
+          "pct" : 0.6204986149584487
+        }, {
+          "lenderCode" : "5493003GQDUH26DNNH17",
+          "count" : 105,
+          "pct" : 0.4794520547945205
+        }, {
+          "lenderCode" : "EQTWLK1G7ODGC2MGLV11",
+          "count" : 100,
+          "pct" : 0.27624309392265195
+        }, {
+          "lenderCode" : "549300CDOC4F7XSRG390",
+          "count" : 42,
+          "pct" : 0.21649484536082475
+        }, {
+          "lenderCode" : "549300FGXN1K3HLB1R50",
+          "count" : 29,
+          "pct" : 0.18471337579617833
+        }, {
+          "lenderCode" : "Q7C315HKI8VX0SSKBS64",
+          "count" : 56,
+          "pct" : 0.15469613259668508
+        }, {
+          "lenderCode" : "5493001EXVWX6Q13MY44",
+          "count" : 27,
+          "pct" : 0.11440677966101695
+        }, {
+          "lenderCode" : "COOWI3L2W9TPYR3WJX37",
+          "count" : 28,
+          "pct" : 0.11336032388663968
+        }, {
+          "lenderCode" : "549300IJ8KTGYPKLXK63",
+          "count" : 0,
+          "pct" : 0.0
+        }, {
+          "lenderCode" : "549300HW662MN1WU8550",
+          "count" : 0,
+          "pct" : 0.0
+        } ]
+      } ]
+    } ],
+    "loanGoals" : [ {
+      "year" : 2022,
+      "loanType" : "ALL",
+      "goalStatus" : [ {
+        "fairLendingType" : "LMIArea",
+        "goalAdj" : -62,
+        "goalCount" : 238,
+        "goalPct" : 0.21179393023004645,
+        "myCount" : 176,
+        "myPct" : 0.15630550621669628
+      }, {
+        "fairLendingType" : "MinorityArea",
+        "goalAdj" : -213,
+        "goalCount" : 499,
+        "goalPct" : 0.44313640781941893,
+        "myCount" : 286,
+        "myPct" : 0.2539964476021314
+      }, {
+        "fairLendingType" : "HispanicArea",
+        "goalAdj" : 2,
+        "goalCount" : 3,
+        "goalPct" : 0.002592072578032185,
+        "myCount" : 5,
+        "myPct" : 0.004440497335701598
+      }, {
+        "fairLendingType" : "AAArea",
+        "goalAdj" : -175,
+        "goalCount" : 311,
+        "goalPct" : 0.2764877416567664,
+        "myCount" : 136,
+        "myPct" : 0.12078152753108348
+      }, {
+        "fairLendingType" : "HispanicIndividual",
+        "goalAdj" : -25,
+        "goalCount" : 51,
+        "goalPct" : 0.04525326709147856,
+        "myCount" : 26,
+        "myPct" : 0.023090586145648313
+      }, {
+        "fairLendingType" : "AAIndividual",
+        "goalAdj" : -221,
+        "goalCount" : 392,
+        "goalPct" : 0.34776973755265145,
+        "myCount" : 171,
+        "myPct" : 0.15186500888099466
+      } ]
+    }, {
+      "year" : 2023,
+      "loanType" : "ALL",
+      "goalStatus" : [ {
+        "fairLendingType" : "LMIArea",
+        "goalAdj" : -64,
+        "goalCount" : 167,
+        "goalPct" : 0.21250161770415427,
+        "myCount" : 103,
+        "myPct" : 0.13137755102040816
+      }, {
+        "fairLendingType" : "MinorityArea",
+        "goalAdj" : -107,
+        "goalCount" : 321,
+        "goalPct" : 0.40947327552737156,
+        "myCount" : 214,
+        "myPct" : 0.2729591836734694
+      }, {
+        "fairLendingType" : "HispanicArea",
+        "goalAdj" : -1,
+        "goalCount" : 2,
+        "goalPct" : 0.002329493982140546,
+        "myCount" : 1,
+        "myPct" : 0.0012755102040816326
+      }, {
+        "fairLendingType" : "AAArea",
+        "goalAdj" : -80,
+        "goalCount" : 184,
+        "goalPct" : 0.235149475863854,
+        "myCount" : 104,
+        "myPct" : 0.1326530612244898
+      }, {
+        "fairLendingType" : "HispanicIndividual",
+        "goalAdj" : -34,
+        "goalCount" : 50,
+        "goalPct" : 0.06393166817652388,
+        "myCount" : 16,
+        "myPct" : 0.02040816326530612
+      }, {
+        "fairLendingType" : "AAIndividual",
+        "goalAdj" : -77,
+        "goalCount" : 222,
+        "goalPct" : 0.2831629351624175,
+        "myCount" : 145,
+        "myPct" : 0.18494897959183673
+      } ]
+    }, {
+      "year" : 2022,
+      "loanType" : "FIRST",
+      "goalStatus" : [ {
+        "fairLendingType" : "LMIArea",
+        "goalAdj" : -8,
+        "goalCount" : 145,
+        "goalPct" : 0.21179393023004645,
+        "myCount" : 137,
+        "myPct" : 0.2
+      }, {
+        "fairLendingType" : "MinorityArea",
+        "goalAdj" : -76,
+        "goalCount" : 304,
+        "goalPct" : 0.44313640781941893,
+        "myCount" : 228,
+        "myPct" : 0.33284671532846716
+      }, {
+        "fairLendingType" : "HispanicArea",
+        "goalAdj" : 2,
+        "goalCount" : 2,
+        "goalPct" : 0.002592072578032185,
+        "myCount" : 4,
+        "myPct" : 0.00583941605839416
+      }, {
+        "fairLendingType" : "AAArea",
+        "goalAdj" : -72,
+        "goalCount" : 189,
+        "goalPct" : 0.2764877416567664,
+        "myCount" : 117,
+        "myPct" : 0.1708029197080292
+      }, {
+        "fairLendingType" : "HispanicIndividual",
+        "goalAdj" : -11,
+        "goalCount" : 31,
+        "goalPct" : 0.04525326709147856,
+        "myCount" : 20,
+        "myPct" : 0.029197080291970802
+      }, {
+        "fairLendingType" : "AAIndividual",
+        "goalAdj" : -103,
+        "goalCount" : 238,
+        "goalPct" : 0.34776973755265145,
+        "myCount" : 135,
+        "myPct" : 0.19708029197080293
+      } ]
+    }, {
+      "year" : 2023,
+      "loanType" : "FIRST",
+      "goalStatus" : [ {
+        "fairLendingType" : "LMIArea",
+        "goalAdj" : -21,
+        "goalCount" : 90,
+        "goalPct" : 0.21250161770415427,
+        "myCount" : 69,
+        "myPct" : 0.16350710900473933
+      }, {
+        "fairLendingType" : "MinorityArea",
+        "goalAdj" : -43,
+        "goalCount" : 173,
+        "goalPct" : 0.40947327552737156,
+        "myCount" : 130,
+        "myPct" : 0.3080568720379147
+      }, {
+        "fairLendingType" : "HispanicArea",
+        "goalAdj" : 0,
+        "goalCount" : 1,
+        "goalPct" : 0.002329493982140546,
+        "myCount" : 1,
+        "myPct" : 0.002369668246445498
+      }, {
+        "fairLendingType" : "AAArea",
+        "goalAdj" : -31,
+        "goalCount" : 99,
+        "goalPct" : 0.235149475863854,
+        "myCount" : 68,
+        "myPct" : 0.16113744075829384
+      }, {
+        "fairLendingType" : "HispanicIndividual",
+        "goalAdj" : -17,
+        "goalCount" : 27,
+        "goalPct" : 0.06393166817652388,
+        "myCount" : 10,
+        "myPct" : 0.023696682464454975
+      }, {
+        "fairLendingType" : "AAIndividual",
+        "goalAdj" : -30,
+        "goalCount" : 119,
+        "goalPct" : 0.2831629351624175,
+        "myCount" : 89,
+        "myPct" : 0.2109004739336493
+      } ]
+    }, {
+      "year" : 2022,
+      "loanType" : "SECOND",
+      "goalStatus" : [ {
+        "fairLendingType" : "LMIArea",
+        "goalAdj" : -54,
+        "goalCount" : 93,
+        "goalPct" : 0.21179393023004645,
+        "myCount" : 39,
+        "myPct" : 0.08843537414965986
+      }, {
+        "fairLendingType" : "MinorityArea",
+        "goalAdj" : -137,
+        "goalCount" : 195,
+        "goalPct" : 0.44313640781941893,
+        "myCount" : 58,
+        "myPct" : 0.13151927437641722
+      }, {
+        "fairLendingType" : "HispanicArea",
+        "goalAdj" : 0,
+        "goalCount" : 1,
+        "goalPct" : 0.002592072578032185,
+        "myCount" : 1,
+        "myPct" : 0.0022675736961451248
+      }, {
+        "fairLendingType" : "AAArea",
+        "goalAdj" : -103,
+        "goalCount" : 122,
+        "goalPct" : 0.2764877416567664,
+        "myCount" : 19,
+        "myPct" : 0.04308390022675737
+      }, {
+        "fairLendingType" : "HispanicIndividual",
+        "goalAdj" : -14,
+        "goalCount" : 20,
+        "goalPct" : 0.04525326709147856,
+        "myCount" : 6,
+        "myPct" : 0.013605442176870748
+      }, {
+        "fairLendingType" : "AAIndividual",
+        "goalAdj" : -117,
+        "goalCount" : 153,
+        "goalPct" : 0.34776973755265145,
+        "myCount" : 36,
+        "myPct" : 0.08163265306122448
+      } ]
+    }, {
+      "year" : 2023,
+      "loanType" : "SECOND",
+      "goalStatus" : [ {
+        "fairLendingType" : "LMIArea",
+        "goalAdj" : -43,
+        "goalCount" : 77,
+        "goalPct" : 0.21250161770415427,
+        "myCount" : 34,
+        "myPct" : 0.09392265193370165
+      }, {
+        "fairLendingType" : "MinorityArea",
+        "goalAdj" : -64,
+        "goalCount" : 148,
+        "goalPct" : 0.40947327552737156,
+        "myCount" : 84,
+        "myPct" : 0.23204419889502761
+      }, {
+        "fairLendingType" : "HispanicArea",
+        "goalAdj" : -1,
+        "goalCount" : 1,
+        "goalPct" : 0.002329493982140546,
+        "myCount" : 0,
+        "myPct" : 0.0
+      }, {
+        "fairLendingType" : "AAArea",
+        "goalAdj" : -49,
+        "goalCount" : 85,
+        "goalPct" : 0.235149475863854,
+        "myCount" : 36,
+        "myPct" : 0.09944751381215469
+      }, {
+        "fairLendingType" : "HispanicIndividual",
+        "goalAdj" : -17,
+        "goalCount" : 23,
+        "goalPct" : 0.06393166817652388,
+        "myCount" : 6,
+        "myPct" : 0.016574585635359115
+      }, {
+        "fairLendingType" : "AAIndividual",
+        "goalAdj" : -47,
+        "goalCount" : 103,
+        "goalPct" : 0.2831629351624175,
+        "myCount" : 56,
+        "myPct" : 0.15469613259668508
+      } ]
+    } ]
+  }

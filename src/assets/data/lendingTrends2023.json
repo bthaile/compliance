@@ -1,0 +1,1141 @@
+{
+    "lenderNames" : [ {
+      "lenderCode" : "REGIONS BANK",
+      "lenderName" : "REGIONS BANK"
+    }, {
+      "lenderCode" : "CADENCE BANK NA",
+      "lenderName" : "CADENCE BANK NA"
+    }, {
+      "lenderCode" : "TRUSTMARK NATIONAL BANK",
+      "lenderName" : "TRUSTMARK NATIONAL BANK"
+    }, {
+      "lenderCode" : "ROCKET MORTGAGE LLC",
+      "lenderName" : "ROCKET MORTGAGE LLC"
+    }, {
+      "lenderCode" : "BANK OF BARTLETT",
+      "lenderName" : "BANK OF BARTLETT"
+    }, {
+      "lenderCode" : "COGENT BANK",
+      "lenderName" : "COGENT BANK"
+    }, {
+      "lenderCode" : "PATRIOT BANK",
+      "lenderName" : "PATRIOT BANK"
+    }, {
+      "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+      "lenderName" : "PENNYMAC LOAN SERVICES LLC"
+    }, {
+      "lenderCode" : "COMMUNITY MORTGAGE CORP",
+      "lenderName" : "COMMUNITY MORTGAGE CORP"
+    }, {
+      "lenderCode" : "FIRST HORIZON BANK",
+      "lenderName" : "FIRST HORIZON BANK"
+    }, {
+      "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+      "lenderName" : "THE BANK OF FAYETTE COUNTY"
+    }, {
+      "lenderCode" : "NAVY FCU",
+      "lenderName" : "NAVY FCU"
+    } ],
+    "loanTrends" : [ {
+      "loanType" : "ALL",
+      "fairLendingTrends" : [ {
+        "fairLendingType" : "Total",
+        "labels" : [ "Q1 - 2023", "Q2 - 2023", "Q3 - 2023", "Q4 - 2023" ],
+        "lenderTrends" : [ {
+          "lenderCode" : "REGIONS BANK",
+          "counts" : [ 170, 241, 195, 182 ],
+          "percents" : [ 0.21573604060913706, 0.30583756345177665, 0.24746192893401014, 0.23096446700507614 ]
+        }, {
+          "lenderCode" : "CADENCE BANK NA",
+          "counts" : [ 167, 204, 213, 143 ],
+          "percents" : [ 0.2297111416781293, 0.28060522696011003, 0.29298486932599727, 0.19669876203576342 ]
+        }, {
+          "lenderCode" : "TRUSTMARK NATIONAL BANK",
+          "counts" : [ 672, 270, 200, 84 ],
+          "percents" : [ 0.5481239804241436, 0.22022838499184338, 0.1631321370309951, 0.06851549755301795 ]
+        }, {
+          "lenderCode" : "ROCKET MORTGAGE LLC",
+          "counts" : [ 269, 330, 360, 257 ],
+          "percents" : [ 0.22121710526315788, 0.2713815789473684, 0.29605263157894735, 0.21134868421052633 ]
+        }, {
+          "lenderCode" : "BANK OF BARTLETT",
+          "counts" : [ 100, 115, 122, 91 ],
+          "percents" : [ 0.2336448598130841, 0.26869158878504673, 0.2850467289719626, 0.21261682242990654 ]
+        }, {
+          "lenderCode" : "COGENT BANK",
+          "counts" : [ 171, 249, 207, 158 ],
+          "percents" : [ 0.2178343949044586, 0.31719745222929935, 0.26369426751592356, 0.20127388535031848 ]
+        }, {
+          "lenderCode" : "PATRIOT BANK",
+          "counts" : [ 137, 179, 203, 126 ],
+          "percents" : [ 0.2124031007751938, 0.2775193798449612, 0.3147286821705426, 0.19534883720930232 ]
+        }, {
+          "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+          "counts" : [ 91, 115, 111, 87 ],
+          "percents" : [ 0.22524752475247525, 0.28465346534653463, 0.2747524752475248, 0.21534653465346534 ]
+        }, {
+          "lenderCode" : "COMMUNITY MORTGAGE CORP",
+          "counts" : [ 178, 268, 245, 155 ],
+          "percents" : [ 0.21040189125295508, 0.31678486997635935, 0.2895981087470449, 0.18321513002364065 ]
+        }, {
+          "lenderCode" : "FIRST HORIZON BANK",
+          "counts" : [ 165, 204, 190, 99 ],
+          "percents" : [ 0.2507598784194529, 0.3100303951367781, 0.2887537993920973, 0.15045592705167174 ]
+        }, {
+          "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+          "counts" : [ 93, 94, 98, 96 ],
+          "percents" : [ 0.2440944881889764, 0.24671916010498687, 0.2572178477690289, 0.25196850393700787 ]
+        }, {
+          "lenderCode" : "NAVY FCU",
+          "counts" : [ 79, 109, 97, 87 ],
+          "percents" : [ 0.21236559139784947, 0.29301075268817206, 0.260752688172043, 0.23387096774193547 ]
+        } ]
+      }, {
+        "fairLendingType" : "LMIArea",
+        "labels" : [ "Q1 - 2023", "Q2 - 2023", "Q3 - 2023", "Q4 - 2023" ],
+        "lenderTrends" : [ {
+          "lenderCode" : "REGIONS BANK",
+          "counts" : [ 35, 36, 37, 36 ],
+          "percents" : [ 0.044416243654822336, 0.04568527918781726, 0.046954314720812185, 0.04568527918781726 ]
+        }, {
+          "lenderCode" : "CADENCE BANK NA",
+          "counts" : [ 28, 33, 25, 28 ],
+          "percents" : [ 0.03851444291609354, 0.0453920220082531, 0.0343878954607978, 0.03851444291609354 ]
+        }, {
+          "lenderCode" : "TRUSTMARK NATIONAL BANK",
+          "counts" : [ 277, 96, 66, 22 ],
+          "percents" : [ 0.22593800978792822, 0.07830342577487764, 0.053833605220228384, 0.01794453507340946 ]
+        }, {
+          "lenderCode" : "ROCKET MORTGAGE LLC",
+          "counts" : [ 50, 80, 67, 54 ],
+          "percents" : [ 0.04111842105263158, 0.06578947368421052, 0.055098684210526314, 0.044407894736842105 ]
+        }, {
+          "lenderCode" : "BANK OF BARTLETT",
+          "counts" : [ 14, 11, 32, 8 ],
+          "percents" : [ 0.03271028037383177, 0.02570093457943925, 0.07476635514018691, 0.018691588785046728 ]
+        }, {
+          "lenderCode" : "COGENT BANK",
+          "counts" : [ 66, 75, 63, 62 ],
+          "percents" : [ 0.0840764331210191, 0.09554140127388536, 0.08025477707006369, 0.07898089171974522 ]
+        }, {
+          "lenderCode" : "PATRIOT BANK",
+          "counts" : [ 23, 41, 48, 27 ],
+          "percents" : [ 0.03565891472868217, 0.06356589147286822, 0.07441860465116279, 0.04186046511627907 ]
+        }, {
+          "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+          "counts" : [ 15, 23, 19, 18 ],
+          "percents" : [ 0.03712871287128713, 0.05693069306930693, 0.04702970297029703, 0.04455445544554455 ]
+        }, {
+          "lenderCode" : "COMMUNITY MORTGAGE CORP",
+          "counts" : [ 32, 38, 35, 37 ],
+          "percents" : [ 0.037825059101654845, 0.04491725768321513, 0.041371158392434985, 0.04373522458628842 ]
+        }, {
+          "lenderCode" : "FIRST HORIZON BANK",
+          "counts" : [ 25, 30, 20, 14 ],
+          "percents" : [ 0.037993920972644375, 0.04559270516717325, 0.030395136778115502, 0.02127659574468085 ]
+        }, {
+          "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+          "counts" : [ 11, 10, 14, 23 ],
+          "percents" : [ 0.028871391076115485, 0.026246719160104987, 0.03674540682414698, 0.06036745406824147 ]
+        }, {
+          "lenderCode" : "NAVY FCU",
+          "counts" : [ 11, 15, 16, 16 ],
+          "percents" : [ 0.02956989247311828, 0.04032258064516129, 0.043010752688172046, 0.043010752688172046 ]
+        } ]
+      }, {
+        "fairLendingType" : "MinorityArea",
+        "labels" : [ "Q1 - 2023", "Q2 - 2023", "Q3 - 2023", "Q4 - 2023" ],
+        "lenderTrends" : [ {
+          "lenderCode" : "REGIONS BANK",
+          "counts" : [ 72, 85, 85, 82 ],
+          "percents" : [ 0.09137055837563451, 0.10786802030456853, 0.10786802030456853, 0.10406091370558376 ]
+        }, {
+          "lenderCode" : "CADENCE BANK NA",
+          "counts" : [ 46, 62, 65, 43 ],
+          "percents" : [ 0.06327372764786796, 0.08528198074277854, 0.08940852819807428, 0.059147180192572216 ]
+        }, {
+          "lenderCode" : "TRUSTMARK NATIONAL BANK",
+          "counts" : [ 585, 170, 123, 37 ],
+          "percents" : [ 0.47716150081566067, 0.13866231647634583, 0.100326264274062, 0.030179445350734094 ]
+        }, {
+          "lenderCode" : "ROCKET MORTGAGE LLC",
+          "counts" : [ 111, 151, 152, 114 ],
+          "percents" : [ 0.0912828947368421, 0.12417763157894737, 0.125, 0.09375 ]
+        }, {
+          "lenderCode" : "BANK OF BARTLETT",
+          "counts" : [ 29, 46, 47, 24 ],
+          "percents" : [ 0.06775700934579439, 0.10747663551401869, 0.10981308411214953, 0.056074766355140186 ]
+        }, {
+          "lenderCode" : "COGENT BANK",
+          "counts" : [ 96, 112, 90, 84 ],
+          "percents" : [ 0.12229299363057325, 0.14267515923566879, 0.11464968152866242, 0.1070063694267516 ]
+        }, {
+          "lenderCode" : "PATRIOT BANK",
+          "counts" : [ 35, 61, 70, 35 ],
+          "percents" : [ 0.05426356589147287, 0.09457364341085271, 0.10852713178294573, 0.05426356589147287 ]
+        }, {
+          "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+          "counts" : [ 53, 56, 49, 48 ],
+          "percents" : [ 0.1311881188118812, 0.13861386138613863, 0.12128712871287128, 0.1188118811881188 ]
+        }, {
+          "lenderCode" : "COMMUNITY MORTGAGE CORP",
+          "counts" : [ 63, 82, 72, 60 ],
+          "percents" : [ 0.07446808510638298, 0.09692671394799054, 0.0851063829787234, 0.07092198581560284 ]
+        }, {
+          "lenderCode" : "FIRST HORIZON BANK",
+          "counts" : [ 44, 51, 43, 26 ],
+          "percents" : [ 0.0668693009118541, 0.07750759878419453, 0.06534954407294832, 0.03951367781155015 ]
+        }, {
+          "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+          "counts" : [ 16, 18, 20, 34 ],
+          "percents" : [ 0.04199475065616798, 0.047244094488188976, 0.05249343832020997, 0.08923884514435695 ]
+        }, {
+          "lenderCode" : "NAVY FCU",
+          "counts" : [ 40, 45, 39, 36 ],
+          "percents" : [ 0.10752688172043011, 0.12096774193548387, 0.10483870967741936, 0.0967741935483871 ]
+        } ]
+      }, {
+        "fairLendingType" : "HispanicArea",
+        "labels" : [ "Q1 - 2023", "Q2 - 2023", "Q3 - 2023", "Q4 - 2023" ],
+        "lenderTrends" : [ {
+          "lenderCode" : "REGIONS BANK",
+          "counts" : [ 0, 2, 1, 3 ],
+          "percents" : [ 0.0, 0.0025380710659898475, 0.0012690355329949238, 0.0038071065989847717 ]
+        }, {
+          "lenderCode" : "CADENCE BANK NA",
+          "counts" : [ 0, 0, 1, 0 ],
+          "percents" : [ 0.0, 0.0, 0.001375515818431912, 0.0 ]
+        }, {
+          "lenderCode" : "TRUSTMARK NATIONAL BANK",
+          "counts" : [ 3, 0, 1, 0 ],
+          "percents" : [ 0.0024469820554649264, 0.0, 8.156606851549756E-4, 0.0 ]
+        }, {
+          "lenderCode" : "ROCKET MORTGAGE LLC",
+          "counts" : [ 0, 0, 0, 1 ],
+          "percents" : [ 0.0, 0.0, 0.0, 8.223684210526315E-4 ]
+        }, {
+          "lenderCode" : "BANK OF BARTLETT",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COGENT BANK",
+          "counts" : [ 0, 0, 1, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0012738853503184713, 0.0 ]
+        }, {
+          "lenderCode" : "PATRIOT BANK",
+          "counts" : [ 1, 0, 11, 1 ],
+          "percents" : [ 0.0015503875968992248, 0.0, 0.017054263565891473, 0.0015503875968992248 ]
+        }, {
+          "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COMMUNITY MORTGAGE CORP",
+          "counts" : [ 0, 2, 0, 1 ],
+          "percents" : [ 0.0, 0.002364066193853428, 0.0, 0.001182033096926714 ]
+        }, {
+          "lenderCode" : "FIRST HORIZON BANK",
+          "counts" : [ 0, 0, 0, 1 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.001519756838905775 ]
+        }, {
+          "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+          "counts" : [ 0, 0, 0, 1 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0026246719160104987 ]
+        }, {
+          "lenderCode" : "NAVY FCU",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        } ]
+      }, {
+        "fairLendingType" : "AAArea",
+        "labels" : [ "Q1 - 2023", "Q2 - 2023", "Q3 - 2023", "Q4 - 2023" ],
+        "lenderTrends" : [ {
+          "lenderCode" : "REGIONS BANK",
+          "counts" : [ 48, 48, 47, 47 ],
+          "percents" : [ 0.06091370558375635, 0.06091370558375635, 0.05964467005076142, 0.05964467005076142 ]
+        }, {
+          "lenderCode" : "CADENCE BANK NA",
+          "counts" : [ 28, 32, 26, 28 ],
+          "percents" : [ 0.03851444291609354, 0.04401650618982118, 0.03576341127922971, 0.03851444291609354 ]
+        }, {
+          "lenderCode" : "TRUSTMARK NATIONAL BANK",
+          "counts" : [ 450, 105, 72, 25 ],
+          "percents" : [ 0.367047308319739, 0.08564437194127243, 0.05872756933115824, 0.020391517128874388 ]
+        }, {
+          "lenderCode" : "ROCKET MORTGAGE LLC",
+          "counts" : [ 63, 90, 86, 75 ],
+          "percents" : [ 0.05180921052631579, 0.07401315789473684, 0.07072368421052631, 0.061677631578947366 ]
+        }, {
+          "lenderCode" : "BANK OF BARTLETT",
+          "counts" : [ 15, 16, 25, 8 ],
+          "percents" : [ 0.035046728971962614, 0.037383177570093455, 0.05841121495327103, 0.018691588785046728 ]
+        }, {
+          "lenderCode" : "COGENT BANK",
+          "counts" : [ 68, 81, 62, 68 ],
+          "percents" : [ 0.08662420382165605, 0.10318471337579618, 0.07898089171974522, 0.08662420382165605 ]
+        }, {
+          "lenderCode" : "PATRIOT BANK",
+          "counts" : [ 21, 45, 37, 20 ],
+          "percents" : [ 0.03255813953488372, 0.06976744186046512, 0.05736434108527132, 0.031007751937984496 ]
+        }, {
+          "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+          "counts" : [ 25, 30, 18, 30 ],
+          "percents" : [ 0.06188118811881188, 0.07425742574257425, 0.04455445544554455, 0.07425742574257425 ]
+        }, {
+          "lenderCode" : "COMMUNITY MORTGAGE CORP",
+          "counts" : [ 34, 39, 30, 30 ],
+          "percents" : [ 0.04018912529550828, 0.04609929078014184, 0.03546099290780142, 0.03546099290780142 ]
+        }, {
+          "lenderCode" : "FIRST HORIZON BANK",
+          "counts" : [ 22, 20, 25, 14 ],
+          "percents" : [ 0.03343465045592705, 0.030395136778115502, 0.037993920972644375, 0.02127659574468085 ]
+        }, {
+          "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+          "counts" : [ 6, 11, 16, 17 ],
+          "percents" : [ 0.015748031496062992, 0.028871391076115485, 0.04199475065616798, 0.04461942257217848 ]
+        }, {
+          "lenderCode" : "NAVY FCU",
+          "counts" : [ 18, 26, 23, 25 ],
+          "percents" : [ 0.04838709677419355, 0.06989247311827956, 0.06182795698924731, 0.06720430107526881 ]
+        } ]
+      }, {
+        "fairLendingType" : "HispanicIndividual",
+        "labels" : [ "Q1 - 2023", "Q2 - 2023", "Q3 - 2023", "Q4 - 2023" ],
+        "lenderTrends" : [ {
+          "lenderCode" : "REGIONS BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "CADENCE BANK NA",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "TRUSTMARK NATIONAL BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "ROCKET MORTGAGE LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "BANK OF BARTLETT",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COGENT BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "PATRIOT BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COMMUNITY MORTGAGE CORP",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "FIRST HORIZON BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "NAVY FCU",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        } ]
+      }, {
+        "fairLendingType" : "AAIndividual",
+        "labels" : [ "Q1 - 2023", "Q2 - 2023", "Q3 - 2023", "Q4 - 2023" ],
+        "lenderTrends" : [ {
+          "lenderCode" : "REGIONS BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "CADENCE BANK NA",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "TRUSTMARK NATIONAL BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "ROCKET MORTGAGE LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "BANK OF BARTLETT",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COGENT BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "PATRIOT BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COMMUNITY MORTGAGE CORP",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "FIRST HORIZON BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "NAVY FCU",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        } ]
+      } ]
+    }, {
+      "loanType" : "FIRST",
+      "fairLendingTrends" : [ {
+        "fairLendingType" : "Total",
+        "labels" : [ "Q1 - 2023", "Q2 - 2023", "Q3 - 2023", "Q4 - 2023" ],
+        "lenderTrends" : [ {
+          "lenderCode" : "REGIONS BANK",
+          "counts" : [ 82, 118, 96, 89 ],
+          "percents" : [ 0.10406091370558376, 0.14974619289340102, 0.1218274111675127, 0.11294416243654823 ]
+        }, {
+          "lenderCode" : "CADENCE BANK NA",
+          "counts" : [ 88, 91, 113, 79 ],
+          "percents" : [ 0.12104539202200826, 0.12517193947730398, 0.15543328748280605, 0.10866574965612105 ]
+        }, {
+          "lenderCode" : "TRUSTMARK NATIONAL BANK",
+          "counts" : [ 389, 193, 159, 52 ],
+          "percents" : [ 0.3172920065252855, 0.15742251223491027, 0.12969004893964112, 0.04241435562805873 ]
+        }, {
+          "lenderCode" : "ROCKET MORTGAGE LLC",
+          "counts" : [ 269, 330, 360, 256 ],
+          "percents" : [ 0.22121710526315788, 0.2713815789473684, 0.29605263157894735, 0.21052631578947367 ]
+        }, {
+          "lenderCode" : "BANK OF BARTLETT",
+          "counts" : [ 58, 49, 61, 38 ],
+          "percents" : [ 0.13551401869158877, 0.11448598130841121, 0.1425233644859813, 0.08878504672897196 ]
+        }, {
+          "lenderCode" : "COGENT BANK",
+          "counts" : [ 134, 187, 166, 122 ],
+          "percents" : [ 0.17070063694267515, 0.23821656050955414, 0.21146496815286625, 0.1554140127388535 ]
+        }, {
+          "lenderCode" : "PATRIOT BANK",
+          "counts" : [ 115, 151, 155, 98 ],
+          "percents" : [ 0.17829457364341086, 0.23410852713178296, 0.24031007751937986, 0.15193798449612403 ]
+        }, {
+          "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+          "counts" : [ 91, 115, 111, 87 ],
+          "percents" : [ 0.22524752475247525, 0.28465346534653463, 0.2747524752475248, 0.21534653465346534 ]
+        }, {
+          "lenderCode" : "COMMUNITY MORTGAGE CORP",
+          "counts" : [ 178, 268, 245, 155 ],
+          "percents" : [ 0.21040189125295508, 0.31678486997635935, 0.2895981087470449, 0.18321513002364065 ]
+        }, {
+          "lenderCode" : "FIRST HORIZON BANK",
+          "counts" : [ 78, 119, 102, 57 ],
+          "percents" : [ 0.11854103343465046, 0.18085106382978725, 0.15501519756838905, 0.08662613981762918 ]
+        }, {
+          "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+          "counts" : [ 68, 71, 78, 73 ],
+          "percents" : [ 0.1784776902887139, 0.18635170603674542, 0.2047244094488189, 0.19160104986876642 ]
+        }, {
+          "lenderCode" : "NAVY FCU",
+          "counts" : [ 47, 83, 77, 73 ],
+          "percents" : [ 0.12634408602150538, 0.22311827956989247, 0.20698924731182797, 0.19623655913978494 ]
+        } ]
+      }, {
+        "fairLendingType" : "LMIArea",
+        "labels" : [ "Q1 - 2023", "Q2 - 2023", "Q3 - 2023", "Q4 - 2023" ],
+        "lenderTrends" : [ {
+          "lenderCode" : "REGIONS BANK",
+          "counts" : [ 17, 20, 25, 24 ],
+          "percents" : [ 0.021573604060913704, 0.025380710659898477, 0.031725888324873094, 0.030456852791878174 ]
+        }, {
+          "lenderCode" : "CADENCE BANK NA",
+          "counts" : [ 14, 20, 17, 24 ],
+          "percents" : [ 0.01925722145804677, 0.027510316368638238, 0.023383768913342505, 0.033012379642365884 ]
+        }, {
+          "lenderCode" : "TRUSTMARK NATIONAL BANK",
+          "counts" : [ 157, 72, 55, 16 ],
+          "percents" : [ 0.12805872756933115, 0.05872756933115824, 0.044861337683523655, 0.013050570962479609 ]
+        }, {
+          "lenderCode" : "ROCKET MORTGAGE LLC",
+          "counts" : [ 50, 80, 67, 54 ],
+          "percents" : [ 0.04111842105263158, 0.06578947368421052, 0.055098684210526314, 0.044407894736842105 ]
+        }, {
+          "lenderCode" : "BANK OF BARTLETT",
+          "counts" : [ 12, 5, 25, 6 ],
+          "percents" : [ 0.028037383177570093, 0.011682242990654205, 0.05841121495327103, 0.014018691588785047 ]
+        }, {
+          "lenderCode" : "COGENT BANK",
+          "counts" : [ 65, 65, 59, 57 ],
+          "percents" : [ 0.08280254777070063, 0.08280254777070063, 0.0751592356687898, 0.07261146496815286 ]
+        }, {
+          "lenderCode" : "PATRIOT BANK",
+          "counts" : [ 17, 37, 42, 24 ],
+          "percents" : [ 0.02635658914728682, 0.05736434108527132, 0.06511627906976744, 0.037209302325581395 ]
+        }, {
+          "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+          "counts" : [ 15, 23, 19, 18 ],
+          "percents" : [ 0.03712871287128713, 0.05693069306930693, 0.04702970297029703, 0.04455445544554455 ]
+        }, {
+          "lenderCode" : "COMMUNITY MORTGAGE CORP",
+          "counts" : [ 32, 38, 35, 37 ],
+          "percents" : [ 0.037825059101654845, 0.04491725768321513, 0.041371158392434985, 0.04373522458628842 ]
+        }, {
+          "lenderCode" : "FIRST HORIZON BANK",
+          "counts" : [ 16, 18, 13, 9 ],
+          "percents" : [ 0.0243161094224924, 0.02735562310030395, 0.019756838905775075, 0.013677811550151976 ]
+        }, {
+          "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+          "counts" : [ 10, 10, 14, 18 ],
+          "percents" : [ 0.026246719160104987, 0.026246719160104987, 0.03674540682414698, 0.047244094488188976 ]
+        }, {
+          "lenderCode" : "NAVY FCU",
+          "counts" : [ 6, 8, 15, 13 ],
+          "percents" : [ 0.016129032258064516, 0.021505376344086023, 0.04032258064516129, 0.03494623655913978 ]
+        } ]
+      }, {
+        "fairLendingType" : "MinorityArea",
+        "labels" : [ "Q1 - 2023", "Q2 - 2023", "Q3 - 2023", "Q4 - 2023" ],
+        "lenderTrends" : [ {
+          "lenderCode" : "REGIONS BANK",
+          "counts" : [ 37, 47, 50, 50 ],
+          "percents" : [ 0.046954314720812185, 0.05964467005076142, 0.06345177664974619, 0.06345177664974619 ]
+        }, {
+          "lenderCode" : "CADENCE BANK NA",
+          "counts" : [ 26, 36, 41, 30 ],
+          "percents" : [ 0.03576341127922971, 0.04951856946354883, 0.05639614855570839, 0.04126547455295736 ]
+        }, {
+          "lenderCode" : "TRUSTMARK NATIONAL BANK",
+          "counts" : [ 331, 134, 104, 28 ],
+          "percents" : [ 0.2699836867862969, 0.10929853181076672, 0.08482871125611746, 0.022838499184339316 ]
+        }, {
+          "lenderCode" : "ROCKET MORTGAGE LLC",
+          "counts" : [ 111, 151, 152, 113 ],
+          "percents" : [ 0.0912828947368421, 0.12417763157894737, 0.125, 0.09292763157894737 ]
+        }, {
+          "lenderCode" : "BANK OF BARTLETT",
+          "counts" : [ 20, 25, 34, 13 ],
+          "percents" : [ 0.04672897196261682, 0.05841121495327103, 0.0794392523364486, 0.030373831775700934 ]
+        }, {
+          "lenderCode" : "COGENT BANK",
+          "counts" : [ 86, 92, 82, 69 ],
+          "percents" : [ 0.10955414012738854, 0.11719745222929936, 0.10445859872611465, 0.08789808917197452 ]
+        }, {
+          "lenderCode" : "PATRIOT BANK",
+          "counts" : [ 29, 54, 59, 28 ],
+          "percents" : [ 0.04496124031007752, 0.08372093023255814, 0.09147286821705426, 0.043410852713178294 ]
+        }, {
+          "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+          "counts" : [ 53, 56, 49, 48 ],
+          "percents" : [ 0.1311881188118812, 0.13861386138613863, 0.12128712871287128, 0.1188118811881188 ]
+        }, {
+          "lenderCode" : "COMMUNITY MORTGAGE CORP",
+          "counts" : [ 63, 82, 72, 60 ],
+          "percents" : [ 0.07446808510638298, 0.09692671394799054, 0.0851063829787234, 0.07092198581560284 ]
+        }, {
+          "lenderCode" : "FIRST HORIZON BANK",
+          "counts" : [ 23, 31, 27, 17 ],
+          "percents" : [ 0.034954407294832825, 0.04711246200607903, 0.041033434650455926, 0.025835866261398176 ]
+        }, {
+          "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+          "counts" : [ 14, 16, 19, 28 ],
+          "percents" : [ 0.03674540682414698, 0.04199475065616798, 0.049868766404199474, 0.07349081364829396 ]
+        }, {
+          "lenderCode" : "NAVY FCU",
+          "counts" : [ 22, 30, 31, 30 ],
+          "percents" : [ 0.05913978494623656, 0.08064516129032258, 0.08333333333333333, 0.08064516129032258 ]
+        } ]
+      }, {
+        "fairLendingType" : "HispanicArea",
+        "labels" : [ "Q1 - 2023", "Q2 - 2023", "Q3 - 2023", "Q4 - 2023" ],
+        "lenderTrends" : [ {
+          "lenderCode" : "REGIONS BANK",
+          "counts" : [ 0, 1, 0, 2 ],
+          "percents" : [ 0.0, 0.0012690355329949238, 0.0, 0.0025380710659898475 ]
+        }, {
+          "lenderCode" : "CADENCE BANK NA",
+          "counts" : [ 0, 0, 1, 0 ],
+          "percents" : [ 0.0, 0.0, 0.001375515818431912, 0.0 ]
+        }, {
+          "lenderCode" : "TRUSTMARK NATIONAL BANK",
+          "counts" : [ 3, 0, 1, 0 ],
+          "percents" : [ 0.0024469820554649264, 0.0, 8.156606851549756E-4, 0.0 ]
+        }, {
+          "lenderCode" : "ROCKET MORTGAGE LLC",
+          "counts" : [ 0, 0, 0, 1 ],
+          "percents" : [ 0.0, 0.0, 0.0, 8.223684210526315E-4 ]
+        }, {
+          "lenderCode" : "BANK OF BARTLETT",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COGENT BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "PATRIOT BANK",
+          "counts" : [ 1, 0, 11, 1 ],
+          "percents" : [ 0.0015503875968992248, 0.0, 0.017054263565891473, 0.0015503875968992248 ]
+        }, {
+          "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COMMUNITY MORTGAGE CORP",
+          "counts" : [ 0, 2, 0, 1 ],
+          "percents" : [ 0.0, 0.002364066193853428, 0.0, 0.001182033096926714 ]
+        }, {
+          "lenderCode" : "FIRST HORIZON BANK",
+          "counts" : [ 0, 0, 0, 1 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.001519756838905775 ]
+        }, {
+          "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "NAVY FCU",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        } ]
+      }, {
+        "fairLendingType" : "AAArea",
+        "labels" : [ "Q1 - 2023", "Q2 - 2023", "Q3 - 2023", "Q4 - 2023" ],
+        "lenderTrends" : [ {
+          "lenderCode" : "REGIONS BANK",
+          "counts" : [ 26, 26, 34, 29 ],
+          "percents" : [ 0.03299492385786802, 0.03299492385786802, 0.04314720812182741, 0.03680203045685279 ]
+        }, {
+          "lenderCode" : "CADENCE BANK NA",
+          "counts" : [ 15, 21, 19, 22 ],
+          "percents" : [ 0.02063273727647868, 0.02888583218707015, 0.026134800550206328, 0.030261348005502064 ]
+        }, {
+          "lenderCode" : "TRUSTMARK NATIONAL BANK",
+          "counts" : [ 245, 81, 61, 17 ],
+          "percents" : [ 0.199836867862969, 0.06606851549755302, 0.049755301794453505, 0.013866231647634585 ]
+        }, {
+          "lenderCode" : "ROCKET MORTGAGE LLC",
+          "counts" : [ 63, 90, 86, 75 ],
+          "percents" : [ 0.05180921052631579, 0.07401315789473684, 0.07072368421052631, 0.061677631578947366 ]
+        }, {
+          "lenderCode" : "BANK OF BARTLETT",
+          "counts" : [ 12, 8, 22, 6 ],
+          "percents" : [ 0.028037383177570093, 0.018691588785046728, 0.0514018691588785, 0.014018691588785047 ]
+        }, {
+          "lenderCode" : "COGENT BANK",
+          "counts" : [ 65, 72, 59, 63 ],
+          "percents" : [ 0.08280254777070063, 0.09171974522292993, 0.0751592356687898, 0.08025477707006369 ]
+        }, {
+          "lenderCode" : "PATRIOT BANK",
+          "counts" : [ 17, 41, 28, 17 ],
+          "percents" : [ 0.02635658914728682, 0.06356589147286822, 0.043410852713178294, 0.02635658914728682 ]
+        }, {
+          "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+          "counts" : [ 25, 30, 18, 30 ],
+          "percents" : [ 0.06188118811881188, 0.07425742574257425, 0.04455445544554455, 0.07425742574257425 ]
+        }, {
+          "lenderCode" : "COMMUNITY MORTGAGE CORP",
+          "counts" : [ 34, 39, 30, 30 ],
+          "percents" : [ 0.04018912529550828, 0.04609929078014184, 0.03546099290780142, 0.03546099290780142 ]
+        }, {
+          "lenderCode" : "FIRST HORIZON BANK",
+          "counts" : [ 13, 11, 18, 9 ],
+          "percents" : [ 0.019756838905775075, 0.016717325227963525, 0.02735562310030395, 0.013677811550151976 ]
+        }, {
+          "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+          "counts" : [ 5, 9, 15, 15 ],
+          "percents" : [ 0.013123359580052493, 0.023622047244094488, 0.03937007874015748, 0.03937007874015748 ]
+        }, {
+          "lenderCode" : "NAVY FCU",
+          "counts" : [ 10, 18, 19, 21 ],
+          "percents" : [ 0.026881720430107527, 0.04838709677419355, 0.051075268817204304, 0.056451612903225805 ]
+        } ]
+      }, {
+        "fairLendingType" : "HispanicIndividual",
+        "labels" : [ "Q1 - 2023", "Q2 - 2023", "Q3 - 2023", "Q4 - 2023" ],
+        "lenderTrends" : [ {
+          "lenderCode" : "REGIONS BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "CADENCE BANK NA",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "TRUSTMARK NATIONAL BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "ROCKET MORTGAGE LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "BANK OF BARTLETT",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COGENT BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "PATRIOT BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COMMUNITY MORTGAGE CORP",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "FIRST HORIZON BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "NAVY FCU",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        } ]
+      }, {
+        "fairLendingType" : "AAIndividual",
+        "labels" : [ "Q1 - 2023", "Q2 - 2023", "Q3 - 2023", "Q4 - 2023" ],
+        "lenderTrends" : [ {
+          "lenderCode" : "REGIONS BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "CADENCE BANK NA",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "TRUSTMARK NATIONAL BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "ROCKET MORTGAGE LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "BANK OF BARTLETT",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COGENT BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "PATRIOT BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COMMUNITY MORTGAGE CORP",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "FIRST HORIZON BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "NAVY FCU",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        } ]
+      } ]
+    }, {
+      "loanType" : "SECOND",
+      "fairLendingTrends" : [ {
+        "fairLendingType" : "Total",
+        "labels" : [ "Q1 - 2023", "Q2 - 2023", "Q3 - 2023", "Q4 - 2023" ],
+        "lenderTrends" : [ {
+          "lenderCode" : "REGIONS BANK",
+          "counts" : [ 88, 123, 99, 93 ],
+          "percents" : [ 0.1116751269035533, 0.15609137055837563, 0.12563451776649745, 0.11802030456852793 ]
+        }, {
+          "lenderCode" : "CADENCE BANK NA",
+          "counts" : [ 79, 113, 100, 64 ],
+          "percents" : [ 0.10866574965612105, 0.15543328748280605, 0.1375515818431912, 0.08803301237964237 ]
+        }, {
+          "lenderCode" : "TRUSTMARK NATIONAL BANK",
+          "counts" : [ 283, 77, 41, 32 ],
+          "percents" : [ 0.23083197389885807, 0.06280587275693311, 0.033442088091353996, 0.026101141924959218 ]
+        }, {
+          "lenderCode" : "ROCKET MORTGAGE LLC",
+          "counts" : [ 0, 0, 0, 1 ],
+          "percents" : [ 0.0, 0.0, 0.0, 8.223684210526315E-4 ]
+        }, {
+          "lenderCode" : "BANK OF BARTLETT",
+          "counts" : [ 42, 66, 61, 53 ],
+          "percents" : [ 0.09813084112149532, 0.1542056074766355, 0.1425233644859813, 0.12383177570093458 ]
+        }, {
+          "lenderCode" : "COGENT BANK",
+          "counts" : [ 37, 62, 41, 36 ],
+          "percents" : [ 0.04713375796178344, 0.07898089171974522, 0.05222929936305733, 0.045859872611464965 ]
+        }, {
+          "lenderCode" : "PATRIOT BANK",
+          "counts" : [ 22, 28, 48, 28 ],
+          "percents" : [ 0.034108527131782945, 0.043410852713178294, 0.07441860465116279, 0.043410852713178294 ]
+        }, {
+          "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COMMUNITY MORTGAGE CORP",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "FIRST HORIZON BANK",
+          "counts" : [ 87, 85, 88, 42 ],
+          "percents" : [ 0.13221884498480244, 0.12917933130699089, 0.1337386018237082, 0.06382978723404255 ]
+        }, {
+          "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+          "counts" : [ 25, 23, 20, 23 ],
+          "percents" : [ 0.06561679790026247, 0.06036745406824147, 0.05249343832020997, 0.06036745406824147 ]
+        }, {
+          "lenderCode" : "NAVY FCU",
+          "counts" : [ 32, 26, 20, 14 ],
+          "percents" : [ 0.08602150537634409, 0.06989247311827956, 0.053763440860215055, 0.03763440860215054 ]
+        } ]
+      }, {
+        "fairLendingType" : "LMIArea",
+        "labels" : [ "Q1 - 2023", "Q2 - 2023", "Q3 - 2023", "Q4 - 2023" ],
+        "lenderTrends" : [ {
+          "lenderCode" : "REGIONS BANK",
+          "counts" : [ 18, 16, 12, 12 ],
+          "percents" : [ 0.02284263959390863, 0.02030456852791878, 0.015228426395939087, 0.015228426395939087 ]
+        }, {
+          "lenderCode" : "CADENCE BANK NA",
+          "counts" : [ 14, 13, 8, 4 ],
+          "percents" : [ 0.01925722145804677, 0.017881705639614855, 0.011004126547455296, 0.005502063273727648 ]
+        }, {
+          "lenderCode" : "TRUSTMARK NATIONAL BANK",
+          "counts" : [ 120, 24, 11, 6 ],
+          "percents" : [ 0.09787928221859707, 0.01957585644371941, 0.00897226753670473, 0.004893964110929853 ]
+        }, {
+          "lenderCode" : "ROCKET MORTGAGE LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "BANK OF BARTLETT",
+          "counts" : [ 2, 6, 7, 2 ],
+          "percents" : [ 0.004672897196261682, 0.014018691588785047, 0.016355140186915886, 0.004672897196261682 ]
+        }, {
+          "lenderCode" : "COGENT BANK",
+          "counts" : [ 1, 10, 4, 5 ],
+          "percents" : [ 0.0012738853503184713, 0.012738853503184714, 0.005095541401273885, 0.006369426751592357 ]
+        }, {
+          "lenderCode" : "PATRIOT BANK",
+          "counts" : [ 6, 4, 6, 3 ],
+          "percents" : [ 0.009302325581395349, 0.006201550387596899, 0.009302325581395349, 0.004651162790697674 ]
+        }, {
+          "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COMMUNITY MORTGAGE CORP",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "FIRST HORIZON BANK",
+          "counts" : [ 9, 12, 7, 5 ],
+          "percents" : [ 0.013677811550151976, 0.0182370820668693, 0.010638297872340425, 0.007598784194528876 ]
+        }, {
+          "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+          "counts" : [ 1, 0, 0, 5 ],
+          "percents" : [ 0.0026246719160104987, 0.0, 0.0, 0.013123359580052493 ]
+        }, {
+          "lenderCode" : "NAVY FCU",
+          "counts" : [ 5, 7, 1, 3 ],
+          "percents" : [ 0.013440860215053764, 0.01881720430107527, 0.002688172043010753, 0.008064516129032258 ]
+        } ]
+      }, {
+        "fairLendingType" : "MinorityArea",
+        "labels" : [ "Q1 - 2023", "Q2 - 2023", "Q3 - 2023", "Q4 - 2023" ],
+        "lenderTrends" : [ {
+          "lenderCode" : "REGIONS BANK",
+          "counts" : [ 35, 38, 35, 32 ],
+          "percents" : [ 0.044416243654822336, 0.048223350253807105, 0.044416243654822336, 0.04060913705583756 ]
+        }, {
+          "lenderCode" : "CADENCE BANK NA",
+          "counts" : [ 20, 26, 24, 13 ],
+          "percents" : [ 0.027510316368638238, 0.03576341127922971, 0.033012379642365884, 0.017881705639614855 ]
+        }, {
+          "lenderCode" : "TRUSTMARK NATIONAL BANK",
+          "counts" : [ 254, 36, 19, 9 ],
+          "percents" : [ 0.20717781402936378, 0.02936378466557912, 0.015497553017944535, 0.00734094616639478 ]
+        }, {
+          "lenderCode" : "ROCKET MORTGAGE LLC",
+          "counts" : [ 0, 0, 0, 1 ],
+          "percents" : [ 0.0, 0.0, 0.0, 8.223684210526315E-4 ]
+        }, {
+          "lenderCode" : "BANK OF BARTLETT",
+          "counts" : [ 9, 21, 13, 11 ],
+          "percents" : [ 0.02102803738317757, 0.04906542056074766, 0.030373831775700934, 0.02570093457943925 ]
+        }, {
+          "lenderCode" : "COGENT BANK",
+          "counts" : [ 10, 20, 8, 15 ],
+          "percents" : [ 0.012738853503184714, 0.025477707006369428, 0.01019108280254777, 0.01910828025477707 ]
+        }, {
+          "lenderCode" : "PATRIOT BANK",
+          "counts" : [ 6, 7, 11, 7 ],
+          "percents" : [ 0.009302325581395349, 0.010852713178294573, 0.017054263565891473, 0.010852713178294573 ]
+        }, {
+          "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COMMUNITY MORTGAGE CORP",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "FIRST HORIZON BANK",
+          "counts" : [ 21, 20, 16, 9 ],
+          "percents" : [ 0.031914893617021274, 0.030395136778115502, 0.0243161094224924, 0.013677811550151976 ]
+        }, {
+          "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+          "counts" : [ 2, 2, 1, 6 ],
+          "percents" : [ 0.005249343832020997, 0.005249343832020997, 0.0026246719160104987, 0.015748031496062992 ]
+        }, {
+          "lenderCode" : "NAVY FCU",
+          "counts" : [ 18, 15, 8, 6 ],
+          "percents" : [ 0.04838709677419355, 0.04032258064516129, 0.021505376344086023, 0.016129032258064516 ]
+        } ]
+      }, {
+        "fairLendingType" : "HispanicArea",
+        "labels" : [ "Q1 - 2023", "Q2 - 2023", "Q3 - 2023", "Q4 - 2023" ],
+        "lenderTrends" : [ {
+          "lenderCode" : "REGIONS BANK",
+          "counts" : [ 0, 1, 1, 1 ],
+          "percents" : [ 0.0, 0.0012690355329949238, 0.0012690355329949238, 0.0012690355329949238 ]
+        }, {
+          "lenderCode" : "CADENCE BANK NA",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "TRUSTMARK NATIONAL BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "ROCKET MORTGAGE LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "BANK OF BARTLETT",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COGENT BANK",
+          "counts" : [ 0, 0, 1, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0012738853503184713, 0.0 ]
+        }, {
+          "lenderCode" : "PATRIOT BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COMMUNITY MORTGAGE CORP",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "FIRST HORIZON BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+          "counts" : [ 0, 0, 0, 1 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0026246719160104987 ]
+        }, {
+          "lenderCode" : "NAVY FCU",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        } ]
+      }, {
+        "fairLendingType" : "AAArea",
+        "labels" : [ "Q1 - 2023", "Q2 - 2023", "Q3 - 2023", "Q4 - 2023" ],
+        "lenderTrends" : [ {
+          "lenderCode" : "REGIONS BANK",
+          "counts" : [ 22, 22, 13, 18 ],
+          "percents" : [ 0.027918781725888325, 0.027918781725888325, 0.01649746192893401, 0.02284263959390863 ]
+        }, {
+          "lenderCode" : "CADENCE BANK NA",
+          "counts" : [ 13, 11, 7, 6 ],
+          "percents" : [ 0.017881705639614855, 0.015130674002751032, 0.009628610729023384, 0.008253094910591471 ]
+        }, {
+          "lenderCode" : "TRUSTMARK NATIONAL BANK",
+          "counts" : [ 205, 24, 11, 8 ],
+          "percents" : [ 0.16721044045676997, 0.01957585644371941, 0.00897226753670473, 0.0065252854812398045 ]
+        }, {
+          "lenderCode" : "ROCKET MORTGAGE LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "BANK OF BARTLETT",
+          "counts" : [ 3, 8, 3, 2 ],
+          "percents" : [ 0.007009345794392523, 0.018691588785046728, 0.007009345794392523, 0.004672897196261682 ]
+        }, {
+          "lenderCode" : "COGENT BANK",
+          "counts" : [ 3, 9, 3, 5 ],
+          "percents" : [ 0.003821656050955414, 0.011464968152866241, 0.003821656050955414, 0.006369426751592357 ]
+        }, {
+          "lenderCode" : "PATRIOT BANK",
+          "counts" : [ 4, 4, 9, 3 ],
+          "percents" : [ 0.006201550387596899, 0.006201550387596899, 0.013953488372093023, 0.004651162790697674 ]
+        }, {
+          "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COMMUNITY MORTGAGE CORP",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "FIRST HORIZON BANK",
+          "counts" : [ 9, 9, 7, 5 ],
+          "percents" : [ 0.013677811550151976, 0.013677811550151976, 0.010638297872340425, 0.007598784194528876 ]
+        }, {
+          "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+          "counts" : [ 1, 2, 1, 2 ],
+          "percents" : [ 0.0026246719160104987, 0.005249343832020997, 0.0026246719160104987, 0.005249343832020997 ]
+        }, {
+          "lenderCode" : "NAVY FCU",
+          "counts" : [ 8, 8, 4, 4 ],
+          "percents" : [ 0.021505376344086023, 0.021505376344086023, 0.010752688172043012, 0.010752688172043012 ]
+        } ]
+      }, {
+        "fairLendingType" : "HispanicIndividual",
+        "labels" : [ "Q1 - 2023", "Q2 - 2023", "Q3 - 2023", "Q4 - 2023" ],
+        "lenderTrends" : [ {
+          "lenderCode" : "REGIONS BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "CADENCE BANK NA",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "TRUSTMARK NATIONAL BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "ROCKET MORTGAGE LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "BANK OF BARTLETT",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COGENT BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "PATRIOT BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COMMUNITY MORTGAGE CORP",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "FIRST HORIZON BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "NAVY FCU",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        } ]
+      }, {
+        "fairLendingType" : "AAIndividual",
+        "labels" : [ "Q1 - 2023", "Q2 - 2023", "Q3 - 2023", "Q4 - 2023" ],
+        "lenderTrends" : [ {
+          "lenderCode" : "REGIONS BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "CADENCE BANK NA",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "TRUSTMARK NATIONAL BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "ROCKET MORTGAGE LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "BANK OF BARTLETT",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COGENT BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "PATRIOT BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "PENNYMAC LOAN SERVICES LLC",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "COMMUNITY MORTGAGE CORP",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "FIRST HORIZON BANK",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "THE BANK OF FAYETTE COUNTY",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        }, {
+          "lenderCode" : "NAVY FCU",
+          "counts" : [ 0, 0, 0, 0 ],
+          "percents" : [ 0.0, 0.0, 0.0, 0.0 ]
+        } ]
+      } ]
+    } ]
+  }
