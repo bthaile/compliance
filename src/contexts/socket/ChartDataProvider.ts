@@ -128,7 +128,7 @@ export const queryLoanTrends = async (query: LenderTrendQuery): Promise<object> 
             "startYear": query.startYear,
             "endYear": query.endYear,
             //  "interval": "YEAR"     (QUARTER / MONTH)
-           // "interval": String(query.timeIncrement).toUpperCase()
+            "interval": String(query.timeIncrement).toUpperCase()
         }
     };
     console.log('queryLoanTrends:', dataQuery)
