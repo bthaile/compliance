@@ -7,7 +7,7 @@ import LendingTrendsPicker from './lending-trends-picker';
 import { FormInputData, FairLendingTypesKeys, LenderTrendQuery, LoanTrend, LenderTrend, FairLendingTrend } from './compliance';
 import { usePubSub } from 'contexts/socket/WebSocketProvider';
 import { makeTopicRequest, makeTopicResponse } from 'contexts/socket/PubSubTopics';
-import { capitalizeWord, lookupBankName } from 'shared/utils/textNames';
+import { capitalizeWords, lookupBankName } from 'shared/utils/textNames';
 
 
 const bankColors = [
@@ -72,8 +72,8 @@ export default function LendingTrendsChart({ uid, topic, formData }: LendingTren
 
     const buildChartData = (trends: LenderTrend[] = [], lenderNames: { lenderCode: string, lenderName: string }[]) => {
         const sortedTrends = trends.sort((a, b) => {
-            const lenderNameA = capitalizeWord(lookupBankName(a.lenderCode, lenderNames)); 
-            const lenderNameB = capitalizeWord(lookupBankName(b.lenderCode, lenderNames)); 
+            const lenderNameA = capitalizeWords(lookupBankName(a.lenderCode, lenderNames)); 
+            const lenderNameB = capitalizeWords(lookupBankName(b.lenderCode, lenderNames)); 
             const isCadenceA = lenderNameA.toLowerCase().includes('cadence');
             const isCadenceB = lenderNameB.toLowerCase().includes('cadence');
             if (isCadenceA && !isCadenceB) {
@@ -85,7 +85,7 @@ export default function LendingTrendsChart({ uid, topic, formData }: LendingTren
             return 0;  // Keep original order if neither or both are 'cadence'
         });
         return sortedTrends?.map((trend, index) => {
-            const lenderName = capitalizeWord(lookupBankName(trend.lenderCode, lenderNames));
+            const lenderName = capitalizeWords(lookupBankName(trend.lenderCode, lenderNames));
             const isCadence = lenderName.toLowerCase().includes('cadence');
 
             return ({
@@ -129,7 +129,7 @@ export default function LendingTrendsChart({ uid, topic, formData }: LendingTren
         const flType = FairLendingTypesKeys[values.fairLendingType]
         fairLending = lendingValue?.fairLendingTrends?.find(x => x.fairLendingType === flType) || lendingValue?.fairLendingTrends[0];
 
-       // const newLabels = itemOneLoans?.map((l: {lenderCode: string}) => capitalizeWord(lookupBankName(l.lenderCode, lenderNames)));
+       // const newLabels = itemOneLoans?.map((l: {lenderCode: string}) => capitalizeWords(lookupBankName(l.lenderCode, lenderNames)));
         const newData = {
             ...chartData, // Spread the existing data to maintain other properties
             labels: fairLending?.labels, // Update labels with new banks

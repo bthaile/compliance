@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-
 import { Bar } from 'react-chartjs-2';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Grid } from '@mui/material';
 import PeerGroupPicker from './peer-group-picker';
 import { FormInputData } from './compliance';
 import { usePubSub } from 'contexts/socket/WebSocketProvider';
 import { makeTopicRequest, makeTopicResponse } from 'contexts/socket/PubSubTopics';
-import { capitalizeWord, lookupBankName } from 'shared/utils/textNames';
+import { capitalizeWords, lookupBankName } from 'shared/utils/textNames';
 
 export type BankYearLoanCityProps = {
     uid?: string;
@@ -110,7 +109,7 @@ export default function PeerGroupChart({ uid, topic, formData }: PeerGroupChartP
         pubSub.publish(makeTopicRequest(topic), { topic, payload });
 
     }
-    
+
     const updateChartData = (inputs: BankYearLoanCityProps, chartData: any) => {
         console.log('peer chart data:', chartData)
         const selectedType = inputs.type.split(' ')[0].toUpperCase()
@@ -125,14 +124,14 @@ export default function PeerGroupChart({ uid, topic, formData }: PeerGroupChartP
 
         // filter based on selected type
         console.log(loanRankings, inputs.type)
-        const loans = loanRankings.filter((item: {loanType: string}) => item.loanType === selectedType);
-        const itemOneLoans = (loans[0]?.fairLendingCounts[0]?.loanCounts || []).filter((i: {count: number}) => i.count > 0);
+        const loans = loanRankings.filter((item: { loanType: string }) => item.loanType === selectedType);
+        const itemOneLoans = (loans[0]?.fairLendingCounts[0]?.loanCounts || []).filter((i: { count: number }) => i.count > 0);
         const loanCounts = itemOneLoans?.map((item: { lenderCode: string, count: number }) => item.count);
         const tl = itemOneLoans?.reduce((acc: number, item: { lenderCode: string, count: number }) => acc + item.count, 0);
-        const newLabels = itemOneLoans?.map((l: {lenderCode: string}) => capitalizeWord(lookupBankName(l.lenderCode, lenderNames)));
+        const newLabels = itemOneLoans?.map((l: { lenderCode: string }) => capitalizeWords(lookupBankName(l.lenderCode, lenderNames), 12));
         const newData = {
             ...defaultChartData, // Spread the existing data to maintain other properties
-            labels: newLabels, 
+            labels: newLabels,
             datasets: defaultChartData?.datasets?.map(dataset => ({
                 ...dataset, // Spread existing dataset properties
                 data: loanCounts, // Update data with new loan numbers
@@ -179,24 +178,31 @@ export default function PeerGroupChart({ uid, topic, formData }: PeerGroupChartP
     }, []);
 
     return (
-        <Box sx={{ height: '100vh', display: 'flex' }}>
-            <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
-                <div style={{ flexGrow: 1 }}>
-                    <Bar data={chartData} options={chartOptions} />
-                    <Typography>
-                        {`Total Mortgages: ${totalLoans.toLocaleString()}`}
-                    </Typography>
-                </div>
-            </Box>
-            <Box sx={{ width: 300, display: 'flex', flexDirection: 'column' }}>
-                <PeerGroupPicker {...{
-                    years: formData?.years,
-                    cities: formData?.cities,
-                    types: formData?.types,
-                    receiveValues,
-                    isLoading,
-                }} />
-            </Box>
-        </Box>
-    )
+        <Grid container sx={{ height: '100vh' }}>
+            {/* Chart section */}
+            <Grid item xs={12} md={8}>
+                <Box sx={{ position: 'relative', width: '100%', height: '100%' }}>
+                    <div style={{ flexGrow: 1 }}>
+                        <Bar data={chartData} options={chartOptions} />
+                        <Typography sx={{ position: 'absolute', bottom: 0, left: 0, padding: '8px' }}>
+                            {`Total Mortgages: ${totalLoans.toLocaleString()}`}
+                        </Typography>
+                    </div>
+                </Box>
+            </Grid>
+
+            {/* Form section */}
+            <Grid item xs={12} md={4}>
+                <PeerGroupPicker
+                    {...{
+                        years: formData?.years,
+                        cities: formData?.cities,
+                        types: formData?.types,
+                        receiveValues,
+                        isLoading,
+                    }}
+                />
+            </Grid>
+        </Grid>
+    );
 }

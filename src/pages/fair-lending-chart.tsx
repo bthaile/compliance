@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
 
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Grid } from '@mui/material';
 import FairLendingPicker from './fair-lending-picker';
-import { FormInputData } from './compliance';
+import { FairLendingTypesKeys, FormInputData } from './compliance';
 import { makeTopicRequest, makeTopicResponse } from 'contexts/socket/PubSubTopics';
 import { usePubSub } from 'contexts/socket/WebSocketProvider';
+import { decimalToPercentage } from 'shared/utils/formatters';
+import { capitalizeWords, lookupBankName } from 'shared/utils/textNames';
 
 const options = {
     scales: {
@@ -76,7 +78,7 @@ const defaultChartData = {
     labels: [],
     datasets: [
         {
-            label: 'Total Count',
+            label: 'Total Percentage',
             data: [],
             backgroundColor: 'rgba(54, 162, 235, 0.5)',
             borderColor: 'rgba(54, 162, 235, 1)',
@@ -103,19 +105,10 @@ export default function FairLendingChart({ uid, topic, formData }: FairLendingCh
         pubSub.publish(makeTopicRequest(topic), { topic, payload });
 
     }
-    
-    function capitalizeWord(word: string) {
-        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-    }
-
-    function lookupBankName(lenderCode: string, lenderData: { lenderCode: string, lenderName: string }[]) {
-        const bank = lenderData.find(l => l.lenderCode === lenderCode);
-        return bank?.lenderName || lenderCode;
-    }
 
     const updateChartData = (inputs: BankYearLoanFairCityProps, chartData: any) => {
         console.log('peer chart data:', chartData)
-
+        const selectedType = inputs.type.split(' ')[0].toUpperCase()
         if (!chartData || chartData?.length === 0) {
             setTotalLoans(0)
             setChartData(defaultChartData);
@@ -124,26 +117,36 @@ export default function FairLendingChart({ uid, topic, formData }: FairLendingCh
         }
 
         const { lenderNames, loanRankings } = chartData;
+        // filter based on loan type
+        const loanTypeFiltered = loanRankings.find((item: { loanType: string }) => item.loanType === selectedType) || [];
 
-        // TODO: server should return an easy to chart data structure. 
-        const itemOneLoans = loanRankings[0]?.fairLendingCounts[0]?.loanCounts || [];
-        const loanCounts = itemOneLoans?.map((item: { lenderCode: string, count: number }) => item.count);
-        const tl = itemOneLoans?.reduce((acc: number, item: { lenderCode: string, count: number }) => acc + item.count, 0);
-        const newLabels = itemOneLoans?.map((l: {lenderCode: string}) => capitalizeWord(lookupBankName(l.lenderCode, lenderNames)));
-        
+        if (!loanTypeFiltered) {
+            console.error('No data found for loan type:', inputs.type)
+            return;
+        }
+        const fairLendingLoans = loanTypeFiltered?.fairLendingCounts;
+        let selectedFairLendingType = FairLendingTypesKeys[inputs.fairLendingType].toLowerCase();
+
+        const typeOfLoan = fairLendingLoans.find(x => x.fairLendingType.toLowerCase() === selectedFairLendingType);
+        console.log('type of loan:', typeOfLoan)
+        const loanPct = typeOfLoan?.loanCounts?.map((item: { lenderCode: string, pct: number }) => decimalToPercentage(item.pct));
+        console.log('loan pct:', loanPct)
+        const tl = loanPct?.reduce((acc: number, item: number) => acc + item, 0);
+        const newLabels = typeOfLoan?.loanCounts?.map((l: { lenderCode: string }) => capitalizeWords(lookupBankName(l.lenderCode, lenderNames), 12));
+        console.log('new labels:', newLabels)
         const newData = {
-            ...defaultChartData, // Spread the existing data to maintain other properties
-            labels: newLabels, 
-            datasets: defaultChartData?.datasets?.map(dataset => ({
-                ...dataset, // Spread existing dataset properties
-                data: loanCounts, // Update data with new loan numbers
+            ...defaultChartData, // spread the existing data to maintain other properties
+            labels: newLabels,
+            datasets: defaultChartData?.datasets?.map(dataSet => ({
+                ...dataSet, // spread existing dataset properties
+                data: loanPct, // update data with new loan numbers
             })),
         };
 
-        setTotalLoans(tl)
+        setTotalLoans(tl || 0)
         setChartData(newData)
 
-        const newChartOptions = {
+        const newchartoptions = {
             ...chartOptions,
             plugins: {
                 ...chartOptions.plugins,
@@ -155,10 +158,10 @@ export default function FairLendingChart({ uid, topic, formData }: FairLendingCh
             }
         }
 
-        setChartOptions(newChartOptions)
+        setChartOptions(newchartoptions)
         setIsLoading(false)
     }
-    
+
     // force a load of intial data to load chart
     useEffect(() => {
         pubSub.subscribe(makeTopicResponse(topic), ({ request, payload }: { request: BankYearLoanCityProps, payload: CensusData }) => {
@@ -180,19 +183,39 @@ export default function FairLendingChart({ uid, topic, formData }: FairLendingCh
         }
     }, []);
 
+
     return (
-        <Box sx={{ height: '100vh', display: 'flex' }}>
-            <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
-                <div style={{ flexGrow: 1 }}>
-                    <Bar data={chartData} options={chartOptions} />
-                    <Typography>
-                        {`Total Mortgages: ${totalLoans.toLocaleString()}`}
-                    </Typography>
-                </div>
-            </Box>
-            <Box sx={{ width: 300, display: 'flex', flexDirection: 'column' }}>
-                <FairLendingPicker isLoading={isLoading} receiveValues={receiveValues} />
-            </Box>
+        <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+            <Grid container>
+                {/* Chart section */}
+                <Grid item xs={12} md={8}>
+                    <Box sx={{ flexGrow: 1, position: 'relative', width: '100%', height: '100%' }}>
+                        <div style={{ flexGrow: 1 }}>
+                            <Bar data={chartData} options={chartOptions} />
+                            <Typography sx={{ position: 'absolute', bottom: 0, left: 0, padding: '8px' }}>
+                                {`Total Mortgages: ${totalLoans.toLocaleString()}`}
+                            </Typography>
+                        </div>
+                    </Box>
+                </Grid>
+
+                {/* Form section */}
+                <Grid item xs={12} md={4}>
+                    <Box sx={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        <FairLendingPicker
+                            {...{
+                                years: formData?.years,
+                                cities: formData?.cities,
+                                types: formData?.types,
+                                fairLendingTypes: formData?.fairLendingTypes,
+                            }}
+                            isLoading={isLoading}
+                            receiveValues={receiveValues}
+                        />
+                    </Box>
+                </Grid>
+            </Grid>
         </Box>
     )
-};
+
+}

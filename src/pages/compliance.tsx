@@ -208,9 +208,9 @@ export type BankLoanInfo = {
 }
 
 export const BaseFairLendingTypes = ['LMI Area', 'Minority Area', 'Hispanic Area', 'AA Area', 'Hispanic Individual', 'AA Individual'];
-export const FairLendingTypes: string[] = ['All', ...BaseFairLendingTypes]
+export const FairLendingTypes: string[] = [...BaseFairLendingTypes]
 export const FairLendingTypesKeys: { [key: string]: string } = {
-    'All': 'Total',
+    'Total': 'Total',
     'LMI Area': 'LMIArea',
     'Minority Area': 'MinorityArea',
     'Hispanic Area': 'HispanicArea',
