@@ -6,3 +6,8 @@ const currencyFormatter =  new Intl.NumberFormat('en-US', {
   });
 
 export default currencyFormatter;
+
+
+export function decimalToPercentage(decimal: number): number {
+  return (decimal * 100);
+}
