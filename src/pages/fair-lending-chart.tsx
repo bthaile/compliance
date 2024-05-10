@@ -108,7 +108,12 @@ export default function FairLendingChart({ uid, topic, formData }: FairLendingCh
 
     const updateChartData = (inputs: BankYearLoanFairCityProps, chartData: any) => {
         console.log('peer chart data:', chartData)
-        const selectedType = inputs.type.split(' ')[0].toUpperCase()
+        let selectedType = inputs.type.split(' ')[0].toUpperCase()
+        // TODO: get data and form keys synched up
+        if (selectedType === 'TOTAL') {
+            selectedType = "ALL"
+        }
+
         if (!chartData || chartData?.length === 0) {
             setTotalLoans(0)
             setChartData(defaultChartData);

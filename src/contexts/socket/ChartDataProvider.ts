@@ -1,7 +1,6 @@
-import { GoalStatusLoadData, LenderTrendQuery, LoanPortfolioFormQuery } from "pages/compliance";
+import { GoalStatusLoadData, LenderTrendQuery, LoanPortfolioFormQuery, assetTypeKeys } from "pages/compliance";
 import { BankYearLoanCityProps } from "pages/peer-group-chart";
 import hashSum from "hash-sum";
-;
 
 export type UserAssessmentAreasQuery = {
     uid: string;
@@ -29,6 +28,10 @@ const buildAssessmentCache = (assess: { assessmentAreas: { id: string, name: str
 const lookupAssessementAreas = (city: string): string => {
     return AssessmentAreaCache[city];
 
+}
+
+const lookupAssetType = (type: string): string => {
+    return assetTypeKeys[type];
 }
 
 const cache: { [key: string]: object } = {};
@@ -84,7 +87,8 @@ export const queryPeerGroupData = async (query: BankYearLoanCityProps): Promise<
         "dateRange": {
             "startYear": query.year,
             "endYear": query.year,
-        }
+        },
+        "type": query.type,
     };
 
     // Add any data transformations here
@@ -98,7 +102,8 @@ export const queryFairLendingData = async (query: BankYearLoanCityProps): Promis
         "dateRange": {
             "startYear": query.year,
             "endYear": query.year,
-        }
+        },
+        "type": lookupAssetType(query.type),
     };
 
     // Add any data transformations here
@@ -129,7 +134,8 @@ export const queryLoanTrends = async (query: LenderTrendQuery): Promise<object> 
             "endYear": query.endYear,
             //  "interval": "YEAR"     (QUARTER / MONTH)
             "interval": String(query.timeIncrement).toUpperCase()
-        }
+        },
+        "type": lookupAssetType(query.assetType),
     };
     console.log('queryLoanTrends:', dataQuery)
     return await getCachedResult(LoanTrendEndpoint, dataQuery, []);
@@ -139,7 +145,8 @@ export const queryCensusTracks = async (query: CensusTrackFormQuery): Promise<ob
     const dataQuery = {
         "userId": query.uid,
         "assessmentAreaId": lookupAssessementAreas(query.city),
-        "year": query.year
+        "year": query.year,
+        "type": lookupAssetType(query.type),
     };
     console.log('queryCensusTracks:', dataQuery)
     return await getCachedResult(CensusTrackEndpoint, dataQuery, []);
@@ -150,7 +157,7 @@ export const queryLoanPortfolio = async (query: LoanPortfolioFormQuery): Promise
         "userId": query.uid,
         "assessmentAreaId": lookupAssessementAreas(query.city),
         "year": query.year,
-        "type": query.type,
+        "type": lookupAssetType(query.type),
         "fairLendingTypes": query.fairLendingTypes
     };
     console.log('queryLoanPortfolio:', dataQuery)

@@ -247,6 +247,13 @@ const defBanks = [
     'FROST BANK',
 ]
 
+export const assetTypeNames = ['Total', 'First Mortgage', 'Second Mortgage']
+export const assetTypeKeys: { [key: string]: string } = {
+    'Total': 'TOTAL',
+    'First Mortgage': 'FIRST',
+    'Second Mortgage': 'SECOND',
+}
+
 const ComplianceCharts = () => {
     const [openDrawer, setOpenDrawer] = useState<boolean>(false);
     const [chartType, setChartType] = useState('peer_group');
@@ -286,7 +293,7 @@ const ComplianceCharts = () => {
     const peerGroupFormData = {
         years: { data: ['2023', '2022', '2021'], defaultValue: 0 },
         cities: { data: assessmentAreas, defaultValue: 0 },
-        types: { data: ['All', 'First Mortgage', 'Second Mortgage'], defaultValue: 0 },
+        types: { data: assetTypeNames, defaultValue: 0 },
     }
 
     const loanGoalsFormData = {
@@ -296,7 +303,7 @@ const ComplianceCharts = () => {
     const fairLendingFormData = {
         years: { data: ['2023', '2022', '2021'], defaultValue: 0 },
         cities: { data: assessmentAreas, defaultValue: 0 },
-        types: { data: ['First Mortgage', 'Second Mortgage'], defaultValue: 0 },
+        types: { data: assetTypeNames, defaultValue: 0 },
         fairLendingTypes: { data: FairLendingTypes, defaultValue: 0 },
     }
 
@@ -307,14 +314,14 @@ const ComplianceCharts = () => {
         endYears: { data: ['2023', '2022', '2021', '2020'], defaultValue: 0 },
         endMonths: { data: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], defaultValue: 0 },
         timeIncrements: { data: ['Month', 'Quarter', 'Year'], defaultValue: 1 },
-        assetTypes: { data: ['Total', 'First Mortgage', 'Second Mortgage'], defaultValue: 0 },
+        assetTypes: { data: assetTypeNames, defaultValue: 0 },
         fairLendingTypes: { data: FairLendingTypes, defaultValue: 0 },
         assetAreas: { data: [...assessmentAreas, 'No Asset Area', 'All'], defaultValue: 0 },
     }
 
     const censusTrackFormData = {
         years: { data: ['2023', '2022', '2021'], defaultValue: 0 },
-        types: { data: ['Total Counts', 'First Mortgages', 'Second Mortgages'], defaultValue: 0 },
+        types: { data: assetTypeNames, defaultValue: 0 },
         cities: { data: assessmentAreas, defaultValue: 0 },
         fairLendingTypes: { data: FairLendingTypes, defaultValue: 0 },
     }
@@ -360,7 +367,7 @@ const ComplianceCharts = () => {
 
     const loanPortfolioFormData = {
         years: { data: ['2023', '2022', '2021', '2020'], defaultValue: 0 },
-        types: { data: ['Total Counts', 'First Mortgages', 'Second Mortgages'], defaultValue: 0 },
+        types: { data: assetTypeNames, defaultValue: 0 },
         cities: { data: [...assessmentAreas, 'No Asset Area', 'All'], defaultValue: 0 },
         fairLendingTypes: { data: BaseFairLendingTypes, defaultValue: 0 },
     }
