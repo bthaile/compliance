@@ -136,6 +136,7 @@ export const queryLoanTrends = async (query: LenderTrendQuery): Promise<object> 
             "interval": String(query.timeIncrement).toUpperCase()
         },
         "type": lookupAssetType(query.assetType),
+        "fairLendingTypes": [query.fairLendingType]
     };
     console.log('queryLoanTrends:', dataQuery)
     return await getCachedResult(LoanTrendEndpoint, dataQuery, []);
@@ -147,6 +148,7 @@ export const queryCensusTracks = async (query: CensusTrackFormQuery): Promise<ob
         "assessmentAreaId": lookupAssessementAreas(query.city),
         "year": query.year,
         "type": lookupAssetType(query.type),
+        "fairLendingTypes": [query.fairLendingType]
     };
     console.log('queryCensusTracks:', dataQuery)
     return await getCachedResult(CensusTrackEndpoint, dataQuery, []);
