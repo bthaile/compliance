@@ -149,7 +149,9 @@ export const queryLoanPortfolio = async (query: LoanPortfolioFormQuery): Promise
     const dataQuery = {
         "userId": query.uid,
         "assessmentAreaId": lookupAssessementAreas(query.city),
-        "year": query.year
+        "year": query.year,
+        "type": query.type,
+        "fairLendingTypes": query.fairLendingTypes
     };
     console.log('queryLoanPortfolio:', dataQuery)
     return await getCachedResult(LoanActivityEndpoint, dataQuery, []);
