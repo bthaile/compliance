@@ -19,7 +19,7 @@ export default function CensusTracksPicker({ receiveValues, formData, isLoading 
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
         // Insert what you want to do on form submit
-        receiveValues({year, type, fairLendingType, city })
+        receiveValues({ year, type, fairLendingType, city })
     };
 
     const resetValues = () => {
@@ -56,7 +56,7 @@ export default function CensusTracksPicker({ receiveValues, formData, isLoading 
                             </Select>
                         </FormControl>
                     </Grid>
-                   {/** <Grid item xs={12} sm={3}>
+                    {/** <Grid item xs={12} sm={3}>
                         <FormControl fullWidth margin="normal">
                             <InputLabel id="type-select-label">Type</InputLabel>
                             <Select
@@ -74,7 +74,7 @@ export default function CensusTracksPicker({ receiveValues, formData, isLoading 
                             </Select>
                         </FormControl>
                     </Grid> */}
-                    {/**<Grid item xs={12} sm={3}>
+                    <Grid item xs={12} sm={3}>
                         <FormControl fullWidth margin="normal">
                             <InputLabel id="fair-lending-type-select-label">Fair Lending Type</InputLabel>
                             <Select
@@ -91,7 +91,7 @@ export default function CensusTracksPicker({ receiveValues, formData, isLoading 
                                 ))}
                             </Select>
                         </FormControl>
-                                </Grid>**/}
+                    </Grid>
                     <Grid item xs={12} sm={3}>
                         <FormControl fullWidth margin="normal">
                             <InputLabel id="city-select-label">Assess Area</InputLabel>

@@ -323,7 +323,7 @@ const ComplianceCharts = () => {
         years: { data: ['2023', '2022', '2021'], defaultValue: 0 },
         types: { data: assetTypeNames, defaultValue: 0 },
         cities: { data: assessmentAreas, defaultValue: 0 },
-        fairLendingTypes: { data: FairLendingTypes, defaultValue: 0 },
+        fairLendingTypes: { data: ['Total', ...FairLendingTypes], defaultValue: 0 },
     }
 
     const loadLoanPortfolioData = (values: LoanPortfolioFormQuery): LoanPortfolioRowData[] => {
@@ -431,7 +431,7 @@ const ComplianceCharts = () => {
                     </AppBar>
                 </div>
                 <Sidebar open={openDrawer} handleDrawerChange={handleDrawerChange} />
-                <div style={{ height: '90vh', margin: '10px' }}>
+                <div style={{ height: '100%', margin: '10px' }}>
                     {assessmentAreas.length > 0 && renderChart()}
                 </div>
 

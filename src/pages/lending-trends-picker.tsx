@@ -131,7 +131,7 @@ export default function LendingTrendsPicker({
                     </Select>
                 </FormControl>
                 <FormControl fullWidth margin="normal">
-                    <InputLabel id="asset-type-select-label">Asset Type</InputLabel>
+                    <InputLabel id="asset-type-select-label">Loan Type</InputLabel>
                     <Select
                         labelId="asset-type-select-label"
                         id="asset-type-type-select"
@@ -163,7 +163,7 @@ export default function LendingTrendsPicker({
                     </Select>
                 </FormControl>
                 <FormControl fullWidth margin="normal">
-                    <InputLabel id="asset-area-select-label">Asset Area</InputLabel>
+                    <InputLabel id="asset-area-select-label">Assess Area</InputLabel>
                     <Select
                         labelId="asset-area-select-label"
                         id="asset-area-select"
@@ -192,4 +192,4 @@ export default function LendingTrendsPicker({
 
 
     );
-};
+}

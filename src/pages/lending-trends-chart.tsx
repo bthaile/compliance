@@ -163,7 +163,7 @@ export default function LendingTrendsChart({ uid, topic, formData }: LendingTren
             }
 
         });
-        // default chart values
+        /* default chart values
         receiveValues({
             startYear: formData?.startYears?.data[formData?.startYears.defaultValue],
             startMonth: formData?.startMonths?.data[formData?.startMonths.defaultValue],
@@ -174,6 +174,7 @@ export default function LendingTrendsChart({ uid, topic, formData }: LendingTren
             fairLendingType: formData?.fairLendingTypes?.data[formData?.fairLendingTypes.defaultValue],
             assetArea: formData?.assetAreas?.data[formData?.assetAreas.defaultValue]
         });
+        */
     }, [])
 
     return (

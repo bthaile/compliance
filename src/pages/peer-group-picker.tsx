@@ -41,7 +41,7 @@ export default function PeerGroupPicker({ isLoading, years, cities, types, recei
                     </Select>
                 </FormControl>
                 <FormControl fullWidth margin="normal">
-                    <InputLabel id="type-select-label">Type</InputLabel>
+                    <InputLabel id="type-select-label">Loan Type</InputLabel>
                     <Select
                         labelId="type-select-label"
                         id="type-select"

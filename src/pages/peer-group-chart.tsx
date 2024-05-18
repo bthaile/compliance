@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Box, Typography, Grid } from '@mui/material';
 import PeerGroupPicker from './peer-group-picker';
@@ -51,7 +51,7 @@ const options = {
     indexAxis: 'y',
     elements: {
         bar: {
-            borderWidth: 2,
+            borderWidth: 1,
         },
     },
     responsive: true,
@@ -62,6 +62,9 @@ const options = {
         title: {
             display: true,
             text: 'First Mortgage - Dallas - 2023',
+        },
+        tooltip: {
+            enabled: false, // Disable tooltips
         },
         datalabels: {
             anchor: 'end',
@@ -88,7 +91,7 @@ const defaultChartData = {
             backgroundColor: 'rgba(54, 162, 235, 0.5)',
             borderColor: 'rgba(54, 162, 235, 1)',
             borderWidth: 1,
-            barThickness: 20,
+            barThickness: 10,
         },
     ],
 }
@@ -131,8 +134,10 @@ export default function PeerGroupChart({ uid, topic, formData }: PeerGroupChartP
         const loans = loanRankings.filter((item: { loanType: string }) => item.loanType === selectedType);
         const itemOneLoans = (loans[0]?.fairLendingCounts[0]?.loanCounts || []).filter((i: { count: number }) => i.count > 0);
         const loanCounts = itemOneLoans?.map((item: { lenderCode: string, count: number }) => item.count);
+        console.log('loan counts:', loanCounts)
         const tl = itemOneLoans?.reduce((acc: number, item: { lenderCode: string, count: number }) => acc + item.count, 0);
-        const newLabels = itemOneLoans?.map((l: { lenderCode: string }) => capitalizeWords(lookupBankName(l.lenderCode, lenderNames), 12));
+        const newLabels = itemOneLoans?.map((l: { lenderCode: string }) => capitalizeWords(lookupBankName(l.lenderCode, lenderNames), 20));
+        console.log('new labels:', newLabels)
         const newData = {
             ...defaultChartData, // Spread the existing data to maintain other properties
             labels: newLabels,
@@ -161,20 +166,20 @@ export default function PeerGroupChart({ uid, topic, formData }: PeerGroupChartP
         setIsLoading(false)
     }
 
-    // force a load of intial data to load chart
+    // force a load of initial data to load chart
     useEffect(() => {
         pubSub.subscribe(makeTopicResponse(topic), ({ request, payload }: { request: BankYearLoanCityProps, payload: CensusData }) => {
             const inputs = request;
             const peerLoans = payload;
             updateChartData(inputs, peerLoans)
         });
-
-        receiveValues({
-            year: formData?.years?.data[formData?.years.defaultValue],
-            type: formData?.types?.data[formData?.types.defaultValue],
-            city: formData?.cities?.data[formData?.cities.defaultValue],
-        });
-
+        /* don't initially load data
+                receiveValues({
+                    year: formData?.years?.data[formData?.years.defaultValue],
+                    type: formData?.types?.data[formData?.types.defaultValue],
+                    city: formData?.cities?.data[formData?.cities.defaultValue],
+                });
+        */
 
         return () => {
             pubSub.unsubscribe(makeTopicResponse(topic));
@@ -186,9 +191,11 @@ export default function PeerGroupChart({ uid, topic, formData }: PeerGroupChartP
             {/* Chart section */}
             <Grid item xs={12} md={8}>
                 <Box sx={{ position: 'relative', width: '100%', height: '100%' }}>
-                    <div style={{ flexGrow: 1 }}>
-                        <Bar data={chartData} options={chartOptions} />
-                        <Typography sx={{ position: 'absolute', bottom: 0, left: 0, padding: '8px' }}>
+                    <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                        <div className="chart-container" >
+                            <Bar data={chartData} options={chartOptions} />
+                        </div>
+                        <Typography >
                             {`Total Mortgages: ${totalLoans.toLocaleString()}`}
                         </Typography>
                     </div>

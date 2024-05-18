@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Box } from '@mui/material';
 import CensusTracksTable from './census-tracks-table'; // Assuming this is your table component
 import CensusTracksPicker from './census-tracks-picker'; // Your form component
-import { FairLendingTypes, CensusTrackProps, CensusTrackRowData, CensusData } from './compliance';
+import { FairLendingTypes, CensusTrackProps, CensusTrackRowData, CensusData, FairLendingTypesKeys } from './compliance';
 import { usePubSub } from 'contexts/socket/WebSocketProvider';
 import { makeTopicRequest, makeTopicResponse } from 'contexts/socket/PubSubTopics';
 import { CensusTrackFormQuery } from 'contexts/socket/ChartDataProvider';
@@ -48,10 +48,17 @@ export default function CensusTracks({ uid, topic, formData }: CensusTrackProps)
 
     const receiveValues = (values: CensusTrackFormQuery) => {
         setIsLoading(true);
+        console.log("form data", values)
         const payload = {
-            ...values,
+            year: values.year,
+            city: values.city,
             uid,
         }
+        const fairLendingType = FairLendingTypesKeys[values.fairLendingType];
+        if (values.fairLendingType !== 'Total') { 
+            payload.fairLendingType = fairLendingType;
+        }
+
         pubSub.publish(makeTopicRequest(topic), { topic, payload });
     }
 

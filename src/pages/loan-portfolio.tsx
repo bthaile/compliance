@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Box } from '@mui/material';
 import LoanPortfolioTable from './loan-portfolio-table'; // Assuming this is your table component
 import LoanPortfolioPicker from './loan-portfolio-picker'; // Your form component
-import { LoanPortfolioFormData, LoanPortfolioFormQuery, LoanPortfolioProps, LoanPortfolioRowData } from './compliance';
+import { FairLendingTypesKeys, LoanPortfolioFormData, LoanPortfolioFormQuery, LoanPortfolioProps, LoanPortfolioRowData } from './compliance';
 import { makeTopicRequest, makeTopicResponse } from 'contexts/socket/PubSubTopics';
 import { usePubSub } from 'contexts/socket/WebSocketProvider';
 
@@ -23,11 +23,12 @@ export default function LoanPortfolio({ uid, topic, formData }: LoanPortfolioPro
         return true;
     }
 
-
     const receiveValues = (values: LoanPortfolioFormQuery) => {
         setIsLoading(true);
+        const fairLendingTypes = values.fairLendingTypes.map((type) => FairLendingTypesKeys[type]);
         const payload = {
             ...values,
+            fairLendingTypes,
             uid,
         }
         pubSub.publish(makeTopicRequest(topic), { topic, payload });
@@ -70,12 +71,15 @@ export default function LoanPortfolio({ uid, topic, formData }: LoanPortfolioPro
         pubSub.subscribe(makeTopicResponse(topic), ({ request, payload }: { request: LoanPortfolioFormQuery, payload: LoanPortfolioRowData[] }) => {
             buildTableData(request, payload)
         })
+
+        /*
         receiveValues({
             year: formData?.years?.data[formData?.years?.defaultValue],
             type: formData?.types?.data[formData?.types?.defaultValue],
             fairLendingTypes: formData?.fairLendingTypes?.data,
             city: formData?.cities?.data[formData?.cities?.defaultValue]
         });
+        */
     }, []);
 
     return (

@@ -91,11 +91,11 @@ export default function GoalStatusTable({ uid, topic, formData }: GoalStatusProp
       console.log('GoalStatusTable', request, payload)
       updateChartData(request, payload)
     });
-
+/* don't load initial data
     receiveValues({
       assessArea: formData?.assessAreas?.data[formData?.assessAreas.defaultValue],
     });
-
+*/
 
     return () => {
       pubSub.unsubscribe(makeTopicResponse(topic));

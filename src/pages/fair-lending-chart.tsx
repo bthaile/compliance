@@ -83,7 +83,7 @@ const defaultChartData = {
             backgroundColor: 'rgba(54, 162, 235, 0.5)',
             borderColor: 'rgba(54, 162, 235, 1)',
             borderWidth: 1,
-            barThickness: 20,
+            barThickness: 10,
         },
     ],
 };
@@ -107,7 +107,6 @@ export default function FairLendingChart({ uid, topic, formData }: FairLendingCh
     }
 
     const updateChartData = (inputs: BankYearLoanFairCityProps, chartData: any) => {
-        console.log('peer chart data:', chartData)
         let selectedType = inputs.type.split(' ')[0].toUpperCase()
         // TODO: get data and form keys synched up
         if (selectedType === 'TOTAL') {
@@ -134,11 +133,16 @@ export default function FairLendingChart({ uid, topic, formData }: FairLendingCh
 
         const typeOfLoan = fairLendingLoans.find(x => x.fairLendingType.toLowerCase() === selectedFairLendingType);
         console.log('type of loan:', typeOfLoan)
-        const loanPct = typeOfLoan?.loanCounts?.map((item: { lenderCode: string, pct: number }) => decimalToPercentage(item.pct));
-        console.log('loan pct:', loanPct)
+
+        const loanPctData = typeOfLoan?.loanCounts?.map((item: { lenderCode: string, pct: number }) => ({
+            pct: decimalToPercentage(item.pct),
+            label: capitalizeWords(lookupBankName(item.lenderCode, lenderNames), 20)
+        })).sort((a: { pct: number }, b: { pct: number }) => a.pct > b.pct ? -1 : 1);
+
+        const loanPct = loanPctData.map((item: { pct: number }) => item.pct);
         const tl = loanPct?.reduce((acc: number, item: number) => acc + item, 0);
-        const newLabels = typeOfLoan?.loanCounts?.map((l: { lenderCode: string }) => capitalizeWords(lookupBankName(l.lenderCode, lenderNames), 12));
-        console.log('new labels:', newLabels)
+
+        const newLabels = loanPctData.map((item: { label: string }) => item.label);
         const newData = {
             ...defaultChartData, // spread the existing data to maintain other properties
             labels: newLabels,
@@ -159,7 +163,10 @@ export default function FairLendingChart({ uid, topic, formData }: FairLendingCh
                     display: true,
                     text: `${inputs.type} - ${inputs.city} - ${inputs.year}`,
 
-                }
+                },
+                tooltip: {
+                    enabled: false, // Disable tooltips
+                },
             }
         }
 
@@ -174,14 +181,14 @@ export default function FairLendingChart({ uid, topic, formData }: FairLendingCh
             const peerLoans = payload;
             updateChartData(inputs, peerLoans)
         });
-
-        receiveValues({
-            year: formData?.years?.data[formData?.years.defaultValue],
-            type: formData?.types?.data[formData?.types.defaultValue],
-            fairLendingType: formData.fairLendingTypes.data[formData.fairLendingTypes.defaultValue],
-            city: formData?.cities?.data[formData?.cities.defaultValue],
-        });
-
+        /*
+                receiveValues({
+                    year: formData?.years?.data[formData?.years.defaultValue],
+                    type: formData?.types?.data[formData?.types.defaultValue],
+                    fairLendingType: formData.fairLendingTypes.data[formData.fairLendingTypes.defaultValue],
+                    city: formData?.cities?.data[formData?.cities.defaultValue],
+                });
+        */
 
         return () => {
             pubSub.unsubscribe(makeTopicResponse(topic));
@@ -190,37 +197,35 @@ export default function FairLendingChart({ uid, topic, formData }: FairLendingCh
 
 
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-            <Grid container>
-                {/* Chart section */}
-                <Grid item xs={12} md={8}>
-                    <Box sx={{ flexGrow: 1, position: 'relative', width: '100%', height: '100%' }}>
-                        <div style={{ flexGrow: 1 }}>
+        <Grid container sx={{ height: '100vh' }}>
+            {/* Chart section */}
+            <Grid item xs={12} md={8}>
+                <Box sx={{ position: 'relative', width: '100%', height: '100%' }}>
+                    <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                        <div className="chart-container" >
                             <Bar data={chartData} options={chartOptions} />
-                            <Typography sx={{ position: 'absolute', bottom: 0, left: 0, padding: '8px' }}>
-                                {`Total Mortgages: ${totalLoans.toLocaleString()}`}
-                            </Typography>
                         </div>
-                    </Box>
-                </Grid>
-
-                {/* Form section */}
-                <Grid item xs={12} md={4}>
-                    <Box sx={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                        <FairLendingPicker
-                            {...{
-                                years: formData?.years,
-                                cities: formData?.cities,
-                                types: formData?.types,
-                                fairLendingTypes: formData?.fairLendingTypes,
-                            }}
-                            isLoading={isLoading}
-                            receiveValues={receiveValues}
-                        />
-                    </Box>
-                </Grid>
+                        <Typography >
+                            {`Total Mortgages: ${totalLoans.toLocaleString()}`}
+                        </Typography>
+                    </div>
+                </Box>
             </Grid>
-        </Box>
+
+            {/* Form section */}
+            <Grid item xs={12} md={4}>
+                <FairLendingPicker
+                    {...{
+                        years: formData?.years,
+                        cities: formData?.cities,
+                        types: formData?.types,
+                        fairLendingTypes: formData?.fairLendingTypes,
+                    }}
+                    isLoading={isLoading}
+                    receiveValues={receiveValues}
+                />
+            </Grid>
+        </Grid>
     )
 
 }

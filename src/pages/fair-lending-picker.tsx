@@ -53,7 +53,7 @@ export default function FairLendingPicker({ years, cities, types, fairLendingTyp
                     </Select>
                 </FormControl>
                 <FormControl fullWidth margin="normal">
-                    <InputLabel id="type-select-label">Type</InputLabel>
+                    <InputLabel id="type-select-label">Loan Type</InputLabel>
                     <Select
                         labelId="type-select-label"
                         id="type-select"
