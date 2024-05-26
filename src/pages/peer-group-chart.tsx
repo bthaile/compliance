@@ -61,7 +61,7 @@ const options = {
         },
         title: {
             display: true,
-            text: 'First Mortgage - Dallas - 2023',
+            text: '',
         },
         tooltip: {
             enabled: false, // Disable tooltips

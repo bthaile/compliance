@@ -72,7 +72,8 @@ const AssessmentAreaEndpoint = "/api/proxy/assessmentAreas"; // picklist
 const LoanRankingEndpoint = "api/proxy/loan/ranking"; // charts 1,2 and 3
 const LoanTrendEndpoint = "api/proxy/loan/trend"; // line chart
 const CensusTrackEndpoint = "/api/proxy/census"; // census track table
-const LoanActivityEndpoint = 'api/proxy/loan/activity'; // portfolio tabld
+const LoanActivityEndpoint = 'api/proxy/loan/activity'; // portfolio table
+const LenderEndpoint = 'api/proxy/lenders'; // lender details
 
 export const queryPicklistData = async (query: UserAssessmentAreasQuery): Promise<object> => {
     const values = await getCachedResult(AssessmentAreaEndpoint, query, []);
@@ -164,4 +165,11 @@ export const queryLoanPortfolio = async (query: LoanPortfolioFormQuery): Promise
     };
     console.log('queryLoanPortfolio:', dataQuery)
     return await getCachedResult(LoanActivityEndpoint, dataQuery, []);
+}
+
+export const queryLendersData = async (query: { uid: string }): Promise<object> => {
+    const dataQuery = {
+    };
+    console.log('queryLendersData:', dataQuery)
+    return await getCachedResult(LenderEndpoint, dataQuery, []);
 }

@@ -43,6 +43,15 @@ export interface CensusTract {
     hispanic: boolean;
     minority: boolean;
     lmi: boolean;
+    originationCounts: [{
+        loanType: string;
+        totalOrig: number;
+        myOrig: number;
+        hispOrig: number;
+        myHispOrig: number;
+        aaOrig: number;
+        myAaOrig: number;
+    }]
 }
 
 export interface CensusData {
@@ -59,25 +68,26 @@ export type FormInputData = {
 
 // Define a type for the row data
 export type CensusTrackRowData = {
-    censusTract: string;
+    tractName: string;
     totalPop: number;
-    totalOriginations: number;
-    myOriginations: number;
+    totalOrig?: number; // todo: set it manually from originationCounts.totalOrig
+    myOrig?: number; // todo: set it manually from originationCounts.myOrig 
     myPct: number;
-    lmiArea: boolean;
-    minorityArea: boolean;
-    minorityCount: number;
+    lmi: boolean;
+    minority: boolean;
+    minorityPop: number;
+    hispanicAA: boolean;
     minorityPct: number;
-    hispanicArea: boolean;
-    hispanicCount: number;
+    hispanic: boolean;
+    hispPop: number;
     hispanicPct: number;
-    aaArea: boolean;
-    aaCount: number;
+    aa: boolean;
+    aaPop: number;
     aaPct: number;
-    hispIndivOriginations: string;
-    myHistIndivOriginations: string;
-    aaIndivOriginations: string;
-    myAaIndivOriginations: string;
+    hispOrig?: string; // todo: set it manually from originationCounts.hispOrig
+    myHispOrig?: string; // todo: set it manually from originationCounts.myHispOrig
+    aaOrig?: string; // todo: set it manually from originationCounts.aaOrig
+    myAaOrig?: string; // todo: set it manually from originationCounts.myAaOrig
 };
 
 
@@ -229,24 +239,6 @@ ChartJS.register(
     ChartDataLabels
 );
 
-const defBanks = [
-    'United Wholesale Mortgage',
-    'Everett Financial, Inc.',
-    'Fairway Independent Mort Corp',
-    'LOANDEPOT.COM, LLC',
-    'JPMorgan Chase Bank, NA',
-    'WELLS FARGO BANK NA',
-    'Lennar Mortgage, LLC',
-    'PRIMELENDING',
-    'Bank of America NA',
-    'CARDINAL FINANCIAL COMPANY, LI',
-    'Nationstar Mortgage',
-    'PENNYMAC LOAN SERVICES LLC',
-    'GUARANTEED RATE, INC',
-    'FIRST UNITED BANK AND TRUST CO',
-    'FROST BANK',
-]
-
 export const assetTypeNames = ['Total', 'First Mortgage', 'Second Mortgage']
 export const assetTypeKeys: { [key: string]: string } = {
     'Total': 'TOTAL',
@@ -272,7 +264,6 @@ const ComplianceCharts = () => {
 
     useEffect(() => {
         Object.keys(CHART_TOPICS).map(topic => {
-            console.log('subscribing to:', topic)
             pubSub?.subscribe(makeTopicResponse(topic), (data) => distributeData(data))
         });
 
@@ -291,7 +282,7 @@ const ComplianceCharts = () => {
     };
 
     const peerGroupFormData = {
-        years: { data: ['2023', '2022', '2021'], defaultValue: 0 },
+        years: { data: ['2024 YTD', '2023', '2022', '2021'], defaultValue: 0 },
         cities: { data: assessmentAreas, defaultValue: 0 },
         types: { data: assetTypeNames, defaultValue: 0 },
     }
@@ -301,15 +292,15 @@ const ComplianceCharts = () => {
     }
 
     const fairLendingFormData = {
-        years: { data: ['2023', '2022', '2021'], defaultValue: 0 },
+        years: { data: ['2024 YTD', '2023', '2022', '2021'], defaultValue: 0 },
         cities: { data: assessmentAreas, defaultValue: 0 },
         types: { data: assetTypeNames, defaultValue: 0 },
         fairLendingTypes: { data: FairLendingTypes, defaultValue: 0 },
     }
-
+ 
     // TODO: need better way to organize data for forms
     const lendingTrendsFormData = {
-        startYears: { data: ['2023', '2022', '2021', '2020'], defaultValue: 0 },
+        startYears: { data: ['2024', '2023', '2022', '2021', '2020'], defaultValue: 0 },
         startMonths: { data: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], defaultValue: 0 },
         endYears: { data: ['2023', '2022', '2021', '2020'], defaultValue: 0 },
         endMonths: { data: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], defaultValue: 0 },
@@ -324,45 +315,6 @@ const ComplianceCharts = () => {
         types: { data: assetTypeNames, defaultValue: 0 },
         cities: { data: assessmentAreas, defaultValue: 0 },
         fairLendingTypes: { data: ['Total', ...FairLendingTypes], defaultValue: 0 },
-    }
-
-    const loadLoanPortfolioData = (values: LoanPortfolioFormQuery): LoanPortfolioRowData[] => {
-        const myRows: LoanPortfolioRowData[] = [];
-        for (let i = 0; i < loanPortfolio2021.loanRecords.length; i++) {
-            const data = loanPortfolio2021.loanRecords[i];
-            const row: LoanPortfolioRowData = {
-                censusTract: data.censusTract,
-                assetArea: data.county,
-                confirming: data.conforming,
-                loanProduct: data.loanType,
-                dwellingType: data.dwellingType,
-                ethnicity: data.ethnicity,
-                race: data.race,
-                loanAmount: data.loanAmount,
-                interestRate: data.interestRate,
-                loanTerm: data.loanTerm,
-                year: 2021
-            }
-            myRows.push(row);
-        }
-        for (let i = 0; i < loanPortfolio2022.loanRecords.length; i++) {
-            const data = loanPortfolio2022.loanRecords[i];
-            const row: LoanPortfolioRowData = {
-                censusTract: data.censusTract,
-                assetArea: data.county,
-                confirming: data.conforming,
-                loanProduct: data.loanType,
-                dwellingType: data.dwellingType,
-                ethnicity: data.ethnicity,
-                race: data.race,
-                loanAmount: data.loanAmount,
-                interestRate: data.interestRate,
-                loanTerm: data.loanTerm,
-                year: 2022,
-            }
-            myRows.push(row);
-        }
-        return myRows;
     }
 
     const loanPortfolioFormData = {

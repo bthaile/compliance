@@ -7,7 +7,7 @@ import censusTracksData from '../../assets/data/censusTracksData.json';
 import loanPortfolio2021 from '../../assets/data/loanPortfolio2021.json';
 import loanPortfolio2022 from '../../assets/data/loanPortfolio2022.json';
 import loanGoals20022003 from '../../assets/data/1-2-3-MemphisAnalysis2022-2023.json';
-import { queryCensusTracks, queryFairLendingData, queryGoalStatusData, queryLoanPortfolio, queryLoanTrends, queryPeerGroupData, queryPicklistData } from './ChartDataProvider';
+import { queryCensusTracks, queryFairLendingData, queryGoalStatusData, queryLendersData, queryLoanPortfolio, queryLoanTrends, queryPeerGroupData, queryPicklistData } from './ChartDataProvider';
 
 interface MessageData {
     [key: string]: any;  // Customize according to your data structure
@@ -95,6 +95,10 @@ class WebSocketManager {
                 })
             } else if (featureName === CHART_TOPICS.LOAN_PORTFOLIO) {
                 data = queryLoanPortfolio(payload).then((data) => {
+                    this.pubSub.publish(makeTopicResponse(featureName), { topic: featureName, request: payload, payload: data });
+                })
+            } else if (featureName === CHART_TOPICS.LENDERS_DATA) {
+                data = queryLendersData(payload).then((data) => {
                     this.pubSub.publish(makeTopicResponse(featureName), { topic: featureName, request: payload, payload: data });
                 })
             }

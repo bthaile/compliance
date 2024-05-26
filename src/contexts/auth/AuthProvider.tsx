@@ -69,7 +69,10 @@ export const AuthProvider = (props: IProviderProps) => {
 
   useEffect(() => {
     if (store?.authUser) {
-      subPub.publish(makeTopicRequest(CHART_TOPICS.PICKLIST_DATA), { topic: CHART_TOPICS.PICKLIST_DATA, payload: { uid: store.authUser?.uid } });
+      if (store?.authUser?.uid) {
+        subPub.publish(makeTopicRequest(CHART_TOPICS.PICKLIST_DATA), { topic: CHART_TOPICS.PICKLIST_DATA, payload: { uid: store.authUser?.uid } });
+        subPub.publish(makeTopicRequest(CHART_TOPICS.LENDERS_DATA), { topic: CHART_TOPICS.LENDERS_DATA, payload: { uid: store.authUser?.uid } });
+      }
     }
   }, [store?.authUser]);
 

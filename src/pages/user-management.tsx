@@ -45,7 +45,9 @@ import { IManager, IUser } from 'shared/types/user';
 import { SYSTEM_ROLES } from 'shared/constants/roleConstants';
 import { v4 } from 'uuid';
 import FieldQuery from 'components/toolbar/FieldQuery';
-
+import { usePubSub } from 'contexts/socket/WebSocketProvider';
+import { CHART_TOPICS, makeTopicRequest, makeTopicResponse } from 'contexts/socket/PubSubTopics';
+import useAuth from 'contexts/auth/useAuth';
 interface IColumnItem {
   name: string;
   enabled: boolean;
@@ -60,6 +62,7 @@ const UserManagement: NextPage = () => {
   const [displayedUsers, setDisplayedUsers] = useState<IUser[]>([]);
   const [page, setPage] = useState<number>(0);
   const [rowsPerPage, setRowsPerPage] = useState<number>(10);
+  const [lenderList, setLenderList] = useState<string[]>([]);
 
   const [enableName, setEnableName] = useState<boolean>(true);
   const [enableTitle, setEnableTitle] = useState<boolean>(true);
@@ -72,12 +75,15 @@ const UserManagement: NextPage = () => {
   const [openColumns, setOpenColumns] = useState<boolean>(false);
   const [searchAnchor, setSearchAnchor] = useState<null | HTMLElement>(null);
   const [columnsAnchor, setColumnsAnchor] = useState<null | HTMLElement>(null);
+  const [assignedLender, setAssignedLender] = useState<string | undefined>();
 
   const [nameSearch, setNameSearch] = useState<string | undefined>();
   const [titleSearch, setTitleSearch] = useState<string | undefined>();
   const [mlsSearch, setMLSSearch] = useState<string | undefined>();
   const [managerSearch, setManagerSearch] = useState<string | undefined>();
   const [emailSearch, setEmailSearch] = useState<string | undefined>();
+  const { authUser } = useAuth();
+  const pubSub = usePubSub();
 
   const socket2 = new Socket(process.env.NEXT_PUBLIC_SECOND_WEBSOCKET_SERVER ??
     'wss://wss.terravalue.net:8089');
@@ -101,6 +107,12 @@ const UserManagement: NextPage = () => {
       setEnabled: setEnableMLS,
       keyValue: 'MlsAreas',
     },
+    /*   {
+         name: 'Lender',
+         enabled: assignedLender,
+         setEnabled: setAssignedLender,
+         keyValue: 'AssignedLender',
+       },*/
     {
       name: 'Manager',
       enabled: enableManager,
@@ -159,6 +171,18 @@ const UserManagement: NextPage = () => {
       value: 'AccountEnabled',
     }, */
   ];
+
+  console.log('lenders list', lenderList);
+  useEffect(() => {
+    pubSub?.subscribe(makeTopicResponse(CHART_TOPICS.LENDERS_DATA), (data) => setLenderList(data))
+    if (authUser?.uid) {
+      pubSub?.publish(makeTopicRequest(CHART_TOPICS.LENDERS_DATA), { topic: CHART_TOPICS.LENDERS_DATA, payload: { uid: authUser?.uid } });
+    }
+
+    return () => {
+      pubSub?.unsubscribe(makeTopicResponse(CHART_TOPICS.LENDERS_DATA))
+    }
+  }, [authUser?.uid]);
 
   useEffect(() => {
     socket2.on('connect', (data) => {
@@ -621,7 +645,7 @@ const UserManagement: NextPage = () => {
                                   <MenuItem key={index} value={role}>
                                     {
                                       SYSTEM_ROLES[
-                                        role as keyof typeof SYSTEM_ROLES
+                                      role as keyof typeof SYSTEM_ROLES
                                       ]
                                     }
                                   </MenuItem>
@@ -640,7 +664,7 @@ const UserManagement: NextPage = () => {
                             onChange={
                               (
                                 event,
-                              ) => {} /* handleTitleChange(record, event) */
+                              ) => { } /* handleTitleChange(record, event) */
                             }
                           >
                             {user.MlsAreas &&

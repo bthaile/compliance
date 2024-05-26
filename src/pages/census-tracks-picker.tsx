@@ -56,12 +56,12 @@ export default function CensusTracksPicker({ receiveValues, formData, isLoading 
                             </Select>
                         </FormControl>
                     </Grid>
-                    {/** <Grid item xs={12} sm={3}>
+                    <Grid item xs={12} sm={3}>
                         <FormControl fullWidth margin="normal">
-                            <InputLabel id="type-select-label">Type</InputLabel>
+                            <InputLabel id="loan-type-select-label">Loan Type</InputLabel>
                             <Select
-                                labelId="type-select-label"
-                                id="type-select"
+                                labelId="loan-type-select-label"
+                                id="loan-type-type-select"
                                 value={type}
                                 label="Type"
                                 onChange={(e) => setType(e.target.value)}
@@ -73,7 +73,8 @@ export default function CensusTracksPicker({ receiveValues, formData, isLoading 
                                 ))}
                             </Select>
                         </FormControl>
-                    </Grid> */}
+                    </Grid>
+                    {/** 
                     <Grid item xs={12} sm={3}>
                         <FormControl fullWidth margin="normal">
                             <InputLabel id="fair-lending-type-select-label">Fair Lending Type</InputLabel>
@@ -92,6 +93,7 @@ export default function CensusTracksPicker({ receiveValues, formData, isLoading 
                             </Select>
                         </FormControl>
                     </Grid>
+                     */}
                     <Grid item xs={12} sm={3}>
                         <FormControl fullWidth margin="normal">
                             <InputLabel id="city-select-label">Assess Area</InputLabel>

@@ -181,7 +181,6 @@ export default function LendingTrendsChart({ uid, topic, formData }: LendingTren
         <Box sx={{ height: '100vh', display: 'flex' }}>
             <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
                 <div style={{ flexGrow: 1 }}>
-                    {chartData === null ? <div>Loading...</div> : null}
                     {chartData !== null && <Line data={chartData} options={chartOptions} />}
                 </div>
             </Box>

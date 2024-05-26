@@ -6,6 +6,7 @@ export const CHART_TOPICS = {
     LOAN_PORTFOLIO: 'loan_portfolio',
     CENSUS_TRACT: 'census_tract',
     PICKLIST_DATA: 'picklist_data',
+    LENDERS_DATA: 'lenders_data',
 }
 
 export const makeTopicRequest = (topic: string) => `${topic}_REQUEST`;

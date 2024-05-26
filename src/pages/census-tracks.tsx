@@ -25,22 +25,22 @@ export default function CensusTracks({ uid, topic, formData }: CensusTrackProps)
         if (fairLendingType === FairLendingTypes[FairLendingTypeAllIndex]) {
             return true;
         }
-        if (row.hispanicArea && fairLendingType === FairLendingTypes[FairLendingTypeHispanicIndex]) {
+        if (row.hispanic && fairLendingType === FairLendingTypes[FairLendingTypeHispanicIndex]) {
             return true;
         }
-        if (row.aaArea && fairLendingType === FairLendingTypes[FairLendingTypeAAIndex]) {
+        if (row.aa && fairLendingType === FairLendingTypes[FairLendingTypeAAIndex]) {
             return true;
         }
-        if (row.minorityArea && fairLendingType === FairLendingTypes[FairLendingTypeMinorityIndex]) {
+        if (row.minority && fairLendingType === FairLendingTypes[FairLendingTypeMinorityIndex]) {
             return true;
         }
-        if (row.lmiArea && fairLendingType === FairLendingTypes[FairLendingTypeLMIIndex]) {
+        if (row.lmi && fairLendingType === FairLendingTypes[FairLendingTypeLMIIndex]) {
             return true;
         }
-        if (row.hispanicArea && fairLendingType === FairLendingTypes[FairLendingTypeHispanicIndividualIndex]) {
+        if (row.hispanic && fairLendingType === FairLendingTypes[FairLendingTypeHispanicIndividualIndex]) {
             return true;
         }
-        if (row.aaArea && fairLendingType === FairLendingTypes[FairLendingTypeAAIndividualIndex]) {
+        if (row.aa && fairLendingType === FairLendingTypes[FairLendingTypeAAIndividualIndex]) {
             return true;
         }
         return false;
@@ -50,12 +50,13 @@ export default function CensusTracks({ uid, topic, formData }: CensusTrackProps)
         setIsLoading(true);
         console.log("form data", values)
         const payload = {
+            type: values.type,
             year: values.year,
             city: values.city,
             uid,
         }
         const fairLendingType = FairLendingTypesKeys[values.fairLendingType];
-        if (values.fairLendingType !== 'Total') { 
+        if (values.fairLendingType !== 'Total') {
             payload.fairLendingType = fairLendingType;
         }
 
@@ -64,51 +65,39 @@ export default function CensusTracks({ uid, topic, formData }: CensusTrackProps)
 
     useEffect(() => {
         pubSub.subscribe(makeTopicResponse(topic), ({ request, payload }: { request: CensusTrackFormQuery, payload: CensusData }) => {
-            const values = request;
             const censusTracksData = payload;
 
+            console.log('censusTracksData', censusTracksData)
             const myRows: CensusTrackRowData[] = [];
             for (let i = 0; i < censusTracksData.censusTracts.length; i++) {
                 const data = censusTracksData.censusTracts[i];
                 const row: CensusTrackRowData = {
-                    censusTract: data.tractName,
-                    totalPop: data.totalPop,
-                    totalOriginations: data.totalOrig,
-                    myOriginations: data.totalOrig,
-                    myPct: 0,
-                    lmiArea: data.lmi,
-                    minorityArea: data.minority,
-                    minorityCount: data.minorityPop,
-                    minorityPct: 0,
-                    hispanicArea: data.hispanic,
-                    hispanicCount: data.hispPop,
-                    hispanicPct: 0,
-                    aaArea: data.aa,
-                    aaCount: data.aaPop,
-                    aaPct: 0,
-                    hispIndivOriginations: "",
-                    myHistIndivOriginations: "",
-                    aaIndivOriginations: "",
-                    myAaIndivOriginations: "",
+                    ...data
                 }
-                if (values.fairLendingType !== FairLendingTypes[FairLendingTypeAllIndex]) {
-                    filterFairLendingType(values.fairLendingType, row) && myRows.push(row);
+                // add loan type data
+                let originationCounts = {};
+                if (request.type === 'Total') {
+                    originationCounts = data.originationCounts.find((x) => x.loanType === 'ALL');
                 } else {
-                    myRows.push(row);
+                    originationCounts = data.originationCounts.find((x) => x.loanType === request.type.toUpperCase());
                 }
+                myRows.push({
+                    ...row,
+                    ...originationCounts
+                });
             }
             setFilteredRows(myRows)
             setIsLoading(false);
         });
 
-
-        receiveValues({
-            year: formData?.years?.data[formData?.years?.defaultValue],
-            type: formData?.types?.data[formData?.types?.defaultValue],
-            city: formData?.cities?.data[formData?.cities?.defaultValue],
-            fairLendingType: formData?.fairLendingTypes?.data[formData?.fairLendingTypes?.defaultValue]
-        });
-
+        /*
+                receiveValues({
+                    year: formData?.years?.data[formData?.years?.defaultValue],
+                    type: formData?.types?.data[formData?.types?.defaultValue],
+                    city: formData?.cities?.data[formData?.cities?.defaultValue],
+                    fairLendingType: formData?.fairLendingTypes?.data[formData?.fairLendingTypes?.defaultValue]
+                });
+        */
         return () => {
             pubSub.unsubscribe(makeTopicResponse(topic));
         }

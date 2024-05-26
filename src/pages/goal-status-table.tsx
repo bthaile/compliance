@@ -8,7 +8,7 @@ import { makeTopicRequest, makeTopicResponse } from 'contexts/socket/PubSubTopic
 
 export default function GoalStatusTable({ uid, topic, formData }: GoalStatusProps) {
   const [data, setData] = React.useState<FairLendingRowData[]>([]);
-  const [selectedAsset, setSelectedAsset] = React.useState<string>(formData?.assessAreas?.data[formData?.assessAreas?.defaultValue]);
+  const [selectedAsset, setSelectedAsset] = React.useState<string>('');
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
   const pubSub = usePubSub();
 

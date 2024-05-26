@@ -16,7 +16,7 @@ interface CensusTracksTableProps {
 // Define a type for the key of CensusTrackRowData
 type DataKey = keyof CensusTrackRowData;
 
-export default function CensusTracksTable ({ rows }: CensusTracksTableProps) {
+export default function CensusTracksTable({ rows }: CensusTracksTableProps) {
     const [order, setOrder] = React.useState<Order>('asc');
     const [orderBy, setOrderBy] = React.useState<DataKey>('censusTract');
 
@@ -51,160 +51,92 @@ export default function CensusTracksTable ({ rows }: CensusTracksTableProps) {
     // Sort rows
     const sortedRows = stableSort(rows, getComparator(order, orderBy));
 
+    const MyTableHeader = (name: string, label: string) => {
+        return (
+            <TableSortLabel
+                active={orderBy === name}
+                direction={orderBy === name ? order : 'asc'}
+                onClick={() => handleSort(name)}
+            >
+                {label}
+            </TableSortLabel>
+        );
+    }
+
     return (
         <TableContainer component={Paper}>
             <Table aria-label="sortable table">
                 <TableHead>
                     <TableRow>
                         <TableCell>
-                            <TableSortLabel
-                                active={orderBy === 'censusTract'}
-                                direction={orderBy === 'censusTract' ? order : 'asc'}
-                                onClick={() => handleSort('censusTract')}
-                            >
-                                Census Tract
-                            </TableSortLabel>
+                            {MyTableHeader("tractName", "Census Tract")}
                         </TableCell>
                         <TableCell>
-                            <TableSortLabel
-                                active={orderBy === 'totalPop'}
-                                direction={orderBy === 'totalPop' ? order : 'asc'}
-                                onClick={() => handleSort('totalPop')}
-                            >
-                                Total Population
-                            </TableSortLabel>
+                            {MyTableHeader("totalPop", "Total Population")}
                         </TableCell>
                         <TableCell>
-                            <TableSortLabel
-                                active={orderBy === 'totalOriginations'}
-                                direction={orderBy === 'totalOriginations' ? order : 'asc'}
-                                onClick={() => handleSort('totalOriginations')}
-                            >
-                                Total Originations
-                            </TableSortLabel>
+                            {MyTableHeader("totalOrig", "Total Originations")}
                         </TableCell>
                         <TableCell>
-                            <TableSortLabel
-                                active={orderBy === 'myOriginations'}
-                                direction={orderBy === 'myOriginations' ? order : 'asc'}
-                                onClick={() => handleSort('myOriginations')}
-                            >
-                                My Originations
-                            </TableSortLabel>
+                            {MyTableHeader("myOrig", "My Originations")}
                         </TableCell>
                         <TableCell>
-                            <TableSortLabel
-                                active={orderBy === 'myPct'}
-                                direction={orderBy === 'myPct' ? order : 'asc'}
-                                onClick={() => handleSort('myPct')}
-                            >
-                                My Pct
-                            </TableSortLabel>
+                            {MyTableHeader("lmi", "LMI Area",)}
                         </TableCell>
                         <TableCell>
-                            <TableHead>
-                                LMI Area
-                            </TableHead>
+                            {MyTableHeader("minority", "Minority Area")}
                         </TableCell>
                         <TableCell>
-                            <TableHead>
-                                Minority Area
-                            </TableHead>
+                            {MyTableHeader("hispanic", "Hispanic Area")}
                         </TableCell>
                         <TableCell>
-                            <TableHead>
-                                Minority Count
-                            </TableHead>
+                            {MyTableHeader("aa", "AA Area")}
                         </TableCell>
                         <TableCell>
-                            <TableHead>
-                                Minority Pct
-                            </TableHead>
+                            {MyTableHeader("hispanicAA", "Hispanic AA Area")}
                         </TableCell>
                         <TableCell>
-                            <TableHead>
-                                Hispanic Area
-                            </TableHead>
+                            {MyTableHeader("minorityPop", "Minority Count")}
                         </TableCell>
                         <TableCell>
-                            <TableHead>
-                                Hispanic Count
-                            </TableHead>
+                            {MyTableHeader("minorityPop", "Hispanic Count")}
                         </TableCell>
                         <TableCell>
-                            <TableHead>
-                                Hispanic Pct
-                            </TableHead>
+                            {MyTableHeader("aaPop", "AA Count")}
                         </TableCell>
                         <TableCell>
-                            <TableHead>
-                                AA Area
-                            </TableHead>
+                            {MyTableHeader("hispOrig", "Hispanic Originations")}
                         </TableCell>
                         <TableCell>
-                            <TableHead>
-                                AA Count
-                            </TableHead>
+                            {MyTableHeader("myHispOrig", "My Hispanic Originations")}
                         </TableCell>
                         <TableCell>
-                            <TableHead>
-                                AA Pct
-                            </TableHead>
+                            {MyTableHeader("aaOrig", "AA Originations")}
                         </TableCell>
                         <TableCell>
-                            <TableHead>
-                                Hispanic Individual
-                            </TableHead>
-                        </TableCell>
-                        <TableCell>
-                            <TableHead>
-                                Hispanic Individual Count
-                            </TableHead>
-                        </TableCell>
-                        <TableCell>
-                            <TableHead>
-                                Hispanic Individual Pct
-                            </TableHead>
-                        </TableCell>
-                        <TableCell>
-                            <TableHead>
-                                AA Individual
-                            </TableHead>
-                        </TableCell>
-                        <TableCell>
-                            <TableHead>
-                                AA Individual Count
-                            </TableHead>
-                        </TableCell>
-                        <TableCell>
-                            <TableHead>
-                                AA Individual Pct
-                            </TableHead>
+                            {MyTableHeader("myAaOrig", "My AA Originations")}
                         </TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     {sortedRows.map((row, index) => (
                         <TableRow key={index}>
-                            <TableCell>{row.censusTract}</TableCell>
+                            <TableCell>{row.tractName}</TableCell>
                             <TableCell>{row.totalPop}</TableCell>
-                            <TableCell>{row.totalOriginations}</TableCell>
-                            <TableCell>{row.myOriginations}</TableCell>
-                            <TableCell>{row.myPct}</TableCell>
-                            <TableCell>{row.lmiArea ? <CheckIcon /> : ''}</TableCell>
-                            <TableCell>{row.minorityArea ? <CheckIcon /> : ''}</TableCell>
-                            <TableCell>{row.minorityCount}</TableCell>
-                            <TableCell>{row.minorityPct}</TableCell>
-                            <TableCell>{row.hispanicArea ? <CheckIcon /> : ''}</TableCell>
-                            <TableCell>{row.hispanicCount}</TableCell>
-                            <TableCell>{row.hispanicPct}</TableCell>
-                            <TableCell>{row.aaArea ? <CheckIcon /> : ''}</TableCell>
-                            <TableCell>{row.aaCount}</TableCell>
-                            <TableCell>{row.aaPct}</TableCell>
-                            <TableCell>{row.hispIndivOriginations}</TableCell>
-                            <TableCell>{row.myHistIndivOriginations}</TableCell>
-                            <TableCell>{row.aaIndivOriginations}</TableCell>
-                            <TableCell>{row.myAaIndivOriginations}</TableCell>
+                            <TableCell>{row.totalOrig}</TableCell>
+                            <TableCell>{row.myOrig}</TableCell>
+                            <TableCell>{row.lmi ? <CheckIcon /> : ''}</TableCell>
+                            <TableCell>{row.minority ? <CheckIcon /> : ''}</TableCell>
+                            <TableCell>{row.hispanic ? <CheckIcon /> : ''}</TableCell>
+                            <TableCell>{row.aa ? <CheckIcon /> : ''}</TableCell>
+                            <TableCell>{row.hispanicAA}</TableCell>
+                            <TableCell>{row.minorityPop}</TableCell>
+                            <TableCell>{row.hispPop}</TableCell>
+                            <TableCell>{row.aaPop}</TableCell>
+                            <TableCell>{row.hispOrig}</TableCell>
+                            <TableCell>{row.myHispOrig}</TableCell>
+                            <TableCell>{row.aaOrig}</TableCell>
+                            <TableCell>{row.myAaOrig}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>

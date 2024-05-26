@@ -35,7 +35,7 @@ const options = {
         },
         title: {
             display: true,
-            text: 'LMI Areas - Dallas - 2023',
+            text: '',
         },
         datalabels: {
             anchor: 'end',
