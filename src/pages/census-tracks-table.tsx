@@ -129,7 +129,7 @@ export default function CensusTracksTable({ rows }: CensusTracksTableProps) {
                             <TableCell>{row.minority ? <CheckIcon /> : ''}</TableCell>
                             <TableCell>{row.hispanic ? <CheckIcon /> : ''}</TableCell>
                             <TableCell>{row.aa ? <CheckIcon /> : ''}</TableCell>
-                            <TableCell>{row.hispanicAA}</TableCell>
+                            <TableCell>{row.hispanicAA ? <CheckIcon /> : ''}</TableCell>
                             <TableCell>{row.minorityPop}</TableCell>
                             <TableCell>{row.hispPop}</TableCell>
                             <TableCell>{row.aaPop}</TableCell>

@@ -300,9 +300,9 @@ const ComplianceCharts = () => {
  
     // TODO: need better way to organize data for forms
     const lendingTrendsFormData = {
-        startYears: { data: ['2024', '2023', '2022', '2021', '2020'], defaultValue: 0 },
+        startYears: { data: ['2024', '2023', '2022', '2021', '2020'], defaultValue: 2 },
         startMonths: { data: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], defaultValue: 0 },
-        endYears: { data: ['2023', '2022', '2021', '2020'], defaultValue: 0 },
+        endYears: { data: ['2024', '2023', '2022', '2021', '2020'], defaultValue: 1 },
         endMonths: { data: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], defaultValue: 0 },
         timeIncrements: { data: ['Month', 'Quarter', 'Year'], defaultValue: 1 },
         assetTypes: { data: assetTypeNames, defaultValue: 0 },

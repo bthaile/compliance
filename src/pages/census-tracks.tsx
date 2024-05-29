@@ -79,7 +79,8 @@ export default function CensusTracks({ uid, topic, formData }: CensusTrackProps)
                 if (request.type === 'Total') {
                     originationCounts = data.originationCounts.find((x) => x.loanType === 'ALL');
                 } else {
-                    originationCounts = data.originationCounts.find((x) => x.loanType === request.type.toUpperCase());
+                    const loanType = request.type.toUpperCase().split(' ')[0];
+                    originationCounts = data.originationCounts.find((x) => x.loanType === loanType);
                 }
                 myRows.push({
                     ...row,
