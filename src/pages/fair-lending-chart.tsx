@@ -149,7 +149,7 @@ export default function FairLendingChart({ uid, topic, formData }: FairLendingCh
 
         const loanPctData = typeOfLoan?.loanCounts?.map((item: { lenderCode: string, pct: number, label: string }) => ({
             pct: decimalToPercentage(item.pct),
-            label: capitalizeWords(lookupBankName(item.lenderCode, lenderNames), 20),
+            label: capitalizeWords(lookupBankName(item.lenderCode, lenderNames), 30),
             name: lookupBankName(item.lenderCode, lenderNames),
             dataLabel: item.label
         }));
@@ -195,7 +195,7 @@ export default function FairLendingChart({ uid, topic, formData }: FairLendingCh
                 x: {
                     beginAtZero: true,
                     min: 0,
-                    max: maxValue + (maxValue * 0.1), // Adding 10% to the max value for padding
+                    max: maxValue + (maxValue * 0.15), // Adding 10% to the max value for padding
                     ticks: {
                         color: '#000',
                         font: {

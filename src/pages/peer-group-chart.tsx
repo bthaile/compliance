@@ -141,7 +141,7 @@ export default function PeerGroupChart({ uid, topic, formData }: PeerGroupChartP
         const tl = itemOneLoans?.reduce((acc: number, item: { lenderCode: string, count: number }) => acc + item.count, 0);
         const banks = itemOneLoans?.map((l: { lenderCode: string }) => (
             {
-                label: capitalizeWords(lookupBankName(l.lenderCode, lenderNames), 20),
+                label: capitalizeWords(lookupBankName(l.lenderCode, lenderNames), 30),
                 name: lookupBankName(l.lenderCode, lenderNames)
             }));
         const newLabels = banks.map((b: { label: string }) => b.label);

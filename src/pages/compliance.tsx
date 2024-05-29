@@ -282,7 +282,7 @@ const ComplianceCharts = () => {
     };
 
     const peerGroupFormData = {
-        years: { data: ['2024 YTD', '2023', '2022', '2021'], defaultValue: 0 },
+        years: { data: ['2024 YTD', '2023', '2022', '2021'], defaultValue: 1 },
         cities: { data: assessmentAreas, defaultValue: 0 },
         types: { data: assetTypeNames, defaultValue: 0 },
     }
@@ -292,7 +292,7 @@ const ComplianceCharts = () => {
     }
 
     const fairLendingFormData = {
-        years: { data: ['2024 YTD', '2023', '2022', '2021'], defaultValue: 0 },
+        years: { data: ['2024 YTD', '2023', '2022', '2021'], defaultValue: 1 },
         cities: { data: assessmentAreas, defaultValue: 0 },
         types: { data: assetTypeNames, defaultValue: 0 },
         fairLendingTypes: { data: FairLendingTypes, defaultValue: 0 },
