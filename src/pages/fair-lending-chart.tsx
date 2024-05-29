@@ -8,6 +8,7 @@ import { makeTopicRequest, makeTopicResponse } from 'contexts/socket/PubSubTopic
 import { usePubSub } from 'contexts/socket/WebSocketProvider';
 import { decimalToPercentage } from 'shared/utils/formatters';
 import { capitalizeWords, lookupBankName } from 'shared/utils/textNames';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 const options = {
     scales: {
@@ -20,12 +21,18 @@ const options = {
             },
             barPercentage: 0.5, // Adjust this value as needed
             categoryPercentage: 0.8, // Adjust this value as needed
+        },
+        x: {
+            beginAtZero: true,
+            ticks: {
+                color: '#000', // Ensures that the ticks (labels) are in black
+            }
         }
     },
     indexAxis: 'y',
     elements: {
         bar: {
-            borderWidth: 2,
+            borderWidth: 1,
         },
     },
     responsive: true,
@@ -37,11 +44,15 @@ const options = {
             display: true,
             text: '',
         },
+        tooltip: {
+            enabled: false,
+        },
         datalabels: {
             anchor: 'end',
             align: 'end',
             offset: 5,
             formatter: (value, context) => {
+                console.log(value, context)
                 return value.toLocaleString(); // or just value if you don't want to format
             },
             color: '#000',
@@ -98,8 +109,10 @@ export default function FairLendingChart({ uid, topic, formData }: FairLendingCh
 
     const receiveValues = (values: BankYearLoanFairCityProps) => {
         setIsLoading(true);
+        const year = values.year.replace(' YTD', '');
         const payload = {
             ...values,
+            year,
             uid,
         }
         pubSub.publish(makeTopicRequest(topic), { topic, payload });
@@ -134,14 +147,17 @@ export default function FairLendingChart({ uid, topic, formData }: FairLendingCh
         const typeOfLoan = fairLendingLoans.find(x => x.fairLendingType.toLowerCase() === selectedFairLendingType);
         console.log('type of loan:', typeOfLoan)
 
-        const loanPctData = typeOfLoan?.loanCounts?.map((item: { lenderCode: string, pct: number }) => ({
+        const loanPctData = typeOfLoan?.loanCounts?.map((item: { lenderCode: string, pct: number, label: string }) => ({
             pct: decimalToPercentage(item.pct),
-            label: capitalizeWords(lookupBankName(item.lenderCode, lenderNames), 20)
-        })).sort((a: { pct: number }, b: { pct: number }) => a.pct > b.pct ? -1 : 1);
+            label: capitalizeWords(lookupBankName(item.lenderCode, lenderNames), 20),
+            name: lookupBankName(item.lenderCode, lenderNames),
+            dataLabel: item.label
+        }));
 
         const loanPct = loanPctData.map((item: { pct: number }) => item.pct);
         const tl = loanPct?.reduce((acc: number, item: number) => acc + item, 0);
 
+        const maxValue = Math.max(...loanPct);
         const newLabels = loanPctData.map((item: { label: string }) => item.label);
         const newData = {
             ...defaultChartData, // spread the existing data to maintain other properties
@@ -154,11 +170,43 @@ export default function FairLendingChart({ uid, topic, formData }: FairLendingCh
 
         setTotalLoans(tl || 0)
         setChartData(newData)
+        const dataLabels = {
+            datalabels: {
+                anchor: 'end',
+                align: 'end',
+                offset: 5,
+                formatter: (value, context) => {
+                    console.log(value, context, loanPctData);
+                    const l = loanPctData.find((item: { pct: number }) => item.pct === value);
+                    console.log('loan pct data:', l)
+                    return l?.dataLabel || value.toLocaleString(); // or just value if you don't want to format
+                },
+                color: '#000',
+                padding: {
+                    right: 10 // Adjust the padding as needed to fit the labels inside the bars
+                }
 
+            },
+        }
         const newchartoptions = {
             ...chartOptions,
+            scales: {
+                ...chartOptions.scales,
+                x: {
+                    beginAtZero: true,
+                    min: 0,
+                    max: maxValue + (maxValue * 0.1), // Adding 10% to the max value for padding
+                    ticks: {
+                        color: '#000',
+                        font: {
+                            weight: 'bold',
+                        }
+                    }
+                }
+            },
             plugins: {
                 ...chartOptions.plugins,
+                ...dataLabels,
                 title: {
                     display: true,
                     text: `${inputs.type} - ${inputs.city} - ${inputs.year}`,

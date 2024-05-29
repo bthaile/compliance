@@ -6,6 +6,7 @@ import { FormInputData } from './compliance';
 import { usePubSub } from 'contexts/socket/WebSocketProvider';
 import { makeTopicRequest, makeTopicResponse } from 'contexts/socket/PubSubTopics';
 import { capitalizeWords, lookupBankName } from 'shared/utils/textNames';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 export type BankYearLoanCityProps = {
     uid?: string;
@@ -44,7 +45,7 @@ const options = {
                     weight: 'bold', // Makes the font bold
                 }
             },
-            barPercentage: 0.5, // Adjust this value as needed
+            barPercentage: 0.15, // Adjust this value as needed
             categoryPercentage: 0.8, // Adjust this value as needed
         }
     },
@@ -64,7 +65,7 @@ const options = {
             text: '',
         },
         tooltip: {
-            enabled: false, // Disable tooltips
+            enabled: false,
         },
         datalabels: {
             anchor: 'end',
@@ -105,8 +106,10 @@ export default function PeerGroupChart({ uid, topic, formData }: PeerGroupChartP
 
     const receiveValues = (values: BankYearLoanCityProps) => {
         setIsLoading(true);
+        const year = values.year.replace(' YTD', '');
         const payload = {
             ...values,
+            year,
             uid,
         }
         pubSub.publish(makeTopicRequest(topic), { topic, payload });
@@ -136,7 +139,12 @@ export default function PeerGroupChart({ uid, topic, formData }: PeerGroupChartP
         const loanCounts = itemOneLoans?.map((item: { lenderCode: string, count: number }) => item.count);
         console.log('loan counts:', loanCounts)
         const tl = itemOneLoans?.reduce((acc: number, item: { lenderCode: string, count: number }) => acc + item.count, 0);
-        const newLabels = itemOneLoans?.map((l: { lenderCode: string }) => capitalizeWords(lookupBankName(l.lenderCode, lenderNames), 20));
+        const banks = itemOneLoans?.map((l: { lenderCode: string }) => (
+            {
+                label: capitalizeWords(lookupBankName(l.lenderCode, lenderNames), 20),
+                name: lookupBankName(l.lenderCode, lenderNames)
+            }));
+        const newLabels = banks.map((b: { label: string }) => b.label);
         console.log('new labels:', newLabels)
         const newData = {
             ...defaultChartData, // Spread the existing data to maintain other properties
@@ -149,7 +157,7 @@ export default function PeerGroupChart({ uid, topic, formData }: PeerGroupChartP
 
         setTotalLoans(tl)
         setChartData(newData)
-
+        
         const newChartOptions = {
             ...chartOptions,
             plugins: {
