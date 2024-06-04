@@ -377,7 +377,7 @@ const ComplianceCharts = () => {
                                 <MenuItem value="goal_status">Goal Status</MenuItem>
                                 <MenuItem value="lending_trends">Lending Trends</MenuItem>
                                 <MenuItem value="census_tracks">Census Tracks</MenuItem>
-                              
+                             
                             </Select>
                         </Toolbar>
                     </AppBar>

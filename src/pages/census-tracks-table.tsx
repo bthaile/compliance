@@ -96,13 +96,13 @@ export default function CensusTracksTable({ rows }: CensusTracksTableProps) {
                             {MyTableHeader("hispanicAA", "Hispanic AA Area")}
                         </TableCell>
                         <TableCell>
-                            {MyTableHeader("minorityPop", "Minority Count")}
+                            {MyTableHeader("minorityPop", "Minority Population")}
                         </TableCell>
                         <TableCell>
-                            {MyTableHeader("minorityPop", "Hispanic Count")}
+                            {MyTableHeader("minorityPop", "Hispanic Population")}
                         </TableCell>
                         <TableCell>
-                            {MyTableHeader("aaPop", "AA Count")}
+                            {MyTableHeader("aaPop", "AA Population")}
                         </TableCell>
                         <TableCell>
                             {MyTableHeader("hispOrig", "Hispanic Originations")}
