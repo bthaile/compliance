@@ -3,15 +3,20 @@ import goldIcon from '../../assets/img/gold-dot.png';
 import dullGoldIcon from '../../assets/img/dullgold-dot.png';
 import blueIcon from '../../assets/img/blue-dot.png';
 import greenIcon from '../../assets/img/green-dot.png';
+import yellowIcon from '../../assets/img/yellow-dot.png';
 import whiteIcon from '../../assets/img/white-dot.png';
 import redIcon from '../../assets/img/red-dot.png';
-import bxsLogo from '../../assets/img/bxs-logo.png';
-import cadenceLogo from '../../assets/img/cadence-logo.png';
+import bxsLogo from '../../assets/img/cadencelogo2.png';
+import pinnacleIcon from '../../assets/img/pinnacle.png';
+import regionsIcon from '../../assets/img/logo-pyramid.svg';
+import cadenceLogo from '../../assets/img/cadencelogo2.png';
 import southLogo from '../../assets/img/south-icon.png';
 import dedhamLogo from '../../assets/img/dedham.png';
 import { IDefaultMarker } from 'components/GoogleMap/MarkerBlock';
 import temple from '../../assets/data/temple2023_tract.json';
 import memphis from '../../assets/data/memphis2023_tract.json';
+import pinnacleBranches from '../../assets/data/pinnacle_branches.json';
+import regionsBranches from '../../assets/data/regions_branches.json';
 
 export const PURPLE_ICON = 'purple';
 export const GOLD_ICON = 'gold';
@@ -19,11 +24,14 @@ export const DULL_GOLD_ICON = 'dullgold';
 export const BLUE_ICON = 'blue';
 export const GREEN_ICON = 'green';
 export const WHITE_ICON = 'white';
+export const YELLOW_ICON = 'yellow';
 export const RED_ICON = 'red';
 export const BXS_ICON = 'bxs';
 export const CADENCE_ICON = 'cadence';
 export const SOUTH_ICON = 'south';
 export const DEDHAM_ICON = 'dedham';
+export const PINNACLE_ICON = 'pinnacle';
+export const REGIONS_ICON = 'regions';
 
 export const LMI = 'LMI';
 
@@ -39,26 +47,75 @@ export const Icons = {
   [CADENCE_ICON]: cadenceLogo,
   [SOUTH_ICON]: southLogo,
   [DEDHAM_ICON]: dedhamLogo,
+  [YELLOW_ICON]: yellowIcon,
+  [PINNACLE_ICON]: pinnacleIcon,
+  [REGIONS_ICON]: regionsIcon,
   
 };
 
-const templeData: IDefaultMarker[] = temple.map((data) => {
+
+var templeData: IDefaultMarker[] = temple.map((data) => {
+  let icon = Icons[WHITE_ICON]  
+  if (data.icon == 'blue' ) icon = Icons[GREEN_ICON]  
   return {
     ...data,
-    icon:  Icons[WHITE_ICON]
+    icon: icon
   }
 })
 
-const memphisData: IDefaultMarker[] = memphis.map((data) => {
+
+var memphisData: IDefaultMarker[] = memphis.map((data) => {
+  let icon = Icons[WHITE_ICON]  
+  if (data.icon == 'blue' ) icon = Icons[GREEN_ICON]  
   return {
     ...data,
-    icon:  Icons[WHITE_ICON]
+    icon: icon
   }
 })
+
+
+var regionsData: IDefaultMarker[] = temple.map((data) => {
+  let icon = Icons[BLUE_ICON]  
+  if (data.icon == 'blue' ) icon = Icons[YELLOW_ICON]  
+  return {
+    ...data,
+    icon: icon
+  }
+})
+
+var cogentData: IDefaultMarker[] = memphis.map((data) => {
+  let icon = Icons[BLUE_ICON]  
+  if (data.icon == 'blue' ) icon = Icons[YELLOW_ICON]  
+  return {
+    ...data,
+    icon: icon
+  }
+})
+
+var regionsBranchData: IDefaultMarker[] = regionsBranches.map((data) => {
+  let icon = Icons[REGIONS_ICON] 
+  return {
+    ...data,
+    icon: icon
+  }
+})
+
+var pinnacleBranchData: IDefaultMarker[] = pinnacleBranches.map((data) => {
+  let icon = Icons[PINNACLE_ICON] 
+  return {
+    ...data,
+    icon: icon
+  }
+})
+
 
 export const DEFAULT_STATE: IDefaultMarker[] = [
   ...memphisData,
   ...templeData,
+  ...regionsData,
+  ...cogentData,
+  ...regionsBranchData,
+  ...pinnacleBranchData,
   {
     position: {
       lat: 35.0358667,

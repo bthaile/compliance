@@ -511,6 +511,166 @@ export const DEFAULTS = {
     id: 'osm-liberty',
   },
 
+  memphisMinorityStyle: {
+    version: 8,
+    name: 'OSM Liberty',
+    metadata: {
+      'mapbox:type': 'template',
+    },
+    sources: {
+      openmaptiles: {
+        type: 'vector',
+        tiles: [
+          'https://tileserver.terravalue.net:8123/lmi2021/{z}/{x}/{y}.mvt',
+        ],
+        name: 'OpenMapTiles',
+      },
+    },
+    sprite: 'https://www.terravalue.net/API/sprite2',
+    layers: [
+      {
+        id: 'dpa-lines',
+        type: 'fill',
+        source: 'openmaptiles',
+        'source-layer': 'all',
+        filter: [
+          'any',
+          ['==', 'ID', '28033070523'],
+          ['==', 'ID', '47157021020'],
+          ['==', 'ID', '47157021141'],
+          ['==', 'ID', '47157021124'],
+          ['==', 'ID', '47157021751'],
+          ['==', 'ID', '47157021745'],
+          ['==', 'ID', '28033070811'],
+          ['==', 'ID', '28033070723'],
+          ['==', 'ID', '28033070210'],
+          ['==', 'ID', '47157021744'],
+          ['==', 'ID', '47157021136'],
+          ['==', 'ID', '47157021022'],
+          ['==', 'ID', '47157021135'],
+          ['==', 'ID', '47157021021'],
+          ['==', 'ID', '47157021143'],
+          ['==', 'ID', '47157020657'],
+          ['==', 'ID', '47157022700'],
+          ['==', 'ID', '47167040700'],
+          ['==', 'ID', '47157010220'],
+          ['==', 'ID', '47157022410'],
+          ['==', 'ID', '47157020532'],
+          ['==', 'ID', '47157020541'],
+          ['==', 'ID', '28033070812'],
+          ['==', 'ID', '47157010210'],
+          ['==', 'ID', '47157020621'],
+          ['==', 'ID', '47157021547'],
+          ['==', 'ID', '47157020658'],
+          ['==', 'ID', '47157021125'],
+          ['==', 'ID', '47157008000']
+        ]
+        ,
+        layout: {
+          visibility: 'visible',
+        },
+        paint: {
+          'fill-color': 'rgb(0,128,256)',
+          'fill-opacity': 0.35,
+        },
+      },
+      {
+        id: 'census_tract_lines',
+        type: 'line',
+        source: 'openmaptiles',
+        'source-layer': 'all',
+        layout: {
+          'line-cap': 'round',
+          'line-join': 'round',
+        },
+        paint: {
+          'line-opacity': 0.1,
+          'line-color': 'rgb(0, 0, 0)',
+          'line-width': 1,
+        },
+      },
+    ],
+    id: 'osm-liberty',
+  },
+
+  memphisAAStyle: {
+    version: 8,
+    name: 'OSM Liberty',
+    metadata: {
+      'mapbox:type': 'template',
+    },
+    sources: {
+      openmaptiles: {
+        type: 'vector',
+        tiles: [
+          'https://tileserver.terravalue.net:8123/lmi2021/{z}/{x}/{y}.mvt',
+        ],
+        name: 'OpenMapTiles',
+      },
+    },
+    sprite: 'https://www.terravalue.net/API/sprite2',
+    layers: [
+      {
+        id: 'dpa-lines',
+        type: 'fill',
+        source: 'openmaptiles',
+        'source-layer': 'all',
+        filter: [
+          'any',
+          ['==', 'ID', '47157021751'],
+          ['==', 'ID', '47157021745'],
+          ['==', 'ID', '28033070210'],
+          ['==', 'ID', '47157021744'],
+          ['==', 'ID', '47157021022'],
+          ['==', 'ID', '47157021021'],
+          ['==', 'ID', '47157022700'],
+          ['==', 'ID', '47167040700'],
+          ['==', 'ID', '47157010220'],
+          ['==', 'ID', '47157022410'],
+          ['==', 'ID', '47157020532'],
+          ['==', 'ID', '47157020541'],
+          ['==', 'ID', '47157010210'],
+          ['==', 'ID', '47157020621'],
+          ['==', 'ID', '47157021547'],
+          ['==', 'ID', '47157020658'],
+          ['==', 'ID', '47157008000'],
+          ['==', 'ID', '47157021754'],
+          ['==', 'ID', '47157010120'],
+          ['==', 'ID', '47157021752'],
+          ['==', 'ID', '28033070323'],
+          ['==', 'ID', '47157022130'],
+          ['==', 'ID', '47157021900'],
+          ['==', 'ID', '47157010710'],
+          ['==', 'ID', '47157020524']
+        ]
+        ,
+        layout: {
+          visibility: 'visible',
+        },
+        paint: {
+          'fill-color': 'rgb(128, 128, 128)',
+          'fill-opacity': 0.35,
+        },
+      },
+      {
+        id: 'census_tract_lines',
+        type: 'line',
+        source: 'openmaptiles',
+        'source-layer': 'all',
+        layout: {
+          'line-cap': 'round',
+          'line-join': 'round',
+        },
+        paint: {
+          'line-opacity': 0.1,
+          'line-color': 'rgb(0, 0, 0)',
+          'line-width': 1,
+        },
+      },
+    ],
+    id: 'osm-liberty',
+  },
+
   dpastyle: {
     version: 8,
     name: 'OSM Liberty',

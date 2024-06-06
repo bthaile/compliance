@@ -36,6 +36,7 @@ const lookupAssetType = (type: string): string => {
 
 const cache: { [key: string]: object } = {};
 const getCachedResult = async (endpoint: string, query: object, defaultReturn: any): Promise<object> => {
+    console.log('getCachedResult:', endpoint, query, defaultReturn)
     try {
         const hash = await hashQuery({ endpoint, query });
         if (cache[hash]) {

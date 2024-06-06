@@ -21,6 +21,11 @@ import {
   DEFAULT_STATE,
   DEDHAM_ICON,
   WHITE_ICON,
+  BLUE_ICON,
+  GREEN_ICON,
+  YELLOW_ICON,
+  REGIONS_ICON,
+  PINNACLE_ICON,
   Icons,
 } from 'shared/constants/googleContants';
 import { MapboxGoogleOverlay } from './MapBoxGL/MapboxGoogleOverlay';
@@ -60,6 +65,10 @@ const MapBlock: FC<MapProps> = ({
   const [cadeMarkers, setCadeMarkers] = useState<IDefaultMarker[]>();
   const [southMarkers, setSouthMarkers] = useState<IDefaultMarker[]>();
   const [loanMarkers, setLoanMarkers] = useState<IDefaultMarker[]>();
+  const [regionsMarkers, setRegionsMarkers] = useState<IDefaultMarker[]>();
+  const [cogentMarkers, setCogentMarkers] = useState<IDefaultMarker[]>();
+  const [regionsBranches, setRegionsBranches] = useState<IDefaultMarker[]>();
+  const [pinnacleBranches, setPinnacleBranches] = useState<IDefaultMarker[]>();
   const [demoMarkers, setDemoMarkers] = useState<IDefaultMarker[]>();
   const [mapInstance, setMapInstance] = useState<google.maps.Map>();
   const [searchBoxInstance, setSearchBoxInstance] =
@@ -72,6 +81,8 @@ const MapBlock: FC<MapProps> = ({
   const [minMajFeatures, setMinMajFeatures] = useState<MapboxGoogleOverlay>();
   const [aaFeatures, setAAFeatures] = useState<MapboxGoogleOverlay>();
   const [cadeaaFeatures, setCADEAAFeatures] = useState<MapboxGoogleOverlay>();
+  const [memphisMinorityFeatures, setMemphisMinorityFeatures] = useState<MapboxGoogleOverlay>();
+  const [memphisAAFeatures, setMemphisAAFeatures] = useState<MapboxGoogleOverlay>();
   const [hispFeatures, setHispFeatures] = useState<MapboxGoogleOverlay>();
   const [geoJSON, setGeoJSON] = useState<FeatureCollection>();
   const [census, setCensus] = useState<ICensus>();
@@ -142,6 +153,7 @@ const MapBlock: FC<MapProps> = ({
       console.log('INCLUDING LIST');
       console.log(mapInstance.overlayMapTypes);
       options.forEach((option: IOption) => {
+        console.log(option.name);
         switch (option.name) {
           case 'LMI': {
             if (option.active) {
@@ -316,12 +328,12 @@ const MapBlock: FC<MapProps> = ({
             }
             break;
           }
-          case 'Loan': {
+          case 'Cadence Pins': {
             if (option.active) {
               const tempLoan: IDefaultMarker[] = [];
 
               DEFAULT_STATE.forEach((location: IDefaultMarker) => {
-                if (location.icon === Icons[WHITE_ICON]) {
+                if (location.icon === Icons[WHITE_ICON] || location.icon === Icons[GREEN_ICON]) {
                   tempLoan.push(location);
                 }
               });
@@ -329,6 +341,100 @@ const MapBlock: FC<MapProps> = ({
               setLoanMarkers(tempLoan);
             } else {
               setLoanMarkers([]);
+            }
+            break;
+          }
+          case 'Regions Pins': {
+            if (option.active) {
+              const tempRegions: IDefaultMarker[] = [];
+
+              DEFAULT_STATE.forEach((location: IDefaultMarker) => {
+                if (location.icon === Icons[YELLOW_ICON] || location.icon === Icons[BLUE_ICON]) {
+                  tempRegions.push(location);
+                }
+              });
+
+              setRegionsMarkers(tempRegions);
+            } else {
+              setRegionsMarkers([]);
+            }
+            break;
+          }         
+          case 'Pinnacle Pins': {
+            if (option.active) {
+              const tempCogent: IDefaultMarker[] = [];
+
+              DEFAULT_STATE.forEach((location: IDefaultMarker) => {
+                if (location.icon === Icons[YELLOW_ICON] || location.icon === Icons[BLUE_ICON]) {
+                  tempCogent.push(location);
+                }
+              });
+
+              setCogentMarkers(tempCogent);
+            } else {
+              setCogentMarkers([]);
+            }
+            break;
+          }
+          case 'Pinnacle Branches': {
+            if (option.active) {
+              const tempPinnacleBranches: IDefaultMarker[] = [];
+
+              DEFAULT_STATE.forEach((location: IDefaultMarker) => {
+                if (location.icon === Icons[PINNACLE_ICON]) {
+                  tempPinnacleBranches.push(location);
+                }
+              });
+
+              setPinnacleBranches(tempPinnacleBranches);
+            } else {
+              setPinnacleBranches([]);
+            }
+            break;
+          }
+          case 'Regions Branches': {
+            if (option.active) {
+              const tempRegionsBranches: IDefaultMarker[] = [];
+
+              DEFAULT_STATE.forEach((location: IDefaultMarker) => {
+                if (location.icon === Icons[REGIONS_ICON]) {
+                  tempRegionsBranches.push(location);
+                }
+              });
+
+              setRegionsBranches(tempRegionsBranches);
+            } else {
+              setRegionsBranches([]);
+            }
+            break;
+          }
+          case 'Memphis Minority': {
+            if (option.active) {
+              if (!memphisMinorityFeatures) {
+                const memphisMinorityTemp = new MapboxGoogleOverlay({
+                  style: DEFAULTS.memphisMinorityStyle,
+                });
+                memphisMinorityTemp.addToMap(mapInstance);
+                setMemphisMinorityFeatures(memphisMinorityTemp);
+              }
+            } else {
+              if (memphisMinorityFeatures) memphisMinorityFeatures.removeFromMap(mapInstance);
+              setMemphisMinorityFeatures(undefined);
+            }
+            break;
+          }
+          case 'Memphis AA': {
+            if (option.active) {
+              if (!memphisAAFeatures) {
+                const memphisAATemp = new MapboxGoogleOverlay({
+                  style: DEFAULTS.memphisAAStyle,
+                });
+                memphisAATemp.addToMap(mapInstance);
+                setMemphisAAFeatures(memphisAATemp);
+              }
+            } else {
+              if (memphisAAFeatures) memphisAAFeatures.removeFromMap(mapInstance);
+              setMemphisAAFeatures(undefined);
             }
             break;
           }
@@ -551,15 +657,52 @@ const MapBlock: FC<MapProps> = ({
               />
             );
           })}
-        {loanMarkers && loanMarkers.map((marker, index) => {
-          return (
-            <Marker
-              key={index}
-              icon={marker.icon.src}
-              position={marker.position}
-            />
-          );
-        })}
+          {loanMarkers && loanMarkers.map((marker, index) => {
+            return (
+              <Marker
+                key={index}
+                icon={marker.icon.src}
+                position={marker.position}
+              />
+            );
+          })}
+          {regionsMarkers && regionsMarkers.map((marker, index) => {
+            return (
+              <Marker
+                key={index}
+                icon={marker.icon.src}
+                position={marker.position}
+              />
+            );
+          })}
+          {cogentMarkers && cogentMarkers.map((marker, index) => {
+            return (
+              <Marker
+                key={index}
+                icon={marker.icon.src}
+                position={marker.position}
+              />
+            );
+          })}
+          {regionsBranches &&regionsBranches.map((marker, index) => {
+            return (
+              <Marker
+                key={index}
+                icon={marker.icon.src}
+                position={marker.position}
+              />
+            );
+          })}
+          {pinnacleBranches && pinnacleBranches.map((marker, index) => {
+            return (
+              <Marker
+                key={index}
+                icon={marker.icon.src}
+                position={marker.position}
+              />
+            );
+          })}
+        
       </GoogleMap>
     </LoadScript>
   );

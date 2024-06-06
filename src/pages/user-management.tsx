@@ -171,8 +171,7 @@ const UserManagement: NextPage = () => {
       value: 'AccountEnabled',
     }, */
   ];
-
-  console.log('lenders list', lenderList);
+/*
   useEffect(() => {
     pubSub?.subscribe(makeTopicResponse(CHART_TOPICS.LENDERS_DATA), (data) => setLenderList(data))
     if (authUser?.uid) {
@@ -183,7 +182,7 @@ const UserManagement: NextPage = () => {
       pubSub?.unsubscribe(makeTopicResponse(CHART_TOPICS.LENDERS_DATA))
     }
   }, [authUser?.uid]);
-
+*/
   useEffect(() => {
     socket2.on('connect', (data) => {
       console.log('connected');

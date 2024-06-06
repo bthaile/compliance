@@ -40,12 +40,21 @@ const Home: NextPage = () => {
   const [atl, setATL] = useState(false);
   const [cadeaa, setCADEAA] = useState(false);
   const [hisp, setHisp] = useState(false);
+  const [branches, setBranches] = useState(false);
+  const [loanActivity, setLoanActivity] = useState(false);
 
   const [rightAtHome, setRightAtHome] = useState(false);
   const [cade, setCADE] = useState(false);
   const [south, setSOUTH] = useState(false);
   const [demo, setDEMO] = useState(false);
   const [loan, setLoan] = useState(false);
+  const [cogent, setCogent] = useState(false);
+  const [regions, setRegions] = useState(false);
+  const [regionsBranches, setRegionsBranches] = useState(false);
+  const [pinnacleBranches, setPinnacleBranches] = useState(false);
+  const [memphisMinority, setMemphisMinority] = useState(false);
+  const [memphisAA, setMemphisAA] = useState(false);
+
   const [crp, setCRP] = useState(false);
 
   const apiKey = 'AIzaSyCWedJRxOp8nbE5hZhAxS43oDgCHGvGB-0';
@@ -84,6 +93,8 @@ const Home: NextPage = () => {
       disabled: false,
     },
     { name: 'HISP', active: hisp, setActive: setHisp, disabled: false },
+    { name: 'Branches', active: branches, setActive: setBranches, disabled: false },
+    { name: 'Loan Activity', active: loanActivity, setActive: setLoanActivity, disabled: false },
 
     /* {
       name: 'Right@Homes',
@@ -96,8 +107,14 @@ const Home: NextPage = () => {
     { name: 'CADE', active: cade, setActive: setCADE, disabled: false },
     { name: 'CADE AA', active: cadeaa, setActive: setCADEAA, disabled: false },
     // { name: 'SOUTHSTAR', active: south, setActive: setSOUTH, disabled: false },
+    { name: 'Cadence Pins', active: loan, setActive: setLoan, disabled: false },
+    { name: 'Regions Pins', active: regions, setActive: setRegions, disabled: false },
+    { name: 'Pinnacle Pins', active: cogent, setActive: setCogent, disabled: false },
+    { name: 'Regions Branches', active: regionsBranches, setActive: setRegionsBranches, disabled: false },
+    { name: 'Pinnacle Branches', active: pinnacleBranches, setActive: setPinnacleBranches, disabled: false },
+    { name: 'Memphis Minority', active: memphisMinority, setActive: setMemphisMinority, disabled: false },
+    { name: 'Memphis AA', active: memphisAA, setActive: setMemphisAA, disabled: false },
     { name: 'DEMO', active: demo, setActive: setDEMO, disabled: false },
-    { name: 'Loan', active: loan, setActive: setLoan, disabled: false },
     // { name: 'HOPE FOCUS', active: hope, setActive: setHOPE, disabled: false },
     // { name: 'CRP', active: crp, setActive: setCRP, disabled: true },
   ];
