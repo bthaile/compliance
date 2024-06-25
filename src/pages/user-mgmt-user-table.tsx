@@ -24,8 +24,8 @@ interface UserTableProps {
 }
 
 const UserTable: React.FC<UserTableProps> = ({
-  columnsList,
-  displayedUsers,
+  columnsList = [],
+  displayedUsers = [],
   managers,
   page,
   rowsPerPage,

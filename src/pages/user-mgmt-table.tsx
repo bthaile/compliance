@@ -27,107 +27,6 @@ import ViewColumnIcon from '@mui/icons-material/ViewColumn';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import { IColumnItem, IUser, IManager, SYSTEM_ROLES } from 'shared/types/user';
 
-interface TableComponentProps {
-  columnsList: IColumnItem[];
-  displayedUsers: IUser[];
-  managers: IManager[];
-  handleTitleChange: (user: IUser, event: React.ChangeEvent<{ value: unknown }>) => void;
-  handleManagerChange: (user: IUser, event: React.ChangeEvent<{ value: unknown }>) => void;
-}
-
-interface TableComponentProps {
-  columnsList: IColumnItem[];
-  displayedUsers: IUser[];
-  managers: IManager[];
-  handleTitleChange: (user: IUser, event: React.ChangeEvent<{ value: unknown }>) => void;
-  handleManagerChange: (user: IUser, event: React.ChangeEvent<{ value: unknown }>) => void;
-  onRowClick: (user: IUser) => void;
-}
-
-export const TableComponent: React.FC<TableComponentProps> = ({
-  columnsList,
-  displayedUsers,
-  managers,
-  handleTitleChange,
-  handleManagerChange,
-  onRowClick,
-}) => {
-  const validateValue = (value: string, options: string[]): string => {
-    return options.includes(value) ? value : '';
-  };
-
-  return (
-    <TableContainer component={Paper} id="userTable">
-      <Table sx={{ minWidth: 650 }} aria-label="User Management Table">
-        <TableHead>
-          <TableRow>
-            {columnsList.filter((column) => column.enabled).map((column, index) => (
-              <TableCell key={index}>{column.name}</TableCell>
-            ))}
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {displayedUsers.map((user, index) => (
-            <TableRow key={index} onClick={() => onRowClick(user)} style={{ cursor: 'pointer' }}>
-              {columnsList[0].enabled && <TableCell>{user.Name}</TableCell>}
-              {columnsList[1].enabled && (
-                <TableCell>
-                  <Select
-                    value={validateValue(user.Title || '', Object.keys(SYSTEM_ROLES))}
-                    label="Title"
-                    variant="standard"
-                    onChange={(event) => handleTitleChange(user, event)}
-                  >
-                    {Object.keys(SYSTEM_ROLES).map((role, index) => (
-                      <MenuItem key={index} value={role}>
-                        {SYSTEM_ROLES[role as keyof typeof SYSTEM_ROLES]}
-                      </MenuItem>
-                    ))}
-                  </Select>
-                </TableCell>
-              )}
-              {columnsList[2].enabled && (
-                <TableCell>
-                  <Select
-                    value={user.MlsAreas && user.MlsAreas.length > 0 ? user.MlsAreas[0] : ''}
-                    label="MLS Areas"
-                    variant="standard"
-                    onChange={() => { }}
-                  >
-                    {user.MlsAreas && user.MlsAreas.map((mls, index) => (
-                      <MenuItem key={index} value={mls}>{mls}</MenuItem>
-                    ))}
-                  </Select>
-                </TableCell>
-              )}
-              {columnsList[3].enabled && (
-                <TableCell>
-                  <Select
-                    value={validateValue(user.ManagerUserId || '', managers.map((m) => m.UserId))}
-                    label="Manager"
-                    variant="standard"
-                    onChange={(event) => handleManagerChange(user, event)}
-                  >
-                    {managers.map((manager, index) => (
-                      <MenuItem key={index} value={manager.UserId}>{manager.Name}</MenuItem>
-                    ))}
-                  </Select>
-                </TableCell>
-              )}
-              {columnsList[4].enabled && <TableCell>{user.Email}</TableCell>}
-              {columnsList[5].enabled && (
-                <TableCell>
-                  <InputLabel>{user.AccountEnabled ? 'Yes' : 'No'}</InputLabel>
-                  <Switch checked={user.AccountEnabled} />
-                </TableCell>
-              )}
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-  );
-};
 
 
 interface AppBarComponentProps {
@@ -137,7 +36,7 @@ interface AppBarComponentProps {
   handleRefresh: () => void;
 }
 
-export const AppBarComponent: React.FC<AppBarComponentProps> = ({
+const AppBarComponent: React.FC<AppBarComponentProps> = ({
   openDrawer,
   handleDrawerChange,
   handleOpenColumns,
@@ -183,3 +82,5 @@ export const AppBarComponent: React.FC<AppBarComponentProps> = ({
     </AppBar>
   );
 };
+
+export default AppBarComponent;
