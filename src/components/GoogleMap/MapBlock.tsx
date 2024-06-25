@@ -13,7 +13,7 @@ import MarkerBlock, {
 import Socket from 'simple-websocket';
 import { v4 } from 'uuid';
 import InfoWindowBlock from './InfoWindowBlock';
-import { ICensus } from './AvmBlock';
+import { ICensus, ICity } from './AvmBlock';
 import {
   BXS_ICON,
   CADENCE_ICON,
@@ -31,6 +31,8 @@ import {
 import { MapboxGoogleOverlay } from './MapBoxGL/MapboxGoogleOverlay';
 import { DEFAULTS } from './MapBoxGL/MapboxDefaults';
 import { usePubSub } from 'contexts/socket/WebSocketProvider';
+import useAuth from 'contexts/auth/useAuth';
+import { Box, Button, CircularProgress, FormControl, InputLabel, MenuItem, Paper, Select } from '@mui/material';
 
 export interface MapProps {
   containerStyle: CSSProperties;
@@ -67,6 +69,10 @@ const MapBlock: FC<MapProps> = ({
   const [loanMarkers, setLoanMarkers] = useState<IDefaultMarker[]>();
   const [regionsMarkers, setRegionsMarkers] = useState<IDefaultMarker[]>();
   const [cogentMarkers, setCogentMarkers] = useState<IDefaultMarker[]>();
+  const [assessAreas, setAssessAreas] = useState<IDefaultMarker[]>();
+  const [branches, setBranches] = useState<IDefaultMarker[]>();
+  const [loanActivity, setLoanActivity] = useState<IDefaultMarker[]>();
+  const [showLoanActivity, setShowLoanActivity] = useState<boolean>();
   const [regionsBranches, setRegionsBranches] = useState<IDefaultMarker[]>();
   const [pinnacleBranches, setPinnacleBranches] = useState<IDefaultMarker[]>();
   const [demoMarkers, setDemoMarkers] = useState<IDefaultMarker[]>();
@@ -90,7 +96,19 @@ const MapBlock: FC<MapProps> = ({
   const [tileX, setTileX] = useState<number>(0);
   const [tileY, setTileY] = useState<number>(0);
   const [featureList, setFeatureList] = useState<MapboxGoogleOverlay[]>([]);
+  const { authUser } = useAuth();
+  const years = ['2023', '2022', '2021'];
+  const [cities, setCities] = useState<ICity[]>([]);
+  const types = ['Total','First Mortgage','Second Mortgage'];
+  const [year, setYear] = useState<string>(years[0]);
+  const [city, setCity] = useState<number>();
+  const [type, setType] = useState<string>(types[0]);
 
+ 
+
+  const LoanActivityEndpoint = '/api/proxy/loans';
+  const AssessmentAreaEndpoint = "/api/proxy/assessmentAreas";
+  
   const handleMapLoad = (map: google.maps.Map) => {
     setMapInstance(map);
   };
@@ -146,6 +164,50 @@ const MapBlock: FC<MapProps> = ({
   const handleCensusCloseWindow = () => {
     setIsCensusOpen(false);
   };
+
+  const fetchJson = async (endpoint: string, query: object): Promise<object> => {
+    const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(query)
+    }).catch((error) => {
+        console.error('Error fetching data:', error);
+    });
+
+    if (!response || !response.ok) {
+        return [];
+    }
+    return response.json() as Promise<object>;
+}
+
+const handleSubmit = (event: React.FormEvent) => {
+  event.preventDefault();
+    const tempDisplayMarkers: IDefaultMarker[] = [];
+    async function fetchMyAPI() {
+      // const idTokenResult = await authUser?.getIdTokenResult(true);
+      //let customAttributes = JSON.parse(await authUser?.reloadUserInfo?.customAttributes);
+      let resp = await fetchJson(LoanActivityEndpoint, {"userId": authUser?.uid, "bank":'customAttributes.bank', type: type, assessmentAreaId:city, year: year}) as IDefaultMarker[]
+      resp.forEach(element => {element.icon = Icons[WHITE_ICON]})
+      setLoanActivity(resp)
+    }
+    fetchMyAPI();         
+};
+
+useEffect(() => {
+  console.log('AssessmentAreaEndpoint');
+  async function fetchMyAPI() {
+     // let customAttributes = JSON.parse(await authUser?.reloadUserInfo?.customAttributes);
+      let resp = await fetchJson(AssessmentAreaEndpoint, {"userId": authUser?.uid, "bank":'customAttributes.bank'}) as ICity[]
+      console.log(resp)
+      setCities(resp);
+      setCity(resp[0]?.id);
+      console.log(resp[0]?.id)
+  }
+  if(cities.length == 0)
+    fetchMyAPI();
+ }, [cities]);
 
   useEffect(() => {
     if (options && mapInstance) {
@@ -438,6 +500,29 @@ const MapBlock: FC<MapProps> = ({
             }
             break;
           }
+          case 'Branches':{
+
+          }
+          case 'Assess Areas':{
+
+          }
+          case 'Loan Activity':{
+            if (option.active) {
+              setShowLoanActivity(true);
+              // const tempDisplayMarkers: IDefaultMarker[] = [];
+              // async function fetchMyAPI() {
+              //   // const idTokenResult = await authUser?.getIdTokenResult(true);
+              //   let customAttributes = JSON.parse(await authUser?.reloadUserInfo?.customAttributes);
+              //   let resp = await fetchJson(LoanActivityEndpoint, {"userId": authUser?.uid, "bank":'customAttributes.bank'}) as IDefaultMarker[]
+              //   resp.forEach(element => {element.icon = Icons[WHITE_ICON]})
+              //   setLoanActivity(resp)
+              // }
+              // fetchMyAPI();    
+            } else {
+              setShowLoanActivity(false);
+              setLoanActivity([]);
+            }        
+          }
         }
       });
 
@@ -702,6 +787,79 @@ const MapBlock: FC<MapProps> = ({
               />
             );
           })}
+          {loanActivity && loanActivity.map((marker, index) => {
+            return (
+              <Marker
+                key={index}
+                icon={marker.icon.src}
+                position={marker.position}
+              />
+            );
+          })}
+          {showLoanActivity && (
+            <Paper elevation={3} style={{marginRight: '1rem', marginTop: '5rem', position:'relative', float: 'right', display: 'flex', justifyContent: 'flex-end' }}>
+            <form onSubmit={handleSubmit}>
+                <FormControl fullWidth margin="normal">
+                    <InputLabel id="year-select-label">Year</InputLabel>
+                    <Select
+                        labelId="year-select-label"
+                        id="year-select"
+                        value={year}
+                        label="Year"
+                        onChange={(e) => setYear(e.target.value)}
+                    >
+                        {years?.map((year) => (
+                            <MenuItem key={year} value={year}>
+                                {year}
+                            </MenuItem>
+                        ))}
+                    </Select>
+                </FormControl>
+                <FormControl fullWidth margin="normal">
+                    <InputLabel id="type-select-label">Loan Type</InputLabel>
+                    <Select
+                        labelId="type-select-label"
+                        id="type-select"
+                        value={type}
+                        label="Type"
+                        onChange={(e) => setType(e.target.value)}
+                    >
+                        {types?.map((type) => (
+                            <MenuItem key={type} value={type}>
+                                {type}
+                            </MenuItem>
+                        ))}
+                    </Select>
+                </FormControl>
+                <FormControl fullWidth margin="normal">
+                    <InputLabel id="city-select-label">Assess Area</InputLabel>
+                    <Select
+                        labelId="city-select-label"
+                        id="city-select"
+                        value={city}
+                        label="Assess Area"
+                        onChange={(e) => setCity(e.target.value)}
+                    >
+                        {cities?.assessmentAreas?.map((cityValue) => (
+                            <MenuItem key={cityValue.id} value={cityValue.id}>
+                                {cityValue.name}
+                            </MenuItem>
+                        ))}
+                    </Select>
+                </FormControl>
+                
+                <Box display="flex" justifyContent="center">
+                    <Button variant="contained" color="primary" type="submit" >
+                        Apply
+                    </Button>
+                    
+                </Box>
+            </form>
+        </Paper>
+              
+            )
+          }
+
         
       </GoogleMap>
     </LoadScript>

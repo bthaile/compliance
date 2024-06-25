@@ -109,15 +109,11 @@ export default function LoanPortfolioPicker({ isLoading, formData, receiveValues
                 </Grid>
                 <Box display="flex" mt={2} gap={2}>
                     <Button variant="contained" color="primary" type="submit" onClick={handleSubmit} disabled={isLoading}>
-                        Apply
+                        {isLoading ? <CircularProgress size={24} color="inherit" /> : 'Apply'}
                     </Button>
                     <Button variant="outlined" color="primary" onClick={resetValues}>
                         Reset
                     </Button>
-                    {isLoading && <CircularProgress size={24} />}
-                    {/** <Button variant="outlined" color="primary" onClick={plotToMap}>
-                        Plot to Map
-                    </Button> */}
                 </Box>
             </form>
         </Paper>

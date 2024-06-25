@@ -114,16 +114,18 @@ export default function CensusTracksPicker({ receiveValues, formData, isLoading 
                     </Grid>
                 </Grid>
                 <Box display="flex" mt={2} mr={2} gap={2} alignItems="center">
-                    <Button variant="contained" color="primary" type="submit" onClick={handleSubmit} disabled={isLoading}>
-                        Apply
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        type="submit"
+                        onClick={handleSubmit}
+                        disabled={isLoading}
+                    >
+                        {isLoading ? <CircularProgress size={24} color="inherit" /> : 'Apply'}
                     </Button>
                     <Button variant="outlined" color="primary" onClick={resetValues}>
                         Reset
                     </Button>
-                    {/*<Button variant="outlined" color="primary" onClick={plotToMap}>
-                        Plot to Map
-                                </Button>*/}
-                    {isLoading && <CircularProgress size={24} />}
                 </Box>
             </form>
         </Paper>

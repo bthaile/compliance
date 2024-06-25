@@ -31,12 +31,11 @@ export default function GoalStatusPicker({ isLoading, receiveValues, formData }:
                     </Grid>
                     <Grid item xs={12} sm={6} md={3} display="flex" justifyContent="flex-start" alignItems="center">
                         <Button variant="contained" color="primary" type="submit" style={{ marginRight: '0.5rem' }} disabled={isLoading}>
-                            Apply
+                            {isLoading ? <CircularProgress size={24} color="inherit" /> : 'Apply'}
                         </Button>
                         <Button variant="outlined" color="primary" onClick={() => { }}>
                             Reset
                         </Button>
-                        {isLoading && <CircularProgress size={24} />}
                     </Grid>
                 </Grid>
             </form>

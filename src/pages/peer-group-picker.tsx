@@ -74,12 +74,11 @@ export default function PeerGroupPicker({ isLoading, years, cities, types, recei
                 </FormControl>
                 <Box display="flex" justifyContent="space-between" mt={2}>
                     <Button variant="contained" color="primary" type="submit" disabled={isLoading}>
-                        Apply
+                        {isLoading ? <CircularProgress size={24} color="inherit" /> : 'Apply'}
                     </Button>
                     <Button variant="outlined" color="primary" onClick={resetValues}>
                         Reset
                     </Button>
-                    {isLoading && <CircularProgress size={24} />}
                 </Box>
             </form>
         </Paper>

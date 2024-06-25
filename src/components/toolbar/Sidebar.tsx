@@ -1,3 +1,4 @@
+import React, { FC } from 'react';
 import {
   CssBaseline,
   AppBar,
@@ -21,10 +22,7 @@ import RestoreIcon from '@mui/icons-material/Restore';
 import EqualizerIcon from '@mui/icons-material/Equalizer';
 import LogoutIcon from '@mui/icons-material/Logout';
 import PeopleIcon from '@mui/icons-material/People';
-
-import { FC } from 'react';
 import Image from 'next/image';
-
 import CadenceLogo from '../../assets/img/cadencelogo.jpg';
 import ScaLogo from '../../assets/img/scalogo.jpg';
 import TerravalueLogo from '../../assets/img/terravaluelogo.jpg';
@@ -48,10 +46,8 @@ const managementSidebarItems = [
   {
     name: 'User Management',
     icon: <PeopleIcon />,
-    route: '/user-management',
+    route: '/user-mgmt',
   },
-  /* { name: 'Activity Log', icon: <RestoreIcon />, route: '/activity-log' },
-  { name: 'CRP Statistics', icon: <EqualizerIcon />, route: '/crp-statistics' }, */
 ];
 
 const actionSidebarItems = [{ name: 'Logout', icon: <LogoutIcon /> }];
@@ -62,7 +58,6 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
   ...theme.mixins.toolbar,
   justifyContent: 'flex-end',
 }));
@@ -98,7 +93,7 @@ const Sidebar: FC<ISideBar> = ({ open, handleDrawerChange }) => {
         open={open}
       >
         <DrawerHeader sx={{ backgroundColor: 'white' }}>
-          <Image src={TerravalueLogo} alt="Cadence Logo" width={200} height={68} />
+          <Image src={TerravalueLogo} alt="Terravalue Logo" width={200} height={68} />
           <IconButton onClick={handleDrawerClose}>
             <ChevronLeftIcon />
           </IconButton>
@@ -107,62 +102,50 @@ const Sidebar: FC<ISideBar> = ({ open, handleDrawerChange }) => {
         <Box sx={{ color: 'white', height: '100%' }}>
           <Typography marginTop={1}>General</Typography>
           <List sx={{ backgroundColor: '#00a2e8' }}>
-            {generalSidebarItems.map((item) => {
-              return (
-                <ListItemButton
-                  key={item.name}
-                  onClick={() => {
-                    router.push(item.route);
-                  }}
-                >
-                  <ListItemIcon sx={{ color: 'white' }}>
-                    {item.icon}
-                  </ListItemIcon>
-                  {item.name}
-                </ListItemButton>
-              );
-            })}
+            {generalSidebarItems.map((item) => (
+              <ListItemButton
+                key={item.name}
+                onClick={() => {
+                  router.push(item.route);
+                }}
+              >
+                <ListItemIcon sx={{ color: 'white' }}>{item.icon}</ListItemIcon>
+                {item.name}
+              </ListItemButton>
+            ))}
           </List>
           <Divider />
           <Typography paddingLeft={2} marginTop={1}>
             Management
           </Typography>
           <List>
-            {managementSidebarItems.map((item) => {
-              return (
-                <ListItemButton
-                  key={item.name}
-                  onClick={() => {
-                    router.push(item.route);
-                  }}
-                >
-                  <ListItemIcon sx={{ color: 'white' }}>
-                    {item.icon}
-                  </ListItemIcon>
-                  {item.name}
-                </ListItemButton>
-              );
-            })}
+            {managementSidebarItems.map((item) => (
+              <ListItemButton
+                key={item.name}
+                onClick={() => {
+                  router.push(item.route);
+                }}
+              >
+                <ListItemIcon sx={{ color: 'white' }}>{item.icon}</ListItemIcon>
+                {item.name}
+              </ListItemButton>
+            ))}
           </List>
           <Divider />
           <List>
-            {actionSidebarItems.map((item) => {
-              return (
-                <ListItemButton
-                  key={item.name}
-                  onClick={() => {
-                    dispatch({
-                      type: AuthActions.LOGOUT,
-                    });
-                  }}
-                >
-                  <ListItemIcon sx={{ color: 'white' }}>
-                    {item.icon}
-                  </ListItemIcon>
-                  {item.name}
-                </ListItemButton>
-              );
-            })}
+            {actionSidebarItems.map((item) => (
+              <ListItemButton
+                key={item.name}
+                onClick={() => {
+                  dispatch({
+                    type: AuthActions.LOGOUT,
+                  });
+                }}
+              >
+                <ListItemIcon sx={{ color: 'white' }}>{item.icon}</ListItemIcon>
+                {item.name}
+              </ListItemButton>
+            ))}
           </List>
         </Box>
       </Drawer>

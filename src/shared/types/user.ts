@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 export type IUser = {
   AVMAccess: boolean;
   AccountEnabled: boolean;
@@ -8,6 +10,7 @@ export type IUser = {
   Name: string;
   Title: string;
   UserId: string;
+  bank: string,
 }
 
 export type IManager = {
@@ -20,4 +23,23 @@ export type IActivity = {
   ActionType: string;
   UserId: string;
   IPAddress: string;
+}
+
+
+export const SYSTEM_ROLES = {
+  tech: "IT Compliance/Encompass",
+  seniormanager: "Senior Management",
+  regionalmanager: "Regional Manager",
+  areamanager: "Area Manager",
+  loanofficer: "Loan Officer",
+  realestate: "Realtor/Builder",
+  appraiser: "Appraiser",
+  '': "No Roles",
+};
+
+
+export interface IColumnItem {
+  name: string;
+  enabled: boolean;
+  setEnabled: Dispatch<SetStateAction<boolean>>;
 }

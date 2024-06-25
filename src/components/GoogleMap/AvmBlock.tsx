@@ -17,6 +17,11 @@ export interface ICensus {
   County: string;
 }
 
+export interface ICity {
+  id: number;
+  name: string;
+}
+
 export interface AvmBlockProps {
   position: {
     lat: number;

@@ -11,7 +11,7 @@ import {
   TableBody,
   TableCell,
   TableHead,
-  TableRow,
+  TableRow, 
   MenuItem,
   Select,
   Switch,
@@ -41,18 +41,12 @@ import ViewColumnIcon from '@mui/icons-material/ViewColumn';
 import RefreshIcon from '@mui/icons-material/Refresh';
 
 import { IParsedResponse } from 'components/GoogleMap/MarkerBlock';
-import { IManager, IUser } from 'shared/types/user';
-import { SYSTEM_ROLES } from 'shared/constants/roleConstants';
+import { IColumnItem, IManager, IUser, SYSTEM_ROLES } from 'shared/types/user';
 import { v4 } from 'uuid';
 import FieldQuery from 'components/toolbar/FieldQuery';
 import { usePubSub } from 'contexts/socket/WebSocketProvider';
 import { CHART_TOPICS, makeTopicRequest, makeTopicResponse } from 'contexts/socket/PubSubTopics';
 import useAuth from 'contexts/auth/useAuth';
-interface IColumnItem {
-  name: string;
-  enabled: boolean;
-  setEnabled: Dispatch<SetStateAction<boolean>>;
-}
 
 const UserManagement: NextPage = () => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
@@ -62,6 +56,7 @@ const UserManagement: NextPage = () => {
   const [displayedUsers, setDisplayedUsers] = useState<IUser[]>([]);
   const [page, setPage] = useState<number>(0);
   const [rowsPerPage, setRowsPerPage] = useState<number>(10);
+  const [bankList, setBankList] = useState<string[]>([]); 
   const [lenderList, setLenderList] = useState<string[]>([]);
 
   const [enableName, setEnableName] = useState<boolean>(true);
@@ -75,6 +70,7 @@ const UserManagement: NextPage = () => {
   const [openColumns, setOpenColumns] = useState<boolean>(false);
   const [searchAnchor, setSearchAnchor] = useState<null | HTMLElement>(null);
   const [columnsAnchor, setColumnsAnchor] = useState<null | HTMLElement>(null);
+  const [enableBank, setEnableBank] = useState<boolean>(true);
   const [assignedLender, setAssignedLender] = useState<string | undefined>();
 
   const [nameSearch, setNameSearch] = useState<string | undefined>();
@@ -126,6 +122,12 @@ const UserManagement: NextPage = () => {
       keyValue: 'Email',
     },
     {
+      name: 'Bank',
+      enabled: enableBank,
+      setEnabled: setEnableBank,
+      keyValue: 'Bank',
+    }, 
+    { 
       name: 'Enabled',
       enabled: enableEnabled,
       setEnabled: setEnableEnabled,
@@ -225,6 +227,10 @@ const UserManagement: NextPage = () => {
       setFilteredUsers(users);
     }
   }, [users]);
+
+  useEffect(() => {
+    setBankList(["", "Cadence"])
+  });
 
   useEffect(() => {
     if (!!users.length && !!filteredUsers.length && searchTerm) {
@@ -362,6 +368,17 @@ const UserManagement: NextPage = () => {
       UserId: userRecord.UserId,
       ManagerUserId: manager.UserId,
       ManagerName: manager.Name,
+    };
+    console.log(payload);
+    updateUserRecord(payload);
+  };
+
+  const handleBankChange = (userRecord: IUser, event: SelectChangeEvent) => {
+    const bank = event.target.value;
+    
+    const payload = {
+      UserId: userRecord.UserId,
+      bank: bank,
     };
     console.log(payload);
     updateUserRecord(payload);
@@ -703,6 +720,28 @@ const UserManagement: NextPage = () => {
                         <TableCell>{user.Email}</TableCell>
                       )}
                       {columnsList[5].enabled && (
+                        <TableCell>
+                          <Select
+                            defaultValue={''}
+                            value={user.bank ? user.bank : ''}
+                            label="Bank"
+                            variant="standard"
+                            onChange={(event) =>
+                              handleBankChange(user, event)
+                            }
+                          >
+                            {bankList &&
+                              bankList.map((bank, index) => {
+                                return (
+                                  <MenuItem key={index} value={bank}>
+                                    {bank}
+                                  </MenuItem>
+                                );
+                              })}
+                          </Select>
+                        </TableCell>
+                      )}
+                      {columnsList[6].enabled && (
                         <TableCell>
                           <InputLabel>
                             {user.AccountEnabled ? 'Yes' : 'No'}

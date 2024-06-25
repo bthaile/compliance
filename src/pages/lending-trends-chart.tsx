@@ -90,7 +90,7 @@ export default function LendingTrendsChart({ uid, topic, formData }: LendingTren
 
             return ({
                 label: lenderName,
-                data: trend.counts,
+                data: trend.percents.map(p => (p * 100).toFixed(2)),
                 borderColor: isCadence ? '#24A926' : bankColors[index % bankColors.length], // Red color for 'cadence'
                 borderWidth: isCadence ? 4 : 2, // Thicker line for 'cadence'
                 backgroundColor: isCadence ? '#24A926' : bankColors[index % bankColors.length], // Keep background the same

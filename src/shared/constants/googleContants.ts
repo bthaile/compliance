@@ -54,7 +54,7 @@ export const Icons = {
 };
 
 
-var templeData: IDefaultMarker[] = temple.map((data) => {
+const  templeData: IDefaultMarker[] = temple.map((data) => {
   let icon = Icons[WHITE_ICON]  
   if (data.icon == 'blue' ) icon = Icons[GREEN_ICON]  
   return {
@@ -64,7 +64,7 @@ var templeData: IDefaultMarker[] = temple.map((data) => {
 })
 
 
-var memphisData: IDefaultMarker[] = memphis.map((data) => {
+const memphisData: IDefaultMarker[] = memphis.map((data) => {
   let icon = Icons[WHITE_ICON]  
   if (data.icon == 'blue' ) icon = Icons[GREEN_ICON]  
   return {
@@ -74,7 +74,7 @@ var memphisData: IDefaultMarker[] = memphis.map((data) => {
 })
 
 
-var regionsData: IDefaultMarker[] = temple.map((data) => {
+const regionsData: IDefaultMarker[] = temple.map((data) => {
   let icon = Icons[BLUE_ICON]  
   if (data.icon == 'blue' ) icon = Icons[YELLOW_ICON]  
   return {
@@ -83,7 +83,7 @@ var regionsData: IDefaultMarker[] = temple.map((data) => {
   }
 })
 
-var cogentData: IDefaultMarker[] = memphis.map((data) => {
+const cogentData: IDefaultMarker[] = memphis.map((data) => {
   let icon = Icons[BLUE_ICON]  
   if (data.icon == 'blue' ) icon = Icons[YELLOW_ICON]  
   return {
@@ -92,19 +92,19 @@ var cogentData: IDefaultMarker[] = memphis.map((data) => {
   }
 })
 
-var regionsBranchData: IDefaultMarker[] = regionsBranches.map((data) => {
-  let icon = Icons[REGIONS_ICON] 
+const regionsBranchData: IDefaultMarker[] = regionsBranches.map((data) => {
+  const icon = Icons[REGIONS_ICON] 
   return {
     ...data,
     icon: icon
   }
 })
 
-var pinnacleBranchData: IDefaultMarker[] = pinnacleBranches.map((data) => {
-  let icon = Icons[PINNACLE_ICON] 
+const pinnacleBranchData: IDefaultMarker[] = pinnacleBranches.map((data) => {
+  const icon = Icons[PINNACLE_ICON]  
   return {
     ...data,
-    icon: icon
+    icon: icon 
   }
 })
 

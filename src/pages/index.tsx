@@ -41,6 +41,7 @@ const Home: NextPage = () => {
   const [cadeaa, setCADEAA] = useState(false);
   const [hisp, setHisp] = useState(false);
   const [branches, setBranches] = useState(false);
+  const [assessAreas, setAssessAreas] = useState(false);
   const [loanActivity, setLoanActivity] = useState(false);
 
   const [rightAtHome, setRightAtHome] = useState(false);
@@ -94,6 +95,7 @@ const Home: NextPage = () => {
     },
     { name: 'HISP', active: hisp, setActive: setHisp, disabled: false },
     { name: 'Branches', active: branches, setActive: setBranches, disabled: false },
+    { name: 'Assess Areas', active: assessAreas, setActive: setAssessAreas, disabled: false },
     { name: 'Loan Activity', active: loanActivity, setActive: setLoanActivity, disabled: false },
 
     /* {
